@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RGameMaster : MonoBehaviour
 {
     [Header("Preferences")]
     [SerializeField]
     private Transform spawnPoint;
-    [SerializeField]
-    private int winScore;
+    public int winScore;
     private int winScoreHalf;
     private int winScoreDouble;
     [SerializeField]
@@ -21,7 +20,7 @@ public class RGameMaster : MonoBehaviour
     [SerializeField]
     private RGameMaster otherGM;
     [SerializeField]
-    private Text message;
+    private TextMeshProUGUI message;
     [SerializeField]
     private RAudioListenerController audioLC;
     [SerializeField]
@@ -31,10 +30,13 @@ public class RGameMaster : MonoBehaviour
     [SerializeField]
     private int playersLeft;
     private int totalPlayers;
+
     [SerializeField]
+    private RVehicleTypeSelector p1Vehicle, p2Vehicle, p3Vehicle, p4Vehicle, p5Vehicle, p6Vehicle, p7Vehicle, p8Vehicle;
+
     private GameObject p1, p2, p3, p4, p5, p6, p7, p8;
-    private RPlayerPowerup p1Power, p2Power, p3Power, p4Power, p5Power, p6Power, p7Power, p8Power;
-    private RPlayerScore p1Score, p2Score, p3Score, p4Score, p5Score, p6Score, p7Score, p8Score;
+    private RPlayerPowerup p1Power = new RPlayerPowerup(), p2Power = new RPlayerPowerup(), p3Power = new RPlayerPowerup(), p4Power = new RPlayerPowerup(), p5Power = new RPlayerPowerup(), p6Power = new RPlayerPowerup(), p7Power = new RPlayerPowerup(), p8Power = new RPlayerPowerup();
+    private RPlayerScore p1Score = new RPlayerScore(), p2Score = new RPlayerScore(), p3Score = new RPlayerScore(), p4Score = new RPlayerScore(), p5Score = new RPlayerScore(), p6Score = new RPlayerScore(), p7Score = new RPlayerScore(), p8Score = new RPlayerScore();
 
     private bool p1Alive, p2Alive, p3Alive, p4Alive, p5Alive, p6Alive, p7Alive, p8Alive;
     private bool hasUpdatedScore = false;
@@ -45,7 +47,9 @@ public class RGameMaster : MonoBehaviour
     private int rewardValue;
     private int roundsPlayed;
 
-    private void Awake()
+    private float cooldownBeforeStart = 2f;
+
+    private void Start()
     {
         winScoreHalf = winScore / 2;
         winScoreDouble = winScore * 2;
@@ -53,6 +57,23 @@ public class RGameMaster : MonoBehaviour
         {
             return;
         }
+
+        StartCoroutine(DelayedStart());
+        
+    }
+
+    IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(cooldownBeforeStart);
+
+        GetPlayer(p1Vehicle, p1);
+        GetPlayer(p2Vehicle, p2);
+        GetPlayer(p3Vehicle, p3);
+        GetPlayer(p4Vehicle, p4);
+        GetPlayer(p5Vehicle, p5);
+        GetPlayer(p6Vehicle, p6);
+        GetPlayer(p7Vehicle, p7);
+        GetPlayer(p8Vehicle, p8);
 
         AwakePlayer(p1, p1Score, p1Power, p1Alive);
         AwakePlayer(p2, p2Score, p2Power, p2Alive);
@@ -77,6 +98,10 @@ public class RGameMaster : MonoBehaviour
 
     private void Update()
     {
+        if (cooldownBeforeStart - Time.time > 0)
+        {
+            return;
+        }
         if (!masterDestroyer)
         {
             return;
@@ -117,14 +142,24 @@ public class RGameMaster : MonoBehaviour
         }
     }
 
+    void GetPlayer(RVehicleTypeSelector vehicleType, GameObject player)
+    {
+        if (vehicleType.GetVehicle())
+        {
+            player = vehicleType.GetVehicle();
+            Debug.Log(player.name);
+        }
+    }
+
     void AwakePlayer(GameObject player, RPlayerScore score, RPlayerPowerup power, bool alive)
     {
-        if (player.activeInHierarchy)
+        if (player && player.activeInHierarchy)
         {
             score = player.GetComponent<RPlayerScore>();
             power = player.GetComponent<RPlayerPowerup>();
             alive = true;
             totalPlayers++;
+            Debug.Log(player.name);
         }
     }
 
