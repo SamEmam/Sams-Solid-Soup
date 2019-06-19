@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class StartManager : MonoBehaviour
 {
     [SerializeField]
     private SceneLoader sceneLoader;
-    [SerializeField]
-    private XboxController controller;
+
+    private Player player;
+
+    private void Start()
+    {
+        player = ReInput.players.GetPlayer(1);
+    }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (XCI.GetButtonDown(XboxButton.A, controller))
+        if (player.GetButtonDown("Select"))
         {
             switch ((int)GamePrefs.RaceMapEnum)
             {
@@ -32,7 +37,7 @@ public class StartManager : MonoBehaviour
 
     private void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.Back, controller))
+        if (player.GetButtonDown("Back"))
         {
             sceneLoader.LoadSceneByIndex(1);
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class LocalVehicleTypeSelector : MonoBehaviour
 {
@@ -14,13 +14,14 @@ public class LocalVehicleTypeSelector : MonoBehaviour
     [SerializeField]
     private int playerNum;
 
-    public XboxController controller;
+    private Player player;
 
     private float switchCooldown;
 
     // Start is called before the first frame update
     void OnEnable()
     {
+        player = ReInput.players.GetPlayer(playerNum);
         EnableType(currentIndex);
         LoadType();
     }
@@ -34,17 +35,27 @@ public class LocalVehicleTypeSelector : MonoBehaviour
             return;
         }
 
-        if (XCI.GetAxis(XboxAxis.RightTrigger, controller) > 0.2)
+        if (player.GetButtonDown("RT"))
         {
             NextType();
-            switchCooldown = 0.2f;
         }
 
-        if (XCI.GetAxis(XboxAxis.LeftTrigger, controller) > 0.2)
+        if (player.GetButtonDown("LT"))
         {
             PrevType();
-            switchCooldown = 0.2f;
         }
+
+        //if (XCI.GetAxis(XboxAxis.RightTrigger, controller) > 0.2)
+        //{
+        //    NextType();
+        //    switchCooldown = 0.2f;
+        //}
+
+        //if (XCI.GetAxis(XboxAxis.LeftTrigger, controller) > 0.2)
+        //{
+        //    PrevType();
+        //    switchCooldown = 0.2f;
+        //}
     }
 
     void OnDisable()

@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class LocalJoinManager : MonoBehaviour
 {
-    [SerializeField]
-    private XboxController controller;
+    private Player player;
     [SerializeField]
     private int playerNum;
     [SerializeField]
@@ -14,6 +13,7 @@ public class LocalJoinManager : MonoBehaviour
 
     private void Start()
     {
+        player = ReInput.players.GetPlayer(playerNum);
         playerObject.SetActive(false);
         if (CheckPlayerStatus())
         {
@@ -24,12 +24,12 @@ public class LocalJoinManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.A,controller))
+        if (player.GetButtonDown("A"))
         {
             JoinPlayer();
         }
 
-        if (XCI.GetButtonDown(XboxButton.B, controller))
+        if (player.GetButtonDown("B"))
         {
             LeavePlayer();
         }

@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+//using XboxCtrlrInput;
+using Rewired;
 
 public class MenuObjectSelector : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MenuObjectSelector : MonoBehaviour
     [SerializeField]
     private Material defaultMat, selectedMat;
 
+    private Player player;
 
     private int currentIndex;
     private float startTime;
@@ -19,6 +21,7 @@ public class MenuObjectSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         SelectIndex(currentIndex);
         startTime = Time.time;
     }
@@ -31,24 +34,40 @@ public class MenuObjectSelector : MonoBehaviour
             return;
         }
 
-        if (XCI.GetButtonDown(XboxButton.A))
+        if (player.GetButtonDown("Select"))
         {
             textExplosions[currentIndex].Explode();
             textObjectColorings[currentIndex].SwitchScene();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadDown))
+        if (player.GetButtonDown("Up"))
         {
-            SelectNext();
+            SelectUp();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadUp))
+        if (player.GetButtonDown("Down"))
         {
-            SelectPrev();
+            SelectDown();
         }
+
+        //if (XCI.GetButtonDown(XboxButton.A))
+        //{
+        //    textExplosions[currentIndex].Explode();
+        //    textObjectColorings[currentIndex].SwitchScene();
+        //}
+
+        //if (XCI.GetButtonDown(XboxButton.DPadDown))
+        //{
+        //    SelectNext();
+        //}
+
+        //if (XCI.GetButtonDown(XboxButton.DPadUp))
+        //{
+        //    SelectPrev();
+        //}
     }
 
-    void SelectNext()
+    void SelectDown()
     {
         if (currentIndex == textObjectColorings.Length - 1)
         {
@@ -60,7 +79,7 @@ public class MenuObjectSelector : MonoBehaviour
         }
     }
 
-    void SelectPrev()
+    void SelectUp()
     {
         if (currentIndex == 0)
         {

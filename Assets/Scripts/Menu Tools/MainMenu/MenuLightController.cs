@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class MenuLightController : MonoBehaviour
 {
+    private Player player;
 
     [SerializeField]
     private Vector3[] positions;
@@ -15,6 +16,7 @@ public class MenuLightController : MonoBehaviour
 
     private void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         startTime = Time.time;
     }
 
@@ -28,14 +30,14 @@ public class MenuLightController : MonoBehaviour
 
         LerpToPos();
 
-        if (XCI.GetButtonDown(XboxButton.DPadDown))
-        {
-            NextPos();
-        }
-
-        if (XCI.GetButtonDown(XboxButton.DPadUp))
+        if (player.GetButtonDown("Up"))
         {
             PrevPos();
+        }
+
+        if (player.GetButtonDown("Down"))
+        {
+            NextPos();
         }
     }
 

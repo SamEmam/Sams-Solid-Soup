@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class MapRotatingSelector : MonoBehaviour
 {
-    [SerializeField]
-    private XboxController controller;
+    private Player player;
+
     [SerializeField]
     private int rotInterval = 45;
     [SerializeField]
@@ -20,34 +20,29 @@ public class MapRotatingSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.DPadRight, controller))
+        if (player.GetButtonDown("Select"))
+        {
+            GamePrefs.RaceMapEnum = (RaceMapEnum)mapIndex;
+        }
+
+        if (player.GetButtonDown("Right"))
         {
             RotRight();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadLeft, controller))
+        if (player.GetButtonDown("Left"))
         {
             RotLeft();
         }
 
-        if (XCI.GetButtonDown(XboxButton.A, controller))
-        {
-            GamePrefs.RaceMapEnum = (RaceMapEnum)mapIndex;
-            // SceneLoader launch Ruthless Race
-        }
-
         UpdateRotation();
-    }
-
-    void StartRace()
-    {
-
     }
 
     void RotRight()

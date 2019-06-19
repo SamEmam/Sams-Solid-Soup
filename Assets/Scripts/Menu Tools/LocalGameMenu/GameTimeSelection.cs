@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using XboxCtrlrInput;
+using Rewired;
 using TMPro;
 
 public class GameTimeSelection : MonoBehaviour
 {
-    [SerializeField]
-    private XboxController controller;
+    private Player player;
 
     [SerializeField]
     private int time = 10;
@@ -43,6 +42,7 @@ public class GameTimeSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         isSelected = false;
         BuildNumbers();
     }
@@ -50,7 +50,7 @@ public class GameTimeSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.Start, controller))
+        if (player.GetButtonDown("Start"))
         {
             GamePrefs.GameTime = time;
         }
@@ -76,26 +76,19 @@ public class GameTimeSelection : MonoBehaviour
             return;
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadRight, controller))
+        if (player.GetButtonDown("Right"))
         {
             IncreaseTime();
             BuildNumbers();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadLeft, controller))
+        if (player.GetButtonDown("Left"))
         {
             DecreaseTime();
             BuildNumbers();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadDown, controller))
-        {
-            isSelected = false;
-            cooldown = 0.2f;
-            gameModeSelector.isSelected = true;
-        }
-
-        if (XCI.GetButtonDown(XboxButton.DPadUp, controller))
+        if (player.GetButtonDown("Up"))
         {
             isSelected = false;
             cooldown = 0.2f;
@@ -109,7 +102,13 @@ public class GameTimeSelection : MonoBehaviour
                 gameModeSelector.isSelected = true;
             }
         }
-        
+
+        if (player.GetButtonDown("Down"))
+        {
+            isSelected = false;
+            cooldown = 0.2f;
+            gameModeSelector.isSelected = true;
+        }
     }
 
     void IncreaseTime()

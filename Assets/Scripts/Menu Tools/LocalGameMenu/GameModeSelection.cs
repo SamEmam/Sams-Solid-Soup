@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using XboxCtrlrInput;
+using Rewired;
 using TMPro;
 
 public class GameModeSelection : MonoBehaviour
 {
-    [SerializeField]
-    private XboxController controller;
+    private Player player;
 
     [SerializeField]
     private TextObjectColoring textObjectColoring;
@@ -37,6 +36,7 @@ public class GameModeSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         isSelected = true;
         EnableGameMode(gameModeIndex);
     }
@@ -44,7 +44,7 @@ public class GameModeSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.Start, controller))
+        if (player.GetButtonDown("Start"))
         {
             GamePrefs.GameMode = (GameModeEnum)gameModeIndex;
         }
@@ -70,17 +70,24 @@ public class GameModeSelection : MonoBehaviour
             return;
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadRight, controller))
+        if (player.GetButtonDown("Right"))
         {
             NextGameMode();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadLeft, controller))
+        if (player.GetButtonDown("Left"))
         {
             PrevGameMode();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadDown, controller))
+        if (player.GetButtonDown("Up"))
+        {
+            isSelected = false;
+            cooldown = 0.2f;
+            timeSelector.isSelected = true;
+        }
+
+        if (player.GetButtonDown("Down"))
         {
             isSelected = false;
             cooldown = 0.2f;
@@ -94,15 +101,6 @@ public class GameModeSelection : MonoBehaviour
                 timeSelector.isSelected = true;
             }
         }
-
-        if (XCI.GetButtonDown(XboxButton.DPadUp, controller))
-        {
-            isSelected = false;
-            cooldown = 0.2f;
-            timeSelector.isSelected = true;
-        }
-
-
     }
 
     void SubModeCheck()

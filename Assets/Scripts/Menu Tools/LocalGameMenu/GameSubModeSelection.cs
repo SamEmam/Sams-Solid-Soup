@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using XboxCtrlrInput;
+using Rewired;
 using TMPro;
 
 public class GameSubModeSelection : MonoBehaviour
 {
-    [SerializeField]
-    private XboxController controller;
+    private Player player;
 
     [SerializeField]
     private GameObject[] subModes;
@@ -36,6 +35,7 @@ public class GameSubModeSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         isSelected = false;
         EnableSubMode(subModeIndex);
     }
@@ -43,7 +43,7 @@ public class GameSubModeSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.Start, controller))
+        if (player.GetButtonDown("Start"))
         {
             GamePrefs.SubMode = (SubModeEnum)subModeIndex;
         }
@@ -69,30 +69,29 @@ public class GameSubModeSelection : MonoBehaviour
             return;
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadRight, controller))
+        if (player.GetButtonDown("Right"))
         {
             NextSubMode();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadLeft, controller))
+        if (player.GetButtonDown("Left"))
         {
             PrevSubMode();
         }
 
-        if (XCI.GetButtonDown(XboxButton.DPadDown, controller))
-        {
-            isSelected = false;
-            cooldown = 0.2f;
-            timeSelector.isSelected = true;
-        }
-
-        if (XCI.GetButtonDown(XboxButton.DPadUp, controller))
+        if (player.GetButtonDown("Up"))
         {
             isSelected = false;
             cooldown = 0.2f;
             gameModeSelector.isSelected = true;
         }
 
+        if (player.GetButtonDown("Down"))
+        {
+            isSelected = false;
+            cooldown = 0.2f;
+            timeSelector.isSelected = true;
+        }
     }
 
     void NextSubMode()

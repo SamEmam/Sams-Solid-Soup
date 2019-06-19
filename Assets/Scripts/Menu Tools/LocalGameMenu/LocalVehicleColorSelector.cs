@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class LocalVehicleColorSelector : MonoBehaviour
 {
@@ -14,11 +14,12 @@ public class LocalVehicleColorSelector : MonoBehaviour
     [SerializeField]
     private int playerNum;
 
-    public XboxController controller;
+    private Player player;
     
     // Start is called before the first frame update
     void OnEnable()
     {
+        player = ReInput.players.GetPlayer(playerNum);
         EnableColor(currentIndex);
         LoadColor();
     }
@@ -26,12 +27,12 @@ public class LocalVehicleColorSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.RightBumper, controller))
+        if (player.GetButtonDown("RB"))
         {
             NextColor();
         }
 
-        if (XCI.GetButtonDown(XboxButton.LeftBumper, controller))
+        if (player.GetButtonDown("LB"))
         {
             PrevColor();
         }

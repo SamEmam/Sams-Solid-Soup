@@ -1,30 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class LocalGameManager : MonoBehaviour
 {
-    public XboxController controller;
+    private Player player;
     private SceneLoader sceneLoader;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = ReInput.players.GetPlayer(1);
         sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (XCI.GetButtonDown(XboxButton.Back, controller))
+        if (player.GetButtonDown("Back"))
         {
             sceneLoader.LoadSceneByIndex(0);
         }
 
-        if (XCI.GetButtonDown(XboxButton.Start, controller))
+        if (player.GetButtonDown("Start"))
         {
-            
             if (GamePrefs.GameMode == GameModeEnum.Racing)
             {
                 sceneLoader.LoadSceneByIndex(2);

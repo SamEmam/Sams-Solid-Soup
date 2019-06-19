@@ -2491,7 +2491,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Solid Sam's Soup
+  m_text: Sam's Solid Soup
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -3641,7 +3641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1164c037bd2ca408294b7df1d18865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 1
 --- !u!114 &852105024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3668,7 +3667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdab541eb4503344ad169d30f70f201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 1
   time: 10
   textObjectColoring: {fileID: 1763668692}
   defaultMat: {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
@@ -3701,7 +3699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6019d2609bf30e64194714db38e8b226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 1
   subModes:
   - {fileID: 571369182}
   - {fileID: 1068477717}
@@ -3724,7 +3721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab774e6de9dc6d348a257c63201856e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: 1
   textObjectColoring: {fileID: 1831104513}
   defaultMat: {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
   selectedMat: {fileID: 2100000, guid: a24037aa2dae5b145b048dcaf948032a, type: 2}
@@ -7711,6 +7707,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726791018493678302, guid: a464760ded71e604c8e196195a5d95a0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726791017726138035, guid: a464760ded71e604c8e196195a5d95a0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726791017457798137, guid: a464760ded71e604c8e196195a5d95a0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726791018623356885, guid: a464760ded71e604c8e196195a5d95a0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a464760ded71e604c8e196195a5d95a0, type: 3}
