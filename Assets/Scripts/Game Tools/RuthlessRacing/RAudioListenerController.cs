@@ -52,8 +52,10 @@ public class RAudioListenerController : MonoBehaviour
             tempPos += p8.position;
             count++;
         }
-
-        tempPos /= count;
+        if (tempPos != Vector3.zero)
+        {
+            tempPos /= count;
+        }
         transform.position = Vector3.Lerp(transform.position, tempPos, speed * Time.deltaTime);
     }
 }
