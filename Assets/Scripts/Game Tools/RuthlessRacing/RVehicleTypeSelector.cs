@@ -13,6 +13,8 @@ public class RVehicleTypeSelector : MonoBehaviour
 
     private GameObject playerVehicle;
 
+    public RGameMaster GM;
+
     private void OnEnable()
     {
         LoadType();
@@ -70,6 +72,7 @@ public class RVehicleTypeSelector : MonoBehaviour
     void SetVehicle(int index)
     {
         playerVehicle = Types[index];
+        SetGMVehicle();
     }
 
     void DisableTypes()
@@ -77,6 +80,69 @@ public class RVehicleTypeSelector : MonoBehaviour
         foreach (var type in Types)
         {
             type.SetActive(false);
+        }
+    }
+
+    void SetGMVehicle()
+    {
+        switch (playerNum)
+        {
+            case 1:
+                GM.p1 = playerVehicle;
+                GM.p1Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p1Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p1Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 2:
+                GM.p2 = playerVehicle;
+                GM.p2Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p2Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p2Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 3:
+                GM.p3 = playerVehicle;
+                GM.p3Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p3Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p3Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 4:
+                GM.p4 = playerVehicle;
+                GM.p4Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p4Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p4Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 5:
+                GM.p5 = playerVehicle;
+                GM.p5Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p5Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p5Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 6:
+                GM.p6 = playerVehicle;
+                GM.p6Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p6Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p6Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 7:
+                GM.p7 = playerVehicle;
+                GM.p7Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p7Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p7Alive = true;
+                GM.totalPlayers++;
+                break;
+            case 8:
+                GM.p8 = playerVehicle;
+                GM.p8Score = playerVehicle.GetComponent<RPlayerScore>();
+                GM.p8Power = playerVehicle.GetComponent<RPlayerPowerup>();
+                GM.p8Alive = true;
+                GM.totalPlayers++;
+                break;
         }
     }
 }

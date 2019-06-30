@@ -2885,7 +2885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1353220565}
-  _version: Version 0.1.0
+  _version: Version 0.1.1
 --- !u!114 &890002313 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 890002313, guid: aaf36fc05d64b3a45a36a55e9fb99c9b,

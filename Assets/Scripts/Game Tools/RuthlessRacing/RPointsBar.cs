@@ -11,7 +11,9 @@ public class RPointsBar : MonoBehaviour
     [SerializeField]
     private int playerNum;
     [SerializeField]
-    private RGameMaster destroyer;
+    private RGameMaster GM;
+    [SerializeField]
+    private RScoreManager SM;
     [SerializeField]
     private Image imgPointsBar;
     [SerializeField]
@@ -29,7 +31,7 @@ public class RPointsBar : MonoBehaviour
 
     private void Start()
     {
-        ps = destroyer.GetPlayerScore(playerNum);
+        ps = GM.GetPlayerScore(playerNum);
         if (!ps || !ps.transform.gameObject.activeInHierarchy)
         {
             canUpdate = false;
@@ -37,7 +39,7 @@ public class RPointsBar : MonoBehaviour
         }
         else
         {
-            max = destroyer.winScore;
+            max = SM.winScore;
             Debug.Log("PointsBar: " + gameObject.name);
         }
 
@@ -66,7 +68,7 @@ public class RPointsBar : MonoBehaviour
     private void OverrideSetPoints(int points)
     {
         overrideUpdate = false;
-        max = destroyer.winScore;
+        max = SM.winScore;
         currentValue = points;
         currenctPercent = (float)currentValue / (float)(max - min);
 

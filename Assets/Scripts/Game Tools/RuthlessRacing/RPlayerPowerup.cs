@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
+using Rewired;
 
 public class RPlayerPowerup : MonoBehaviour
 {
@@ -11,14 +11,20 @@ public class RPlayerPowerup : MonoBehaviour
     private float[] seconds;
     [SerializeField]
     private bool[] useSeconds;
-    [SerializeField]
-    private XboxController controller;
+
+    private Player player;
+    public int playerNum;
 
     private bool powerupTriggered = false;
 
+    private void Start()
+    {
+        player = ReInput.players.GetPlayer(playerNum);
+    }
+
     private void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.Y, controller))
+        if (player.GetButtonDown("ResetPowerup"))
         {
             DisableAll();
         }
