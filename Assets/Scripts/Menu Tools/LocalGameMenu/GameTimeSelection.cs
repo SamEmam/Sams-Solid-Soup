@@ -52,7 +52,7 @@ public class GameTimeSelection : MonoBehaviour
     {
         if (player.GetButtonDown("Start"))
         {
-            GamePrefs.GameTime = time;
+            GamePrefs.GameTime = time * 60;
         }
 
         if (!isSelected)

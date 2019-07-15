@@ -878,6 +878,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 2
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps:
       - _enabled: 1
@@ -903,6 +906,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 2
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
       _defaultCustomControllerMaps: []
@@ -924,6 +930,9 @@ MonoBehaviour:
       _defaultJoystickMaps:
       - _enabled: 1
         _categoryId: 2
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -947,6 +956,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 2
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
       _defaultCustomControllerMaps: []
@@ -968,6 +980,9 @@ MonoBehaviour:
       _defaultJoystickMaps:
       - _enabled: 1
         _categoryId: 2
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -991,6 +1006,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 2
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
       _defaultCustomControllerMaps: []
@@ -1013,6 +1031,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 2
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
       _defaultCustomControllerMaps: []
@@ -1034,6 +1055,9 @@ MonoBehaviour:
       _defaultJoystickMaps:
       - _enabled: 1
         _categoryId: 2
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -1167,6 +1191,60 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
+    - _id: 17
+      _name: Shoot
+      _type: 1
+      _descriptiveName: Shoot powerups
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 18
+      _name: ResetPowerup
+      _type: 1
+      _descriptiveName: Reset player powerup
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 19
+      _name: Turn
+      _type: 0
+      _descriptiveName: Turn left and right
+      _positiveDescriptiveName: Turn Left
+      _negativeDescriptiveName: Turn Right
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 20
+      _name: Accelerate
+      _type: 0
+      _descriptiveName: Accelerate forward
+      _positiveDescriptiveName: Accelerate
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 21
+      _name: Brake
+      _type: 0
+      _descriptiveName: Brake and reverse
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: Brake
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 22
+      _name: Handbrake
+      _type: 1
+      _descriptiveName: Handbrake car
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -1183,6 +1261,11 @@ MonoBehaviour:
       _tag: 
       _id: 2
       _userAssignable: 1
+    - _name: RuthlessRacing
+      _descriptiveName: Player Controlls
+      _tag: 
+      _id: 3
+      _userAssignable: 1
     actionCategoryMap:
       list:
       - categoryId: 0
@@ -1191,6 +1274,8 @@ MonoBehaviour:
         actionIds: 03000000040000000500000006000000070000000800000009000000
       - categoryId: 2
         actionIds: 0b0000000c0000000d0000000e0000000f00000010000000
+      - categoryId: 3
+        actionIds: 110000001200000013000000140000001500000016000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -1234,6 +1319,13 @@ MonoBehaviour:
       _descriptiveName: Player specific menu Category
       _tag: 
       _id: 2
+      _userAssignable: 1
+      _checkConflictsWithAllCategories: 1
+      _checkConflictsCategoryIds: 
+    - _name: Ruthless Racing
+      _descriptiveName: Ruthless racing mapping
+      _tag: 
+      _id: 3
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
       _checkConflictsCategoryIds: 
@@ -1411,6 +1503,79 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+    - id: 4
+      categoryId: 3
+      layoutId: 0
+      name: 
+      hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 17
+        _elementType: 1
+        _elementIdentifierId: 4
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 18
+        _elementType: 1
+        _elementIdentifierId: 8
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 19
+        _elementType: 0
+        _elementIdentifierId: 0
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 20
+        _elementType: 1
+        _elementIdentifierId: 13
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 21
+        _elementType: 1
+        _elementIdentifierId: 11
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 22
+        _elementType: 1
+        _elementIdentifierId: 5
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     keyboardMaps:
     - id: 0
       categoryId: 0
@@ -1553,15 +1718,15 @@ MonoBehaviour:
     controllerMapLayoutManagerRuleSets: []
     controllerMapEnablerRuleSets: []
     playerIdCounter: 17
-    actionIdCounter: 17
-    actionCategoryIdCounter: 3
+    actionIdCounter: 23
+    actionCategoryIdCounter: 4
     inputBehaviorIdCounter: 1
-    mapCategoryIdCounter: 3
+    mapCategoryIdCounter: 4
     joystickLayoutIdCounter: 1
     keyboardLayoutIdCounter: 1
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
-    joystickMapIdCounter: 4
+    joystickMapIdCounter: 5
     keyboardMapIdCounter: 3
     mouseMapIdCounter: 2
     customControllerMapIdCounter: 0
@@ -2885,7 +3050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1353220565}
-  _version: Version 0.1.1
+  _version: Version 0.1.2
 --- !u!114 &890002313 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 890002313, guid: aaf36fc05d64b3a45a36a55e9fb99c9b,

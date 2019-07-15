@@ -8,7 +8,7 @@ public class RMissile : MonoBehaviour
     public float delayBeforeActive = 2.5f;
     public float impactForce = 10f;
 
-    private float thrust = 10f;
+    private float thrust = 25f;
     private float radius = 10f;
     private float upwardsThrust = 10f;
     private float rotationSpeed = 750f;
@@ -23,11 +23,15 @@ public class RMissile : MonoBehaviour
     public ParticleSystem explosion;
     private ParticleSystem.EmissionModule emit;
     private Transform closestTarget;
+    private Vector3 startPos;
+    private Vector3 startRot;
 
     // Start is called before the first frame update
     void Start()
     {
         emit = thrustParticle.emission;
+        emit.enabled = false;
+        thrustParticle.Clear();
     }
 
     // Update is called once per frame
@@ -58,6 +62,7 @@ public class RMissile : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBeforeActive);
         FindNearestTarget();
+        emit.enabled = true;
         isActive = true;
     }
 
@@ -99,6 +104,10 @@ public class RMissile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!isActive)
+        {
+            return;
+        }
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider hit in colliders)
         {
@@ -110,6 +119,6 @@ public class RMissile : MonoBehaviour
         }
 
         Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject);
     }
 }

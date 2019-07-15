@@ -39,7 +39,7 @@ public class REndGameManager : MonoBehaviour
     {
         gameHasEnded = true;
         yield return new WaitForSeconds(3);
-        sceneLoader.LoadSceneByIndex(0); // CHANGE TO score scene
+        sceneLoader.LoadSceneByIndex(1); // CHANGE TO score scene
     }
 
     public void RewardWinner(int playerNum)

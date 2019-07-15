@@ -13,10 +13,10 @@ public class RPowerup : MonoBehaviour
 
     private void Start()
     {
-        randomizePowerUp();
+        RandomizePowerUp();
     }
 
-    void randomizePowerUp()
+    void RandomizePowerUp()
     {
         rng = Random.Range(0, powerUps.Length);
 
@@ -45,7 +45,7 @@ public class RPowerup : MonoBehaviour
     {
         powerUps[rng].SetActive(false);
         yield return new WaitForSeconds(seconds);
-        randomizePowerUp();
+        RandomizePowerUp();
         canTriggerPowerUp = true;
     }
 }

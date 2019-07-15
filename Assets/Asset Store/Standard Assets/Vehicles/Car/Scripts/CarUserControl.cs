@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using XboxCtrlrInput;
+using Rewired;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -10,12 +10,13 @@ namespace UnityStandardAssets.Vehicles.Car
     {
         private CarController m_Car; // the car controller we want to use
 
-
-        public XboxController controller;
+        private Player player;
+        public int playerNum;
 
 
         private void Awake()
         {
+            player = ReInput.players.GetPlayer(playerNum);
             // get the car controller
             m_Car = GetComponent<CarController>();
         }
@@ -26,18 +27,18 @@ namespace UnityStandardAssets.Vehicles.Car
         private void FixedUpdate()
         {
             // new input
-            float h = XCI.GetAxis(XboxAxis.LeftStickX, controller);
+            float h = player.GetAxis("Turn");
             float v = 0f;
-            if (XCI.GetAxis(XboxAxis.RightTrigger, controller) > 0)
+            if (player.GetAxis("Accelerate") > 0)
             {
-                v = XCI.GetAxis(XboxAxis.RightTrigger, controller);
+                v = player.GetAxis("Accelerate");
             }
             else
             {
-                v = XCI.GetAxis(XboxAxis.LeftTrigger, controller) * -1;
+                v = player.GetAxis("Brake");
             }
             float handbrake = 0f;
-            if (XCI.GetButton(XboxButton.B, controller))
+            if (player.GetButton("Handbrake"))
             {
                 handbrake = 1f;
             }

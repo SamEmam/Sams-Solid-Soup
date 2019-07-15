@@ -35,6 +35,7 @@ public class GameSubModeSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        subModeIndex = (int)GamePrefs.SubMode;
         player = ReInput.players.GetPlayer(1);
         isSelected = false;
         EnableSubMode(subModeIndex);

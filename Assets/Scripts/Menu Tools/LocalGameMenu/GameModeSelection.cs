@@ -36,6 +36,7 @@ public class GameModeSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameModeIndex = (int)GamePrefs.GameMode;
         player = ReInput.players.GetPlayer(1);
         isSelected = true;
         EnableGameMode(gameModeIndex);
