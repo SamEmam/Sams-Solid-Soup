@@ -9,7 +9,7 @@ public class RMine : MonoBehaviour
     public float radius = 50f;
     public float upwardsThrust = 5f;
 
-    private float delay = 2f;
+    private float delay = 0.25f;
     public bool isShot = false;
 
     [Header("Setup")]
@@ -28,13 +28,14 @@ public class RMine : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         if (delay > 0)
         {
             return;
         }
-        if (collision.gameObject.tag == "Player")
+
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "PlayerChassis")
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
             foreach (Collider hit in colliders)
@@ -46,7 +47,7 @@ public class RMine : MonoBehaviour
                 }
             }
             Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }

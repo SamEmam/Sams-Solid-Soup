@@ -6,7 +6,7 @@ using UnityEngine;
 public class RMineLauncher : MonoBehaviour
 {
     [Header("Attributes")]
-    public float initialForce = 20f;
+    private float initialForce = 5f;
     public int playerNum;
     public int powerupNum = 1;
 
@@ -52,27 +52,40 @@ public class RMineLauncher : MonoBehaviour
             return;
         }
 
-        if (mineCount < 1)
-        {
-            playerPowerup.DisablePowerup(powerupNum);
-            return;
-        }
 
         if (player.GetButtonDown("Shoot"))
         {
-            mineCount--;
             Shoot();
         }
+
+        
     }
 
     void Shoot()
     {
         GameObject shotMine = mineGOs[mineCount - 1];
         Rigidbody rb = shotMine.GetComponent<Rigidbody>();
-        shotMine.GetComponent<RMine>().isShot = true;
         shotMine.transform.SetParent(null);
         rb.isKinematic = false;
         rb.useGravity = true;
-        rb.AddForce(shotMine.transform.forward * initialForce, ForceMode.VelocityChange);
+        rb.AddForce(shotMine.transform.up * initialForce, ForceMode.VelocityChange);
+        shotMine.GetComponentInChildren<RMine>().isShot = true;
+        StartCoroutine(EnableCollider(shotMine));
+        mineCount--;
+
+    }
+
+    IEnumerator EnableCollider(GameObject shotMine)
+    {
+        BoxCollider collider = shotMine.GetComponent<BoxCollider>();
+
+        yield return new WaitForSeconds(0.25f);
+
+        collider.enabled = true;
+
+        if (mineCount < 1)
+        {
+            playerPowerup.DisablePowerup(powerupNum);
+        }
     }
 }

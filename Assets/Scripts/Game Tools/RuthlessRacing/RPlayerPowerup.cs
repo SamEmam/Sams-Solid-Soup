@@ -9,8 +9,6 @@ public class RPlayerPowerup : MonoBehaviour
     private GameObject[] Powerups;
     [SerializeField]
     private float[] seconds;
-    [SerializeField]
-    private bool[] useSeconds;
 
     private Player player;
     public int playerNum;
@@ -39,7 +37,7 @@ public class RPlayerPowerup : MonoBehaviour
     {
         Powerups[powerupNum].SetActive(true);
         powerupTriggered = true;
-        if (useSeconds[powerupNum])
+        if (seconds[powerupNum] > 0)
         {
             StartCoroutine(DisablePowerupAfterSeconds(powerupNum));
         }

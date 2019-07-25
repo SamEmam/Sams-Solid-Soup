@@ -24,12 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Ruthless Racing/Ice Oval.unity
     guid: 8fca3839532d2044dbf4ace0387150fe
   - enabled: 1
-    path: Assets/Scenes/Ruthless Racing/Ice Canyon.unity
-    guid: 76cd98649080fa744a54d349a61f3a48
-  - enabled: 1
     path: Assets/Scenes/Ruthless Racing/Space 8.unity
     guid: a6d68b85adee03842b50a2a01d041465
   - enabled: 1
     path: Assets/Scenes/Ruthless Racing/Stadium.unity
     guid: cfa3958fa281bd8478622594bde6b957
+  - enabled: 1
+    path: Assets/Scenes/Ruthless Racing/Ice Canyon.unity
+    guid: 76cd98649080fa744a54d349a61f3a48
   m_configObjects: {}
