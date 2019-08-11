@@ -1,0 +1,21 @@
+newmtl SimpleTown
+map_Kd SimpleRacer_Texture.png
+Kd 1 1 1
+d 1
+
+newmtl Road_Border_Dark_Red
+Kd 0.5490196 0.172549 0.1607843
+d 1
+
+newmtl Asphalt
+Kd 0.2235294 0.2196079 0.2235294
+d 1
+
+newmtl Road_Line
+Kd 0.6784314 0.6509804 0.6470588
+d 1
+
+newmtl Road_Border_Red
+Kd 0.7098039 0.2352941 0.2235294
+d 1
+

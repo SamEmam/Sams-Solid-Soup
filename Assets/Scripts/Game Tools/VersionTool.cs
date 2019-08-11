@@ -18,7 +18,6 @@ public class VersionTool : MonoBehaviour
         else
         {
             _version = PlayerPrefs.GetString("version");
-            versionText.text = _version;
         }
     }
 
