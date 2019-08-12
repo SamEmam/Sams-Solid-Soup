@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class LoadingScreenCubeController : MonoBehaviour
 {
-    public List<Vector3> positions = new List<Vector3>();
-    private Vector3 prevPos, curPos;
+    public List<Vector3> positions;
+    private Vector3 targetPos;
+    private int speed = 5;
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(prevPos, curPos, Time.deltaTime);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, targetPos, speed * Time.deltaTime);
     }
 
     public void MoveToNextPosition(int index)
     {
-        if (index == 0)
-        {
-            prevPos = positions[positions.Count - 1];
-            curPos = positions[index];
-        }
-        else
-        {
-            prevPos = positions[index - 1];
-            curPos = positions[index];
-        }
+        targetPos = positions[index];
     }
 }
