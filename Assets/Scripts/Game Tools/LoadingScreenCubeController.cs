@@ -8,7 +8,7 @@ public class LoadingScreenCubeController : MonoBehaviour
     private Vector3 targetPos;
     private int speed = 5;
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.localPosition = Vector3.Lerp(transform.localPosition, targetPos, speed * Time.deltaTime);
     }

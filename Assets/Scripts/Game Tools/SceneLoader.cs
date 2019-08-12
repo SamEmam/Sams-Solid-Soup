@@ -54,6 +54,7 @@ public class SceneLoader : MonoBehaviour
         while (!async.isDone)
         {
             yield return null;
+            //yield return new WaitForSeconds(3f);
         }
     }
 }
