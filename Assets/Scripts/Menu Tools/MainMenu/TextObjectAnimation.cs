@@ -12,6 +12,8 @@ public class TextObjectAnimation : MonoBehaviour
     private float speed = 12f;
     private float startTime;
     private float journeyLength;
+    //private float runTime = 1.8f;
+    private float runTime = 2.6f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class TextObjectAnimation : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Time.time - startTime > 1.8f)
+        if (Time.time - startTime > runTime)
         {
             return;
         }

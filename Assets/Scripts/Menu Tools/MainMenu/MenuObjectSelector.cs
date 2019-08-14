@@ -17,6 +17,8 @@ public class MenuObjectSelector : MonoBehaviour
 
     private int currentIndex;
     private float startTime;
+    //private float runTime = 1.8f;
+    private float runTime = 2.6f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,7 @@ public class MenuObjectSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime < 1.8f)
+        if (Time.time - startTime < runTime)
         {
             return;
         }
