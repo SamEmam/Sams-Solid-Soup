@@ -31,6 +31,9 @@ public class StartManager : MonoBehaviour
                 case 2:
                     sceneLoader.LoadSceneByIndex(7);
                     break;
+                case 3:
+                    sceneLoader.LoadSceneByIndex(8);
+                    break;
             }
         }
     }
