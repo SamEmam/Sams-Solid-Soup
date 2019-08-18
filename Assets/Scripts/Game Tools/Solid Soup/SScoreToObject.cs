@@ -16,6 +16,7 @@ public class SScoreToObject : MonoBehaviour
     {
         playerNum = GetComponent<RVehicleTypeSelector>().GetPlayerNum();
         
+
         switch (playerNum)
         {
             case 1:
@@ -63,7 +64,7 @@ public class SScoreToObject : MonoBehaviour
     void StringToCharArray(string scoreString, Transform position)
     {
         int temp;
-        Vector3 offset = Vector3.forward;
+        Vector3 offset = Vector3.right;
         char[] scoreCharArray = scoreString.ToCharArray();
 
         for (int i = 0; i < scoreCharArray.Length; i++)
@@ -71,7 +72,7 @@ public class SScoreToObject : MonoBehaviour
             temp = (int)System.Char.GetNumericValue(scoreCharArray[i]);
             GameObject instantiatedNum = Instantiate(charObjArray[temp], position.position + offset, position.rotation);
             instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
-            offset += Vector3.forward * 3;
+            offset += Vector3.left * 3;
         }
 
     }

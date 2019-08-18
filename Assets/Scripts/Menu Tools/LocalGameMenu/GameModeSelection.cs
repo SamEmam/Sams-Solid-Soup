@@ -25,6 +25,10 @@ public class GameModeSelection : MonoBehaviour
     [SerializeField]
     private GameObject subMode;
     [SerializeField]
+    private GameObject soupMode;
+    [SerializeField]
+    private GameSoupModeSelection soupModeSelector;
+    [SerializeField]
     private GameSubModeSelection subModeSelector;
     [SerializeField]
     private GameTimeSelection timeSelector;
@@ -97,6 +101,10 @@ public class GameModeSelection : MonoBehaviour
             {
                 subModeSelector.isSelected = true;
             }
+            else if (soupMode.activeInHierarchy)
+            {
+                soupModeSelector.isSelected = true;
+            }
             else
             {
                 timeSelector.isSelected = true;
@@ -113,6 +121,18 @@ public class GameModeSelection : MonoBehaviour
         else
         {
             subMode.SetActive(false);
+        }
+    }
+
+    void SoupModeCheck()
+    {
+        if (gameModeIndex == 2)
+        {
+            soupMode.SetActive(true);
+        }
+        else
+        {
+            soupMode.SetActive(false);
         }
     }
 
@@ -150,6 +170,7 @@ public class GameModeSelection : MonoBehaviour
         DisableGameModes();
         gameModes[index].SetActive(true);
         SubModeCheck();
+        SoupModeCheck();
     }
 
     void DisableGameModes()

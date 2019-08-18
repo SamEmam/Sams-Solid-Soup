@@ -5,6 +5,9 @@ using UnityEngine;
 public static class GamePrefs
 {
     private static int player1Score, player2Score, player3Score, player4Score, player5Score, player6Score, player7Score, player8Score;
+    private static int gamesPlayed;
+    private static List<int> soupList;
+    private static bool withSplit;
     private static float gameTime;
     private static bool player1 = false, player2 = false, player3 = false, player4 = false, player5 = false, player6 = false, player7 = false, player8 = false;
     private static GameModeEnum gameMode;
@@ -12,6 +15,42 @@ public static class GamePrefs
     private static ColorEnum p1Color = ColorEnum.Undefined, p2Color = ColorEnum.Undefined, p3Color = ColorEnum.Undefined, p4Color = ColorEnum.Undefined, p5Color = ColorEnum.Undefined, p6Color = ColorEnum.Undefined, p7Color = ColorEnum.Undefined, p8Color = ColorEnum.Undefined;
     private static TypeEnum p1Type, p2Type, p3Type, p4Type, p5Type, p6Type, p7Type, p8Type;
     private static RaceMapEnum raceMapEnum;
+
+    public static bool WithSplit
+    {
+        get
+        {
+            return withSplit;
+        }
+        set
+        {
+            withSplit = value;
+        }
+    }
+
+    public static List<int> SoupList
+    {
+        get
+        {
+            return soupList;
+        }
+        set
+        {
+            soupList = value;
+        }
+    }
+
+    public static int GamesPlayed
+    {
+        get
+        {
+            return gamesPlayed;
+        }
+        set
+        {
+            gamesPlayed = value;
+        }
+    }
 
     public static TypeEnum P1Type
     {

@@ -12,7 +12,7 @@ public class GameTimeSelection : MonoBehaviour
     private Player player;
 
     [SerializeField]
-    private int time = 10;
+    private int time = 20;
 
     [SerializeField]
     private TextObjectColoring textObjectColoring;
@@ -31,7 +31,11 @@ public class GameTimeSelection : MonoBehaviour
     [SerializeField]
     private GameObject subMode;
     [SerializeField]
+    private GameObject soupMode;
+    [SerializeField]
     private GameSubModeSelection subModeSelector;
+    [SerializeField]
+    private GameSoupModeSelection soupModeSelector;
     [SerializeField]
     private GameModeSelection gameModeSelector;
 
@@ -96,6 +100,10 @@ public class GameTimeSelection : MonoBehaviour
             if (subMode.activeInHierarchy)
             {
                 subModeSelector.isSelected = true;
+            }
+            else if (soupMode.activeInHierarchy)
+            {
+                soupModeSelector.isSelected = true;
             }
             else
             {

@@ -7,12 +7,14 @@ public class LocalGameManager : MonoBehaviour
 {
     private Player player;
     private SceneLoader sceneLoader;
+    private SSoupSetup soupSetup;
 
     // Start is called before the first frame update
     void Start()
     {
         player = ReInput.players.GetPlayer(1);
         sceneLoader = FindObjectOfType<SceneLoader>();
+        soupSetup = FindObjectOfType<SSoupSetup>();
     }
 
     // Update is called once per frame
@@ -31,10 +33,18 @@ public class LocalGameManager : MonoBehaviour
             }
             else if (GamePrefs.GameMode == GameModeEnum.Warfare)
             {
-                sceneLoader.LoadSceneByIndex(3);
+                sceneLoader.LoadSceneByIndex(2);
             }
             else if (GamePrefs.GameMode == GameModeEnum.Soup)
             {
+                if (GamePrefs.WithSplit)
+                {
+                    soupSetup.SetSoupList(true);
+                }
+                else
+                {
+                    soupSetup.SetSoupList(false);
+                }
                 sceneLoader.LoadSceneByIndex(4);
             }
         }
