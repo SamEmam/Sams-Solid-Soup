@@ -10,19 +10,28 @@ public class SScoreScene : MonoBehaviour
     public SceneLoader sceneLoader;
 
     public TextMeshProUGUI countdown;
-    public TextMeshProUGUI roundsPlayed;
+    public TextMeshProUGUI gamesPlayedText;
 
     private bool isLoadingScene = false;
 
     private void Start()
     {
-        roundsPlayed.text = "Games played: " + GamePrefs.GamesPlayed;
-        GamePrefs.GamesPlayed++;
+        gamesPlayedText.text = "Games played: " + GamePrefs.GamesPlayed;
+        GamePrefs.GamesPlayed += 1;
+        GamePrefs.GamesIndex += 1;
 
-        if (GamePrefs.GamesPlayed > GamePrefs.SoupList.Count)
+        if (GamePrefs.GamesIndex > GamePrefs.SoupList.Count)
         {
-            // End Game
-            sceneLoader.LoadSceneByIndex(1);
+            // Reshuffle games
+            for (int i = 0; i < GamePrefs.SoupList.Count - 1; i++)
+            {
+                var r = Random.Range(i, GamePrefs.SoupList.Count);
+                var temp = GamePrefs.SoupList[i];
+                GamePrefs.SoupList[i] = GamePrefs.SoupList[r];
+                GamePrefs.SoupList[r] = temp;
+            }
+            GamePrefs.GamesIndex = 1;
+            
         }
     }
 
@@ -45,7 +54,7 @@ public class SScoreScene : MonoBehaviour
         {
             
             isLoadingScene = true;
-            sceneLoader.LoadSceneByIndex(GamePrefs.SoupList[GamePrefs.GamesPlayed - 1]);
+            sceneLoader.LoadSceneByIndex(GamePrefs.SoupList[GamePrefs.GamesIndex - 1]);
         }
 
         scoreScreenCounter -= Time.deltaTime;

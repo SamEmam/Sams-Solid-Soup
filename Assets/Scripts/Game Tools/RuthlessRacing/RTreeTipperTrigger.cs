@@ -65,7 +65,6 @@ public class RTreeTipperTrigger : MonoBehaviour
             hasFallen = true;
             rb.isKinematic = false;
             rb.useGravity = true;
-            Debug.Log(name);
         }
 
         if (other.tag == "Tree" && !isPaused)
@@ -73,7 +72,6 @@ public class RTreeTipperTrigger : MonoBehaviour
             hasFallen = true;
             rb.isKinematic = false;
             rb.useGravity = true;
-            Debug.Log(name);
         }
     }
 
@@ -85,7 +83,6 @@ public class RTreeTipperTrigger : MonoBehaviour
             hasFallen = true;
             rb.isKinematic = false;
             rb.useGravity = true;
-            Debug.Log(name);
         }
 
         if (tag == "Tree" && !isPaused)
@@ -93,7 +90,6 @@ public class RTreeTipperTrigger : MonoBehaviour
             hasFallen = true;
             rb.isKinematic = false;
             rb.useGravity = true;
-            Debug.Log(name);
         }
     }
 }

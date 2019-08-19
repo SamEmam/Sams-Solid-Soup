@@ -5,6 +5,7 @@ using UnityEngine;
 public class SRaceCheckpoint : MonoBehaviour
 {
     public int checkpointNum;
+    public GameObject explosion;
 
     private void Awake()
     {
@@ -24,11 +25,19 @@ public class SRaceCheckpoint : MonoBehaviour
 
             if (cp.checkpointCount == checkpointNum - 1)
             {
+                if (explosion)
+                {
+                    Instantiate(explosion, transform.position + Vector3.down, transform.rotation);
+                }
                 cp.checkpointCount++;
                 cp.respawnPoint = transform;
             }
             else if (cp.checkpointCount == checkpointNum)
             {
+                //if (explosion)
+                //{
+                //    Instantiate(explosion, transform.position + Vector3.down, transform.rotation);
+                //}
                 cp.checkpointCount = checkpointNum;
                 cp.respawnPoint = transform;
             }

@@ -4785,7 +4785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startIndex: 9
   splitIndex: 9
-  finishIndex: 10
+  finishIndex: 13
   list4Player: 
   list8Player: 
 --- !u!4 &852560903 stripped

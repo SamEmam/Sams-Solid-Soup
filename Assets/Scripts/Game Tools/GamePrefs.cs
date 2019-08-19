@@ -5,9 +5,9 @@ using UnityEngine;
 public static class GamePrefs
 {
     private static int player1Score, player2Score, player3Score, player4Score, player5Score, player6Score, player7Score, player8Score;
-    private static int gamesPlayed;
+    private static int gamesPlayed = 0, gamesIndex = 0;
     private static List<int> soupList;
-    private static bool withSplit;
+    private static bool withSplit = true;
     private static float gameTime;
     private static bool player1 = false, player2 = false, player3 = false, player4 = false, player5 = false, player6 = false, player7 = false, player8 = false;
     private static GameModeEnum gameMode;
@@ -37,6 +37,18 @@ public static class GamePrefs
         set
         {
             soupList = value;
+        }
+    }
+
+    public static int GamesIndex
+    {
+        get
+        {
+            return gamesIndex;
+        }
+        set
+        {
+            gamesIndex = value;
         }
     }
 
