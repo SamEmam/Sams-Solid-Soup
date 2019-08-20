@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Circuit Dirt Trail.unity
     guid: b6596bf8f643e0c449b4595eb01e383d
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Dodge The Trucks.unity
+    guid: 04b879d9299234b44b56c1631074aede
   m_configObjects: {}

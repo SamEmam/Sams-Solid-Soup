@@ -13,6 +13,8 @@ public class SPointsBar : MonoBehaviour
     public GameObject canvas;
     private bool canUpdate;
 
+    public int startPoints;
+
     private bool maxHasBeenUpdated = false;
 
     public int currentValue;
@@ -24,27 +26,35 @@ public class SPointsBar : MonoBehaviour
         {
             case 1:
                 SetupPointsBar(GamePrefs.Player1, GamePrefs.Player1Score, GamePrefs.P1Color);
+                startPoints = GamePrefs.Player1Score;
                 break;
             case 2:
                 SetupPointsBar(GamePrefs.Player2, GamePrefs.Player2Score, GamePrefs.P2Color);
+                startPoints = GamePrefs.Player2Score;
                 break;
             case 3:
                 SetupPointsBar(GamePrefs.Player3, GamePrefs.Player3Score, GamePrefs.P3Color);
+                startPoints = GamePrefs.Player3Score;
                 break;
             case 4:
                 SetupPointsBar(GamePrefs.Player4, GamePrefs.Player4Score, GamePrefs.P4Color);
+                startPoints = GamePrefs.Player4Score;
                 break;
             case 5:
                 SetupPointsBar(GamePrefs.Player5, GamePrefs.Player5Score, GamePrefs.P5Color);
+                startPoints = GamePrefs.Player5Score;
                 break;
             case 6:
                 SetupPointsBar(GamePrefs.Player6, GamePrefs.Player6Score, GamePrefs.P6Color);
+                startPoints = GamePrefs.Player6Score;
                 break;
             case 7:
                 SetupPointsBar(GamePrefs.Player7, GamePrefs.Player7Score, GamePrefs.P7Color);
+                startPoints = GamePrefs.Player7Score;
                 break;
             case 8:
                 SetupPointsBar(GamePrefs.Player8, GamePrefs.Player8Score, GamePrefs.P8Color);
+                startPoints = GamePrefs.Player8Score;
                 break;
 
         }
@@ -162,6 +172,10 @@ public class SPointsBar : MonoBehaviour
             }
 
             txtPoints.text = currentValue.ToString();
+            if (startPoints != currentValue)
+            {
+                txtPoints.text += " (+" + (currentValue - startPoints) + ")";
+            }
             imgPointsBar.fillAmount = currenctPercent;
         }
     }
