@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6856720814577071270}
   - component: {fileID: 6518159986953880318}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Explosion Finish Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

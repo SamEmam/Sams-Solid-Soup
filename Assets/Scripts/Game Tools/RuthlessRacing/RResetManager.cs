@@ -13,7 +13,6 @@ public class RResetManager : MonoBehaviour
     public void ResetPlayers()
     {
         GM.playersLeft = 0;
-        Debug.Log("RM ResetPlayers");
         if (GamePrefs.Player1)
         {
             GM.p1.SetActive(true);

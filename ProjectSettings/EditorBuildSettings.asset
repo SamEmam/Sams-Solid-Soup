@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Dodge The Trucks.unity
     guid: 04b879d9299234b44b56c1631074aede
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Endless Runner.unity
+    guid: 151bdeb15a4ce4e438c2dece4a85ee55
   m_configObjects: {}
