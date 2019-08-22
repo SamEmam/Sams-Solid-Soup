@@ -8,10 +8,10 @@ public class RRocketSniper : MonoBehaviour
     [Header("Attributes")]
     public int playerNum;
     public int powerupNum = 3;
-    public float radius = 10f;
+    private float radius = 75f;
     public float threshold = 0.9f;
     public Transform target;
-    public float lockOnTime = 2f;
+    //public float lockOnTime = 2f;
     private List<Transform> selectables;
     private float spawnOffset = 1f;
     private float closest = 0f;
@@ -56,22 +56,22 @@ public class RRocketSniper : MonoBehaviour
         }
     }
 
-    IEnumerator LockOnTarget()
-    {
-        var tempTime = lockOnTime;
-        while (target)
-        {
-            tempTime -= Time.deltaTime;
+    //IEnumerator LockOnTarget()
+    //{
+    //    var tempTime = lockOnTime;
+    //    while (target)
+    //    {
+    //        tempTime -= Time.deltaTime;
 
-            if (tempTime <= 0)
-            {
-                break;
-            }
-            yield return null;
-        }
-        laserPoint.hasTarget = true;
-        lockedOn = true;
-    }
+    //        if (tempTime <= 0)
+    //        {
+    //            break;
+    //        }
+    //        yield return null;
+    //    }
+    //    laserPoint.hasTarget = true;
+    //    lockedOn = true;
+    //}
 
     void Shoot()
     {

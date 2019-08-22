@@ -7,17 +7,18 @@ public class VersionTool : MonoBehaviour
 {
     public TextMeshProUGUI versionText;
     public string _version;
+    public bool readFromPrefs = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (_version != "")
+        if (!readFromPrefs)
         {
             UpdateVersion(_version);
         }
         else
         {
-            _version = PlayerPrefs.GetString("version");
+            versionText.text = PlayerPrefs.GetString("version");
         }
     }
 

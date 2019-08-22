@@ -11,7 +11,7 @@ public class RWaterForce : MonoBehaviour
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
 
-        if (rb && other.tag == "Player")
+        if (rb && (other.tag == "Player" || other.tag == "Buoyant"))
         {
             rb.AddForce(direction.rotation.eulerAngles * force, ForceMode.Acceleration);
         }

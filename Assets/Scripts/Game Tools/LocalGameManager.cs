@@ -27,6 +27,8 @@ public class LocalGameManager : MonoBehaviour
 
         if (player.GetButtonDown("Start"))
         {
+            ResetPlayerScore();
+
             if (GamePrefs.GameMode == GameModeEnum.Racing)
             {
                 sceneLoader.LoadSceneByIndex(2);
@@ -48,5 +50,17 @@ public class LocalGameManager : MonoBehaviour
                 sceneLoader.LoadSceneByIndex(4);
             }
         }
+    }
+
+    void ResetPlayerScore()
+    {
+        GamePrefs.Player1Score = 0;
+        GamePrefs.Player2Score = 0;
+        GamePrefs.Player3Score = 0;
+        GamePrefs.Player4Score = 0;
+        GamePrefs.Player5Score = 0;
+        GamePrefs.Player6Score = 0;
+        GamePrefs.Player7Score = 0;
+        GamePrefs.Player8Score = 0;
     }
 }

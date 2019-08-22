@@ -79,7 +79,7 @@ public class RMineLauncher : MonoBehaviour
     {
         BoxCollider collider = shotMine.GetComponent<BoxCollider>();
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
 
         collider.enabled = true;
 

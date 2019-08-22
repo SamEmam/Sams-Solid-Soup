@@ -26,7 +26,7 @@ public class SDTTSpawner : MonoBehaviour
         {
             SetSpawnPos();
             Instantiate(SelectSpawn(), spawnPos, transform.rotation);
-            if (spawnStartSpeed > 1.2f)
+            if (spawnStartSpeed > 1.0f)
             {
                 spawnStartSpeed -= speedIncrement;
             }

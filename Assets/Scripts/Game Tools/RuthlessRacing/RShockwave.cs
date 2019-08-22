@@ -6,9 +6,9 @@ using Rewired;
 public class RShockwave : MonoBehaviour
 {
     [Header("Attributes")]
-    public float impactForce = 5f;
-    public float radius = 15f;
-    public float upwardsThrust = 2f;
+    private float impactForce = 10f;
+    private float radius = 15f;
+    private float upwardsThrust = 5f;
 
     [Header("Powerup Settings")]
     public int playerNum;

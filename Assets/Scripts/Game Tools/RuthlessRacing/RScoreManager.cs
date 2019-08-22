@@ -29,11 +29,16 @@ public class RScoreManager : MonoBehaviour
 
     void WinScoreCalc()
     {
-        if (GM.playersLeft < 3)
+        winScore = winScoreHalf;
+        if (GM.playersLeft > 2)
         {
-            winScore = winScoreHalf;
+            winScore = winScoreHalf * 2;
         }
         if (GM.playersLeft > 4)
+        {
+            winScore = winScoreHalf * 3;
+        }
+        if (GM.playersLeft > 6)
         {
             winScore = winScoreDouble;
         }

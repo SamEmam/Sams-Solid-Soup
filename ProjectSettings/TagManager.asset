@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - Tree
   - Vehicle
+  - Buoyant
   layers:
   - Default
   - TransparentFX
