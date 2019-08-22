@@ -21,7 +21,7 @@ public class VersionTool : MonoBehaviour
         }
     }
 
-    void UpdateVersion(string version)
+    void UpdateVersion(string version) 
     {
         PlayerPrefs.SetString("version", version);
         _version = version;
