@@ -11,7 +11,7 @@ public class SERDistanceDial : MonoBehaviour
 
     private void Update()
     {
-        distance = (int)Vector3.Distance(transform.position, killWall.position) - 100;
+        distance = (int)Vector3.Distance(transform.position, killWall.position) - 50;
         dial.text = distance + " m";
     }
 }

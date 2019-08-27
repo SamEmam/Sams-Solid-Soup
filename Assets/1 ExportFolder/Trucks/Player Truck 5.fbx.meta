@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 4f5335a0e4c215746880758f16992452
+timeCreated: 1526586264
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: block_default_205
+    100002: detail_exhaust_168
+    100004: detail_fenderSquare_163
+    100006: detail_fenderSquare_165
+    100008: detail_fenderSquare_181
+    100010: detail_fenderSquare_206
+    100012: detail_mirror_155
+    100014: detail_mirror_156
+    100016: hood_sleek_187
+    100018: //RootNode
+    100020: trunk_bedFlat_195
+    100022: trunk_truck_196
+    100024: wall_straight_201
+    100026: wall_straight_202
+    100028: wall_straight_203
+    100030: wheel_colored_189
+    100032: wheel_colored_190
+    100034: wheel_colored_191
+    100036: wheel_colored_192
+    100038: windshield_default_183
+    400000: block_default_205
+    400002: detail_exhaust_168
+    400004: detail_fenderSquare_163
+    400006: detail_fenderSquare_165
+    400008: detail_fenderSquare_181
+    400010: detail_fenderSquare_206
+    400012: detail_mirror_155
+    400014: detail_mirror_156
+    400016: hood_sleek_187
+    400018: //RootNode
+    400020: trunk_bedFlat_195
+    400022: trunk_truck_196
+    400024: wall_straight_201
+    400026: wall_straight_202
+    400028: wall_straight_203
+    400030: wheel_colored_189
+    400032: wheel_colored_190
+    400034: wheel_colored_191
+    400036: wheel_colored_192
+    400038: windshield_default_183
+    2100000: lightBlue
+    2100002: glass
+    2100004: _defaultMat
+    2100006: tire
+    2100008: orangeSteel
+    2100010: blueSteel
+    2100012: light
+    2300000: block_default_205
+    2300002: detail_exhaust_168
+    2300004: detail_fenderSquare_163
+    2300006: detail_fenderSquare_165
+    2300008: detail_fenderSquare_181
+    2300010: detail_fenderSquare_206
+    2300012: detail_mirror_155
+    2300014: detail_mirror_156
+    2300016: hood_sleek_187
+    2300018: trunk_bedFlat_195
+    2300020: trunk_truck_196
+    2300022: wall_straight_201
+    2300024: wall_straight_202
+    2300026: wall_straight_203
+    2300028: wheel_colored_189
+    2300030: wheel_colored_190
+    2300032: wheel_colored_191
+    2300034: wheel_colored_192
+    2300036: windshield_default_183
+    3300000: block_default_205
+    3300002: detail_exhaust_168
+    3300004: detail_fenderSquare_163
+    3300006: detail_fenderSquare_165
+    3300008: detail_fenderSquare_181
+    3300010: detail_fenderSquare_206
+    3300012: detail_mirror_155
+    3300014: detail_mirror_156
+    3300016: hood_sleek_187
+    3300018: trunk_bedFlat_195
+    3300020: trunk_truck_196
+    3300022: wall_straight_201
+    3300024: wall_straight_202
+    3300026: wall_straight_203
+    3300028: wheel_colored_189
+    3300030: wheel_colored_190
+    3300032: wheel_colored_191
+    3300034: wheel_colored_192
+    3300036: windshield_default_183
+    4300000: detail_mirror_155
+    4300002: detail_mirror_156
+    4300004: detail_fenderSquare_163
+    4300006: detail_fenderSquare_165
+    4300008: detail_exhaust_168
+    4300010: detail_fenderSquare_181
+    4300012: windshield_default_183
+    4300014: hood_sleek_187
+    4300016: wheel_colored_189
+    4300018: wheel_colored_190
+    4300020: wheel_colored_191
+    4300022: wheel_colored_192
+    4300024: trunk_bedFlat_195
+    4300026: trunk_truck_196
+    4300028: wall_straight_201
+    4300030: wall_straight_202
+    4300032: wall_straight_203
+    4300034: block_default_205
+    4300036: detail_fenderSquare_206
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

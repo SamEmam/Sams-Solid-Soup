@@ -10,6 +10,7 @@ TagManager:
   - Tree
   - Vehicle
   - Buoyant
+  - Objective
   layers:
   - Default
   - TransparentFX

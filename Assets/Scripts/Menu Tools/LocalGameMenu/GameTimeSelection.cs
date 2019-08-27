@@ -133,7 +133,7 @@ public class GameTimeSelection : MonoBehaviour
 
     void DecreaseTime()
     {
-        if (time == 10)
+        if (time == 5)
         {
             return;
         }

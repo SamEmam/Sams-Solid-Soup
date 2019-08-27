@@ -42,7 +42,7 @@ public class SScoreScene : MonoBehaviour
         if (GamePrefs.GameTime <= 0)
         {
             // End Game
-            sceneLoader.LoadSceneByIndex(1);
+            sceneLoader.LoadSceneByIndex(5);
         }
 
         if (isLoadingScene)

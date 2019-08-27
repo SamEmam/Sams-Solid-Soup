@@ -72,7 +72,7 @@ public class SScoreToObject : MonoBehaviour
             temp = (int)System.Char.GetNumericValue(scoreCharArray[i]);
             GameObject instantiatedNum = Instantiate(charObjArray[temp], position.position + offset, position.rotation);
             instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
-            offset += Vector3.left * 3;
+            offset += Vector3.right * 3;
         }
 
     }

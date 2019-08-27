@@ -23,16 +23,16 @@ public class StartManager : MonoBehaviour
             switch ((int)GamePrefs.RaceMapEnum)
             {
                 case 0:
-                    sceneLoader.LoadSceneByIndex(5);
-                    break;
-                case 1:
                     sceneLoader.LoadSceneByIndex(6);
                     break;
-                case 2:
+                case 1:
                     sceneLoader.LoadSceneByIndex(7);
                     break;
-                case 3:
+                case 2:
                     sceneLoader.LoadSceneByIndex(8);
+                    break;
+                case 3:
+                    sceneLoader.LoadSceneByIndex(9);
                     break;
             }
         }

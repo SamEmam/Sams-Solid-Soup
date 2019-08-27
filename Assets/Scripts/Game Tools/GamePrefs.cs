@@ -6,6 +6,7 @@ public static class GamePrefs
 {
     private static int player1Score, player2Score, player3Score, player4Score, player5Score, player6Score, player7Score, player8Score;
     private static int gamesPlayed = 0, gamesIndex = 0;
+    private static int totalPlayerCount;
     private static List<int> soupList;
     private static bool withSplit = true;
     private static float gameTime;
@@ -15,6 +16,18 @@ public static class GamePrefs
     private static ColorEnum p1Color = ColorEnum.Undefined, p2Color = ColorEnum.Undefined, p3Color = ColorEnum.Undefined, p4Color = ColorEnum.Undefined, p5Color = ColorEnum.Undefined, p6Color = ColorEnum.Undefined, p7Color = ColorEnum.Undefined, p8Color = ColorEnum.Undefined;
     private static TypeEnum p1Type, p2Type, p3Type, p4Type, p5Type, p6Type, p7Type, p8Type;
     private static RaceMapEnum raceMapEnum;
+
+    public static int TotalPlayerCount
+    {
+        get
+        {
+            return totalPlayerCount;
+        }
+        set
+        {
+            totalPlayerCount = value;
+        }
+    }
 
     public static bool WithSplit
     {

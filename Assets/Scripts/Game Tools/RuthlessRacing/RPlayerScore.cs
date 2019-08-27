@@ -7,11 +7,13 @@ public class RPlayerScore : MonoBehaviour
     public int playerNum;
 
     public int score = 0;
-    
+
     //private int laps = 0;
     //private GameObject finishParticles;
     //private string playerColorText;
     
+
+
     void SetScore()
     {
         switch (playerNum)
@@ -99,4 +101,6 @@ public class RPlayerScore : MonoBehaviour
         }
         score = 0;
     }
+
+    
 }

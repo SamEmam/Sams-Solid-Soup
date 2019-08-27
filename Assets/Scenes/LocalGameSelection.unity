@@ -5016,9 +5016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63928cd4194b4ce48b2c4b578de8300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startIndex: 9
-  splitIndex: 15
-  finishIndex: 16
+  startIndex: 10
+  splitIndex: 12
+  finishIndex: 20
   list4Player: 
   list8Player: 
 --- !u!4 &852560903 stripped

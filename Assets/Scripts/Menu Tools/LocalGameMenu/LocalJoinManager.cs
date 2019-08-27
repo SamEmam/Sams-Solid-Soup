@@ -11,6 +11,8 @@ public class LocalJoinManager : MonoBehaviour
     [SerializeField]
     private GameObject playerObject;
 
+    private bool hasJoined;
+
     private void Start()
     {
         player = ReInput.players.GetPlayer(playerNum);
@@ -24,12 +26,12 @@ public class LocalJoinManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetButtonDown("A"))
+        if (player.GetButtonDown("A") && !hasJoined)
         {
             JoinPlayer();
         }
 
-        if (player.GetButtonDown("B"))
+        if (player.GetButtonDown("B") && hasJoined)
         {
             LeavePlayer();
         }
@@ -37,6 +39,8 @@ public class LocalJoinManager : MonoBehaviour
 
     void LeavePlayer()
     {
+        hasJoined = false;
+        GamePrefs.TotalPlayerCount -= 1;
         playerObject.SetActive(false);
         switch (playerNum)
         {
@@ -69,6 +73,8 @@ public class LocalJoinManager : MonoBehaviour
 
     void JoinPlayer()
     {
+        hasJoined = true;
+        GamePrefs.TotalPlayerCount += 1;
         playerObject.SetActive(true);
         switch (playerNum)
         {

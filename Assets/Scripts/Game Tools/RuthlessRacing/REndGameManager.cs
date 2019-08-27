@@ -39,7 +39,7 @@ public class REndGameManager : MonoBehaviour
     {
         gameHasEnded = true;
         yield return new WaitForSeconds(3);
-        sceneLoader.LoadSceneByIndex(1); // CHANGE TO score scene
+        sceneLoader.LoadSceneByIndex(5); // CHANGE TO score scene
     }
 
     public void RewardWinner(int playerNum)
@@ -47,35 +47,35 @@ public class REndGameManager : MonoBehaviour
         switch (playerNum)
         {
             case 1:
-                GamePrefs.Player1Score++;
+                //GamePrefs.Player1Score++;
                 message.text += "P1 WINS!";
                 break;
             case 2:
-                GamePrefs.Player2Score++;
+                //GamePrefs.Player2Score++;
                 message.text += "P2 WINS!";
                 break;
             case 3:
-                GamePrefs.Player3Score++;
+                //GamePrefs.Player3Score++;
                 message.text += "P3 WINS!";
                 break;
             case 4:
-                GamePrefs.Player4Score++;
+                //GamePrefs.Player4Score++;
                 message.text += "P4 WINS!";
                 break;
             case 5:
-                GamePrefs.Player5Score++;
+                //GamePrefs.Player5Score++;
                 message.text += "P5 WINS!";
                 break;
             case 6:
-                GamePrefs.Player6Score++;
+                //GamePrefs.Player6Score++;
                 message.text += "P6 WINS!";
                 break;
             case 7:
-                GamePrefs.Player7Score++;
+                //GamePrefs.Player7Score++;
                 message.text += "P7 WINS!";
                 break;
             case 8:
-                GamePrefs.Player8Score++;
+                //GamePrefs.Player8Score++;
                 message.text += "P8 WINS!";
                 break;
 

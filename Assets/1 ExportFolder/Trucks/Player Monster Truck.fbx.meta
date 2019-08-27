@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 3cbccf46b456da94681476eaf33dfcb6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: detail_engine_19
+    100002: detail_exhaust_43
+    100004: detail_exhaust_44
+    100006: detail_exhaust_45
+    100008: detail_exhaust_46
+    100010: detail_exhaustVertical_24
+    100012: detail_exhaustVertical_25
+    100014: detail_mirror_22
+    100016: detail_mirror_23
+    100018: detail_rollbar_20
+    100020: detail_spoilerRound_54
+    100022: engine_intakeArrow_35
+    100024: hood_square_16
+    100026: //RootNode
+    100028: trunk_bed_12
+    100030: wheel_large_47
+    100032: wheel_large_48
+    100034: wheel_large_49
+    100036: wheel_large_50
+    100038: windshield_truck_14
+    400000: detail_engine_19
+    400002: detail_exhaust_43
+    400004: detail_exhaust_44
+    400006: detail_exhaust_45
+    400008: detail_exhaust_46
+    400010: detail_exhaustVertical_24
+    400012: detail_exhaustVertical_25
+    400014: detail_mirror_22
+    400016: detail_mirror_23
+    400018: detail_rollbar_20
+    400020: detail_spoilerRound_54
+    400022: engine_intakeArrow_35
+    400024: hood_square_16
+    400026: //RootNode
+    400028: trunk_bed_12
+    400030: wheel_large_47
+    400032: wheel_large_48
+    400034: wheel_large_49
+    400036: wheel_large_50
+    400038: windshield_truck_14
+    2100000: blueSteel
+    2100002: _defaultMat
+    2100004: orangeSteel
+    2100006: glass
+    2100008: light
+    2100010: tire
+    2100012: lightRed
+    2100014: black
+    2300000: detail_engine_19
+    2300002: detail_exhaust_43
+    2300004: detail_exhaust_44
+    2300006: detail_exhaust_45
+    2300008: detail_exhaust_46
+    2300010: detail_exhaustVertical_24
+    2300012: detail_exhaustVertical_25
+    2300014: detail_mirror_22
+    2300016: detail_mirror_23
+    2300018: detail_rollbar_20
+    2300020: detail_spoilerRound_54
+    2300022: engine_intakeArrow_35
+    2300024: hood_square_16
+    2300026: trunk_bed_12
+    2300028: wheel_large_47
+    2300030: wheel_large_48
+    2300032: wheel_large_49
+    2300034: wheel_large_50
+    2300036: windshield_truck_14
+    3300000: detail_engine_19
+    3300002: detail_exhaust_43
+    3300004: detail_exhaust_44
+    3300006: detail_exhaust_45
+    3300008: detail_exhaust_46
+    3300010: detail_exhaustVertical_24
+    3300012: detail_exhaustVertical_25
+    3300014: detail_mirror_22
+    3300016: detail_mirror_23
+    3300018: detail_rollbar_20
+    3300020: detail_spoilerRound_54
+    3300022: engine_intakeArrow_35
+    3300024: hood_square_16
+    3300026: trunk_bed_12
+    3300028: wheel_large_47
+    3300030: wheel_large_48
+    3300032: wheel_large_49
+    3300034: wheel_large_50
+    3300036: windshield_truck_14
+    4300000: trunk_bed_12
+    4300002: windshield_truck_14
+    4300004: hood_square_16
+    4300006: detail_engine_19
+    4300008: detail_rollbar_20
+    4300010: detail_mirror_22
+    4300012: detail_mirror_23
+    4300014: detail_exhaustVertical_24
+    4300016: detail_exhaustVertical_25
+    4300018: engine_intakeArrow_35
+    4300020: detail_exhaust_43
+    4300022: detail_exhaust_44
+    4300024: detail_exhaust_45
+    4300026: detail_exhaust_46
+    4300028: wheel_large_47
+    4300030: wheel_large_48
+    4300032: wheel_large_49
+    4300034: wheel_large_50
+    4300036: detail_spoilerRound_54
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

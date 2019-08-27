@@ -30,15 +30,15 @@ public class RScoreManager : MonoBehaviour
     void WinScoreCalc()
     {
         winScore = winScoreHalf;
-        if (GM.playersLeft > 2)
+        if (GamePrefs.TotalPlayerCount > 2)
         {
             winScore = winScoreHalf * 2;
         }
-        if (GM.playersLeft > 4)
+        if (GamePrefs.TotalPlayerCount > 4)
         {
             winScore = winScoreHalf * 3;
         }
-        if (GM.playersLeft > 6)
+        if (GamePrefs.TotalPlayerCount > 6)
         {
             winScore = winScoreDouble;
         }
@@ -51,11 +51,77 @@ public class RScoreManager : MonoBehaviour
             rewardValue++;
         }
         score.score += rewardValue;
+        UpdatePrefScore(score.playerNum, rewardValue);
         if (score.score < 0)
         {
             score.score = 0;
         }
         rewardValue++;
+    }
+
+    void UpdatePrefScore(int playerNum, int reward)
+    {
+        switch (playerNum)
+        {
+            case 1:
+                GamePrefs.Player1Score += reward;
+                if (GamePrefs.Player1Score < 0)
+                {
+                    GamePrefs.Player1Score = 0;
+                }
+                break;
+            case 2:
+                GamePrefs.Player2Score += reward;
+                if (GamePrefs.Player2Score < 0)
+                {
+                    GamePrefs.Player2Score = 0;
+                }
+                break;
+            case 3:
+                GamePrefs.Player3Score += reward;
+                if (GamePrefs.Player3Score < 0)
+                {
+                    GamePrefs.Player3Score = 0;
+                }
+                break;
+            case 4:
+                GamePrefs.Player4Score += reward;
+                if (GamePrefs.Player4Score < 0)
+                {
+                    GamePrefs.Player4Score = 0;
+                }
+                break;
+            case 5:
+                GamePrefs.Player5Score += reward;
+                if (GamePrefs.Player5Score < 0)
+                {
+                    GamePrefs.Player5Score = 0;
+                }
+                break;
+            case 6:
+                GamePrefs.Player6Score += reward;
+                if (GamePrefs.Player6Score < 0)
+                {
+                    GamePrefs.Player6Score = 0;
+                }
+                break;
+            case 7:
+                GamePrefs.Player7Score += reward;
+                if (GamePrefs.Player7Score < 0)
+                {
+                    GamePrefs.Player7Score = 0;
+                }
+                break;
+            case 8:
+                GamePrefs.Player8Score += reward;
+                if (GamePrefs.Player8Score < 0)
+                {
+                    GamePrefs.Player8Score = 0;
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     public void SetRewardValue()
