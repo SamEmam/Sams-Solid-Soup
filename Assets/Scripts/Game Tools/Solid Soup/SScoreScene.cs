@@ -37,17 +37,17 @@ public class SScoreScene : MonoBehaviour
 
     private void Update()
     {
-        GamePrefs.GameTime -= Time.deltaTime;
+        
+        if (isLoadingScene)
+        {
+            return;
+        }
 
         if (GamePrefs.GameTime <= 0)
         {
             // End Game
+            isLoadingScene = true;
             sceneLoader.LoadSceneByIndex(5);
-        }
-
-        if (isLoadingScene)
-        {
-            return;
         }
 
         if (scoreScreenCounter <= 0)

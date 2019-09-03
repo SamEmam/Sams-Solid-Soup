@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 6163770774304496425}
   - component: {fileID: 3021392356317087247}
   - component: {fileID: 127792686408483020}
-  - component: {fileID: -988771291023428819}
-  - component: {fileID: 4772933812469614884}
+  - component: {fileID: -2054874157681381240}
   m_Layer: 0
   m_Name: Tree_Red_1
   m_TagString: Tree
@@ -90,11 +89,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163770774306424297}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 350
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -105,14 +104,14 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163770774306424297}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2dcb55e9abd0bd940aa3529714af2223, type: 3}
---- !u!114 &-988771291023428819
+--- !u!114 &-2054874157681381240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,20 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6163770774306424297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c61818af1d696e14d9f84c717bcd0672, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d787a27852fafb43a90f09d25f780e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &4772933812469614884
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6163770774306424297}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.8
-  m_Height: 5.4
-  m_Direction: 1
-  m_Center: {x: -1.69423, y: 2.664835, z: -1.523205}

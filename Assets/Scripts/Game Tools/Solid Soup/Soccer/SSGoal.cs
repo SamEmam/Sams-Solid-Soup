@@ -74,6 +74,7 @@ public class SSGoal : MonoBehaviour
             }
             else
             {
+                RespawnAll();
                 ball.position = new Vector3(0, 3, 0);
                 ballRB.velocity = Vector3.zero;
                 ballRB.angularVelocity = Vector3.zero;
@@ -128,6 +129,16 @@ public class SSGoal : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         sceneLoader.LoadSceneByIndex(4);
+    }
+
+    void RespawnAll()
+    {
+        SRacePlayerCheckpoint[] CPs = FindObjectsOfType<SRacePlayerCheckpoint>();
+
+        foreach (var cp in CPs)
+        {
+            cp.Respawn();
+        }
     }
 }
 

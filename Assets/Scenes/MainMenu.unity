@@ -3551,7 +3551,7 @@ MonoBehaviour:
       _startingCustomControllers: []
       _assignMouseOnStart: 0
       _assignKeyboardOnStart: 0
-      _excludeFromControllerAutoAssignment: 0
+      _excludeFromControllerAutoAssignment: 1
       _controllerMapLayoutManagerSettings:
         _enabled: 1
         _loadFromUserDataStore: 1
@@ -7932,7 +7932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1353220565}
-  _version: Version 0.1.8
+  _version: Version 0.1.11
   readFromPrefs: 0
 --- !u!114 &852105025
 MonoBehaviour:

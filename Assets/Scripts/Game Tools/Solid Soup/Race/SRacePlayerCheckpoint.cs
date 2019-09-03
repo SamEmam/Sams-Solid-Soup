@@ -8,6 +8,7 @@ public class SRacePlayerCheckpoint : MonoBehaviour
     public int playerNum;
     public int checkpointCount;
     public int laps;
+    public ParticleSystem respawnParticles;
     public Transform respawnPoint;
     public Player player;
     private Rigidbody rb;
@@ -22,14 +23,22 @@ public class SRacePlayerCheckpoint : MonoBehaviour
     {
         if (player.GetButtonDown("Respawn"))
         {
-            Respawn(respawnPoint);
+            Respawn();
         }
     }
 
-    void Respawn(Transform resPoint)
+    public void Respawn()
     {
-        gameObject.transform.position = resPoint.position;
-        gameObject.transform.rotation = resPoint.rotation;
+        if (respawnParticles)
+        {
+            Instantiate(respawnParticles, transform.position, Quaternion.identity);
+        }
+        gameObject.transform.position = respawnPoint.position;
+        gameObject.transform.rotation = respawnPoint.rotation;
+        if (respawnParticles)
+        {
+            Instantiate(respawnParticles, transform.position, Quaternion.identity);
+        }
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }

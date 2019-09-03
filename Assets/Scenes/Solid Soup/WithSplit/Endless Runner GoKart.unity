@@ -14849,7 +14849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b383a2d4aeb6547b550ea3ba467b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceBeforeSpawn: 100
+  distanceBeforeSpawn: 200
   blockSize: 200
   objs:
   - {fileID: 251148660465366359, guid: 905fab36c49ae1641850e134aef09c47, type: 3}
@@ -14860,13 +14860,13 @@ MonoBehaviour:
   - {fileID: 4867152708330796014, guid: 9fc5da53c782bee4aa97fb9c5ceccff1, type: 3}
   - {fileID: 5949768070572453145, guid: a7ed0bde022b00640b6b0b6a8351cc45, type: 3}
   p1: {fileID: 4269301731547261087}
-  p2: {fileID: 0}
-  p3: {fileID: 0}
-  p4: {fileID: 0}
-  p5: {fileID: 0}
-  p6: {fileID: 0}
-  p7: {fileID: 0}
-  p8: {fileID: 0}
+  p2: {fileID: 1644905416}
+  p3: {fileID: 141511134}
+  p4: {fileID: 1987908078}
+  p5: {fileID: 1497860690}
+  p6: {fileID: 463487014}
+  p7: {fileID: 1023060646}
+  p8: {fileID: 1743292852}
 --- !u!1001 &280798455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16899,7 +16899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &319229410
 Transform:
   m_ObjectHideFlags: 0
@@ -17001,7 +17001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewarded: 0
-  playerNum: 0
+  playerNum: 4
   GM: {fileID: 980128426}
 --- !u!114 &319229414
 MonoBehaviour:
@@ -17018,6 +17018,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &319229415
 MonoBehaviour:
@@ -17136,7 +17137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 4
   rightShoulder: {fileID: 1054521778}
   leftShoulder: {fileID: 797575423}
 --- !u!1 &322045668
@@ -17603,7 +17604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &341397780
 Transform:
   m_ObjectHideFlags: 0
@@ -17705,7 +17706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewarded: 0
-  playerNum: 0
+  playerNum: 8
   GM: {fileID: 980128426}
 --- !u!114 &341397784
 MonoBehaviour:
@@ -17722,6 +17723,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &341397785
 MonoBehaviour:
@@ -17840,7 +17842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 8
   rightShoulder: {fileID: 992448834}
   leftShoulder: {fileID: 1011880471}
 --- !u!1 &344551666
@@ -26945,7 +26947,7 @@ PrefabInstance:
     - target: {fileID: 3305496, guid: 080163e4c778e8d4fb170d5395ed0614, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1444044537}
+      objectReference: {fileID: 1429058770}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 080163e4c778e8d4fb170d5395ed0614, type: 3}
 --- !u!4 &604844812 stripped
@@ -31563,7 +31565,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh284976
+  m_Name: pb_Mesh2553100
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31746,7 +31748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &886264748
 Transform:
   m_ObjectHideFlags: 0
@@ -31865,6 +31867,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &886264753
 MonoBehaviour:
@@ -31983,7 +31986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 3
   rightShoulder: {fileID: 1561380597}
   leftShoulder: {fileID: 1598086084}
 --- !u!1 &891701092
@@ -33211,6 +33214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+  text: {fileID: 1946114149}
 --- !u!114 &980128432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45710,7 +45714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1099868192
 Transform:
   m_ObjectHideFlags: 0
@@ -45812,7 +45816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewarded: 0
-  playerNum: 0
+  playerNum: 7
   GM: {fileID: 980128426}
 --- !u!114 &1099868196
 MonoBehaviour:
@@ -45829,6 +45833,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &1099868197
 MonoBehaviour:
@@ -45947,7 +45952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 7
   rightShoulder: {fileID: 468748062}
   leftShoulder: {fileID: 1920746447}
 --- !u!1 &1101831395
@@ -56701,7 +56706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1384532683
 Transform:
   m_ObjectHideFlags: 0
@@ -56820,6 +56825,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &1384532688
 MonoBehaviour:
@@ -56938,7 +56944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 2
   rightShoulder: {fileID: 1055764619}
   leftShoulder: {fileID: 300598299}
 --- !u!1001 &1386806423
@@ -57655,6 +57661,169 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1422636089}
   m_PrefabAsset: {fileID: 0}
+--- !u!43 &1429058770
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh2552604
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 6
+    localAABB:
+      m_Center: {x: -8.421574, y: 0.000002026558, z: 4.999988}
+      m_Extent: {x: 0.22003269, y: 0, z: 4.999988}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200030004000500
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 6
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 288
+    _typelessdata: 03440ac100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d833903c100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d853903c10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d03440ac100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d853903c10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d05440ac10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -8.421574, y: 0.000002026558, z: 4.999988}
+    m_Extent: {x: 0.22003269, y: 0, z: 4.999988}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1433382012
 GameObject:
   m_ObjectHideFlags: 0
@@ -57823,169 +57992,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!43 &1444044537
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh284482
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 6
-    localAABB:
-      m_Center: {x: -8.421574, y: 0.000002026558, z: 4.999988}
-      m_Extent: {x: 0.22003269, y: 0, z: 4.999988}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200030004000500
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 6
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 288
-    _typelessdata: 03440ac100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d833903c100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d853903c10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d03440ac100000836e7ff1f41000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d853903c10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d05440ac10000083600000000000000000000803f000000000000c0ff0000c0ff0000c0ff0000803f2033c73e9816813d
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -8.421574, y: 0.000002026558, z: 4.999988}
-    m_Extent: {x: 0.22003269, y: 0, z: 4.999988}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1446468219
 GameObject:
   m_ObjectHideFlags: 0
@@ -65785,7 +65791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1684238171
 Transform:
   m_ObjectHideFlags: 0
@@ -65887,7 +65893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewarded: 0
-  playerNum: 0
+  playerNum: 6
   GM: {fileID: 980128426}
 --- !u!114 &1684238175
 MonoBehaviour:
@@ -65904,6 +65910,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &1684238176
 MonoBehaviour:
@@ -66022,7 +66029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 6
   rightShoulder: {fileID: 1305272124}
   leftShoulder: {fileID: 5030189}
 --- !u!1 &1687720781
@@ -66130,13 +66137,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p1: {fileID: 4269301731547261087}
-  p2: {fileID: 0}
-  p3: {fileID: 0}
-  p4: {fileID: 0}
-  p5: {fileID: 0}
-  p6: {fileID: 0}
-  p7: {fileID: 0}
-  p8: {fileID: 0}
+  p2: {fileID: 1644905416}
+  p3: {fileID: 141511134}
+  p4: {fileID: 1987908078}
+  p5: {fileID: 1497860690}
+  p6: {fileID: 463487014}
+  p7: {fileID: 1023060646}
+  p8: {fileID: 1743292852}
 --- !u!1 &1694889019
 GameObject:
   m_ObjectHideFlags: 0
@@ -68755,11 +68762,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2323342275490604247, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 959641625719816389, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
         type: 3}
       propertyPath: m_ClearFlags
@@ -68784,6 +68786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Depth
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323342275490604247, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815569f1d9daac04bb5f38cd0b0ad3cb, type: 3}
@@ -75753,6 +75760,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1946114112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1946114149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1943697016352232967, guid: 7aae98bee7dee9f439c535b9649e1ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1946114112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961192865
 GameObject:
   m_ObjectHideFlags: 0
@@ -77040,6 +77059,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061195072
 MonoBehaviour:
@@ -77449,7 +77469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2070446736
 Transform:
   m_ObjectHideFlags: 0
@@ -77551,7 +77571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewarded: 0
-  playerNum: 0
+  playerNum: 5
   GM: {fileID: 980128426}
 --- !u!114 &2070446740
 MonoBehaviour:
@@ -77568,6 +77588,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2070446741
 MonoBehaviour:
@@ -77686,7 +77707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 5
   rightShoulder: {fileID: 2101447849}
   leftShoulder: {fileID: 632024184}
 --- !u!1 &2079903249
@@ -81023,7 +81044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4929518982618290720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81060,7 +81081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e6703e397e6844c8a2c8c3c5202a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerNum: 1
   rightShoulder: {fileID: 4827774820582013008}
   leftShoulder: {fileID: 4827774820581988304}
 --- !u!114 &4929518982618290913

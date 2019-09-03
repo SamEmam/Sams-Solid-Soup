@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 5054143338647919803}
   - component: {fileID: 6309212721640982696}
   - component: {fileID: 3309662938748787000}
-  - component: {fileID: -5531719347500574137}
-  - component: {fileID: 598518818518402238}
+  - component: {fileID: 3104945699989036718}
   m_Layer: 0
   m_Name: Tree_Light_2
   m_TagString: Tree
@@ -89,7 +88,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5054143338650174075}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -104,15 +103,15 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5054143338650174075}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 350
+  m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-5531719347500574137
+--- !u!114 &3104945699989036718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,20 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5054143338650174075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c61818af1d696e14d9f84c717bcd0672, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d787a27852fafb43a90f09d25f780e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &598518818518402238
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5054143338650174075}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.1
-  m_Height: 8.4
-  m_Direction: 1
-  m_Center: {x: -0.85932, y: 4.124435, z: -0.992255}

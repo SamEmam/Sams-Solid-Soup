@@ -3701,7 +3701,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.2e-44, y: 2.2e-44, z: 2.2e-44, w: 2.2e-44}
+  m_BoundingSphereOverride: {x: -8.796361e+12, y: 1048576.4, z: -1.7014118e+38, w: 2.5243547e-29}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5018,7 +5018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startIndex: 10
   splitIndex: 12
-  finishIndex: 20
+  finishIndex: 21
   list4Player: 
   list8Player: 
 --- !u!4 &852560903 stripped

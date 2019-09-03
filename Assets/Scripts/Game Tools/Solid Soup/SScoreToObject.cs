@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SScoreToObject : MonoBehaviour
 {
+    public ScoreDirectionEnum direction;
     public Transform scorePos;
     public GameObject[] charObjArray;
     public Material[] materials;
@@ -11,6 +12,7 @@ public class SScoreToObject : MonoBehaviour
     private int playerNum;
     private string playerString;
     private Material objColor;
+
 
     private void OnEnable()
     {
@@ -72,8 +74,22 @@ public class SScoreToObject : MonoBehaviour
             temp = (int)System.Char.GetNumericValue(scoreCharArray[i]);
             GameObject instantiatedNum = Instantiate(charObjArray[temp], position.position + offset, position.rotation);
             instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
-            offset += Vector3.right * 3;
+
+            if (direction == ScoreDirectionEnum.right)
+            {
+                offset += Vector3.right * 3;
+            }
+            else
+            {
+                offset += Vector3.left * 3;
+            }
         }
 
     }
+}
+
+public enum ScoreDirectionEnum
+{
+    right,
+    left
 }

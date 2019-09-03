@@ -9,8 +9,11 @@ public class SRaceGameMaster : MonoBehaviour
 
     public int totalPlayers;
 
+    [HideInInspector]
     public RVehicleTypeSelector p1Type, p2Type, p3Type, p4Type, p5Type, p6Type, p7Type, p8Type;
+    [HideInInspector]
     public GameObject p1, p2, p3, p4, p5, p6, p7, p8;
+    [HideInInspector]
     public RPlayerScore p1Score = new RPlayerScore(), p2Score = new RPlayerScore(), p3Score = new RPlayerScore(), p4Score = new RPlayerScore(), p5Score = new RPlayerScore(), p6Score = new RPlayerScore(), p7Score = new RPlayerScore(), p8Score = new RPlayerScore();
 
     public SRaceFinishLine finishLine;
