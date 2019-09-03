@@ -74,6 +74,7 @@ public class STagGameMaster : MonoBehaviour
             tagText.text = "Game Over!";
             StartCoroutine(EndScene());
             tagObject.position = Vector3.up * 100;
+            return;
 
         }
         else

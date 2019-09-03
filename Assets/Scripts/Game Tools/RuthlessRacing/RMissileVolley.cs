@@ -78,7 +78,7 @@ public class RMissileVolley : MonoBehaviour
 
             missile.transform.SetParent(null);
             rb.isKinematic = false;
-            rb.useGravity = true;
+            //rb.useGravity = true;  // Disabled gravity as a test to increase usability of powerup
             rb.AddForce(missile.transform.forward * initialForce, ForceMode.VelocityChange);
 
             yield return wait;
