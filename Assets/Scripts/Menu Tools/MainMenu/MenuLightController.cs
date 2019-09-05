@@ -23,7 +23,7 @@ public class MenuLightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - startTime < 1.8f)
+        if (Time.time - startTime < 2.2f)
         {
             return;
         }

@@ -1770,6 +1770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Counter123: {fileID: 1946114147}
+  text1: Race
+  text2: 2 laps
+  text3: GO!
 --- !u!114 &980128426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34093,8 +34096,8 @@ MonoBehaviour:
   Pitch: 60
   Yaw: 270
   Roll: 0
-  PaddingLeft: 20
-  PaddingRight: 20
+  PaddingLeft: 40
+  PaddingRight: 40
   PaddingUp: 20
   PaddingDown: 20
   MoveSmoothTime: 0.1

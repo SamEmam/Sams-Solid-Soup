@@ -7,8 +7,9 @@ public class RMissileVolley : MonoBehaviour
 {
     [Header("Properties")]
     public float fireDelay = 0.1f;
-    public float spreadFactor = 0.5f;
-    public float initialForce = 20f;
+    private float spreadFactor = 0.2f;
+    private float initialForce = 20f;
+    private float forceSpreadFactor = 5f;
     public int playerNum;
     public int powerupNum = 0;
 
@@ -78,8 +79,9 @@ public class RMissileVolley : MonoBehaviour
 
             missile.transform.SetParent(null);
             rb.isKinematic = false;
-            //rb.useGravity = true;  // Disabled gravity as a test to increase usability of powerup
-            rb.AddForce(missile.transform.forward * initialForce, ForceMode.VelocityChange);
+            //rb.useGravity = true;
+            var rngForce = Random.Range(initialForce - forceSpreadFactor, initialForce + forceSpreadFactor);
+            rb.AddForce(missile.transform.forward * rngForce, ForceMode.VelocityChange);
 
             yield return wait;
         }

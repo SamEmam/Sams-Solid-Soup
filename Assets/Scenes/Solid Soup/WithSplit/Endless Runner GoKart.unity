@@ -33116,6 +33116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Counter123: {fileID: 1946114147}
+  text1: Endless
+  text2: GoKart Rush
+  text3: GO!
 --- !u!114 &980128426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68762,6 +68765,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2323342275490604247, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 959641625719816389, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
         type: 3}
       propertyPath: m_ClearFlags
@@ -68786,11 +68794,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Depth
       value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2323342275490604247, guid: 815569f1d9daac04bb5f38cd0b0ad3cb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815569f1d9daac04bb5f38cd0b0ad3cb, type: 3}

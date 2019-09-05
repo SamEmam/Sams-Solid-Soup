@@ -1337,6 +1337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Counter123: {fileID: 1946114147}
+  text1: Endless
+  text2: Terrain Rush
+  text3: GO!
 --- !u!114 &980128426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9651,6 +9654,116 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4272902862236867407, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039882964473801550, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039882964473801550, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193571758113878201, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193571758113878201, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250402919487965371, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250402919487965371, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827848945401919162, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827848945401919162, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379657101488047107, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925094749736231693, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925094749736231693, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030744896558211972, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030744896558211972, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012985820211400350, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012985820211400350, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: RGM
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188072549671892820, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640868489690413979, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 906966371811942801, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119077064237607752, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132268152808566925, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877846400443172820, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6813933379346494275, guid: 00369450eb40f5649ae93f2a60f2f9fa,
         type: 3}
       propertyPath: m_IsActive
@@ -9696,52 +9809,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 10.5
       objectReference: {fileID: 0}
-    - target: {fileID: 906966371811942801, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5877846400443172820, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8119077064237607752, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188072549671892820, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2132268152808566925, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4272902862236867407, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7640868489690413979, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2039882964473801550, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2039882964473801550, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3745804149617963899, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409369232127142826, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689469482298384958, guid: 00369450eb40f5649ae93f2a60f2f9fa,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9751,92 +9829,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8193571758113878201, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193571758113878201, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4858755299400709033, guid: 00369450eb40f5649ae93f2a60f2f9fa,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 579842943568859682, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250402919487965371, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250402919487965371, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4827848945401919162, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4827848945401919162, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 409369232127142826, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379657101488047107, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925094749736231693, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925094749736231693, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030744896558211972, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030744896558211972, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2689469482298384958, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012985820211400350, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: GM
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012985820211400350, guid: 00369450eb40f5649ae93f2a60f2f9fa,
-        type: 3}
-      propertyPath: RGM
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5146775929283043258, guid: 00369450eb40f5649ae93f2a60f2f9fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 579842943568859682, guid: 00369450eb40f5649ae93f2a60f2f9fa,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10562,6 +10565,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194923
 MonoBehaviour:
@@ -10578,6 +10582,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194924
 MonoBehaviour:
@@ -10594,6 +10599,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194925
 MonoBehaviour:
@@ -10610,6 +10616,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194926
 MonoBehaviour:
@@ -10626,6 +10633,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194927
 MonoBehaviour:
@@ -10642,6 +10650,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194928
 MonoBehaviour:
@@ -10658,6 +10667,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194929
 MonoBehaviour:
@@ -10674,6 +10684,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194930
 MonoBehaviour:
@@ -10690,6 +10701,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194931
 MonoBehaviour:
@@ -10706,6 +10718,7 @@ MonoBehaviour:
   playerNum: 8
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194932
 MonoBehaviour:
@@ -10722,6 +10735,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194933
 MonoBehaviour:
@@ -10738,6 +10752,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194934
 MonoBehaviour:
@@ -10754,6 +10769,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194935
 MonoBehaviour:
@@ -10770,6 +10786,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194936
 MonoBehaviour:
@@ -10786,6 +10803,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194937
 MonoBehaviour:
@@ -10802,6 +10820,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194938
 MonoBehaviour:
@@ -10818,6 +10837,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194939
 MonoBehaviour:
@@ -10834,6 +10854,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194940
 MonoBehaviour:
@@ -10850,6 +10871,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194941
 MonoBehaviour:
@@ -10866,6 +10888,7 @@ MonoBehaviour:
   playerNum: 7
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194942
 MonoBehaviour:
@@ -10882,6 +10905,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194943
 MonoBehaviour:
@@ -10898,6 +10922,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194944
 MonoBehaviour:
@@ -10914,6 +10939,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194945
 MonoBehaviour:
@@ -10930,6 +10956,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194946
 MonoBehaviour:
@@ -10946,6 +10973,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194947
 MonoBehaviour:
@@ -10962,6 +10990,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194948
 MonoBehaviour:
@@ -10978,6 +11007,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194949
 MonoBehaviour:
@@ -10994,6 +11024,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194950
 MonoBehaviour:
@@ -11010,6 +11041,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194951
 MonoBehaviour:
@@ -11026,6 +11058,7 @@ MonoBehaviour:
   playerNum: 6
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194952
 MonoBehaviour:
@@ -11042,6 +11075,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194953
 MonoBehaviour:
@@ -11058,6 +11092,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194954
 MonoBehaviour:
@@ -11074,6 +11109,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194955
 MonoBehaviour:
@@ -11090,6 +11126,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194956
 MonoBehaviour:
@@ -11106,6 +11143,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194957
 MonoBehaviour:
@@ -11122,6 +11160,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194958
 MonoBehaviour:
@@ -11138,6 +11177,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194959
 MonoBehaviour:
@@ -11154,6 +11194,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194960
 MonoBehaviour:
@@ -11170,6 +11211,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194961
 MonoBehaviour:
@@ -11186,6 +11228,7 @@ MonoBehaviour:
   playerNum: 5
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194962
 MonoBehaviour:
@@ -11202,6 +11245,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194963
 MonoBehaviour:
@@ -11218,6 +11262,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194964
 MonoBehaviour:
@@ -11234,6 +11279,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194965
 MonoBehaviour:
@@ -11250,6 +11296,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194966
 MonoBehaviour:
@@ -11266,6 +11313,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194967
 MonoBehaviour:
@@ -11282,6 +11330,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194968
 MonoBehaviour:
@@ -11298,6 +11347,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194969
 MonoBehaviour:
@@ -11314,6 +11364,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194970
 MonoBehaviour:
@@ -11330,6 +11381,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194971
 MonoBehaviour:
@@ -11346,6 +11398,7 @@ MonoBehaviour:
   playerNum: 4
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194972
 MonoBehaviour:
@@ -11362,6 +11415,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194973
 MonoBehaviour:
@@ -11378,6 +11432,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194974
 MonoBehaviour:
@@ -11394,6 +11449,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194975
 MonoBehaviour:
@@ -11410,6 +11466,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194976
 MonoBehaviour:
@@ -11426,6 +11483,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194977
 MonoBehaviour:
@@ -11442,6 +11500,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194978
 MonoBehaviour:
@@ -11458,6 +11517,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194979
 MonoBehaviour:
@@ -11474,6 +11534,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194980
 MonoBehaviour:
@@ -11490,6 +11551,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194981
 MonoBehaviour:
@@ -11506,6 +11568,7 @@ MonoBehaviour:
   playerNum: 3
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194982
 MonoBehaviour:
@@ -11522,6 +11585,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194983
 MonoBehaviour:
@@ -11538,6 +11602,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194984
 MonoBehaviour:
@@ -11554,6 +11619,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194985
 MonoBehaviour:
@@ -11570,6 +11636,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194986
 MonoBehaviour:
@@ -11586,6 +11653,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194987
 MonoBehaviour:
@@ -11602,6 +11670,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194988
 MonoBehaviour:
@@ -11618,6 +11687,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194989
 MonoBehaviour:
@@ -11634,6 +11704,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194990
 MonoBehaviour:
@@ -11650,6 +11721,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194991
 MonoBehaviour:
@@ -11666,6 +11738,7 @@ MonoBehaviour:
   playerNum: 2
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194992
 MonoBehaviour:
@@ -11682,6 +11755,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194993
 MonoBehaviour:
@@ -11698,6 +11772,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194994
 MonoBehaviour:
@@ -11714,6 +11789,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194995
 MonoBehaviour:
@@ -11730,6 +11806,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194996
 MonoBehaviour:
@@ -11746,6 +11823,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194997
 MonoBehaviour:
@@ -11762,6 +11840,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194998
 MonoBehaviour:
@@ -11778,6 +11857,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061194999
 MonoBehaviour:
@@ -11794,6 +11874,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061195000
 MonoBehaviour:
@@ -11810,6 +11891,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061195001
 MonoBehaviour:
@@ -11826,6 +11908,7 @@ MonoBehaviour:
   playerNum: 1
   checkpointCount: 0
   laps: 0
+  respawnParticles: {fileID: 0}
   respawnPoint: {fileID: 0}
 --- !u!114 &2061195002
 MonoBehaviour:

@@ -6350,6 +6350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Counter123: {fileID: 1174982175}
+  text1: Dodge
+  text2: The
+  text3: Trucks!
 --- !u!114 &980128426
 MonoBehaviour:
   m_ObjectHideFlags: 0

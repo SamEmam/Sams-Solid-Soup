@@ -16,6 +16,8 @@ public class TextObjectColoring : MonoBehaviour
     [SerializeField]
     private SceneLoader sceneLoader;
 
+    private bool loadingScene = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,11 @@ public class TextObjectColoring : MonoBehaviour
 
     public void SwitchScene()
     {
+        if (loadingScene)
+        {
+            return;
+        }
+        loadingScene = true;
         StartCoroutine(SelectedHandle());
     }
 

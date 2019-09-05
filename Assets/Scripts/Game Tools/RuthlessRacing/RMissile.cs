@@ -6,12 +6,13 @@ public class RMissile : MonoBehaviour
 {
     [Header("Attributes")]
     public float delayBeforeActive = 2.5f;
-    public float impactForce = 10f;
+    private float lifespan = 5f;
+    private float impactForce = 1.5f;
 
     private float thrust = 25f;
     private float radius = 10f;
-    private float upwardsThrust = 10f;
-    private float rotationSpeed = 750f;
+    private float upwardsThrust = 1.5f;
+    private float rotationSpeed = 500f;
     private float closestDistance = float.MaxValue;
     private bool missileEnabled = false;
     private bool isActive = false;
@@ -52,6 +53,15 @@ public class RMissile : MonoBehaviour
         {
             RotateTowardsTarget();
             MoveForward();
+        }
+
+        if (lifespan <= 0)
+        {
+            Explode();
+        }
+        else
+        {
+            lifespan -= Time.deltaTime;
         }
 
         // Rotate towards direction of travel
@@ -99,7 +109,8 @@ public class RMissile : MonoBehaviour
 
     private void MoveForward()
     {
-        rb.AddForce(transform.forward * thrust, ForceMode.Acceleration);
+        //rb.AddForce(transform.forward * thrust, ForceMode.Acceleration);
+        transform.Translate(transform.forward * Time.deltaTime * thrust);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -108,13 +119,20 @@ public class RMissile : MonoBehaviour
         {
             return;
         }
+
+        Explode();
+        
+    }
+
+    void Explode()
+    {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider hit in colliders)
         {
             Rigidbody hitRB = hit.GetComponent<Rigidbody>();
             if (hitRB != null /*&& !hit.GetComponent<RNotAffected>()*/)
             {
-                hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.Acceleration);
+                hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.VelocityChange);
             }
         }
 
