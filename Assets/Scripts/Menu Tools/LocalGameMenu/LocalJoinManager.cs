@@ -17,9 +17,12 @@ public class LocalJoinManager : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(playerNum);
         playerObject.SetActive(false);
+        hasJoined = false;
+
         if (CheckPlayerStatus())
         {
             playerObject.SetActive(true);
+            hasJoined = true;
         }
     }
 

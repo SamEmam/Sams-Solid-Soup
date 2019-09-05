@@ -7,7 +7,7 @@ public class RScoreManager : MonoBehaviour
     public RGameMaster GM;
 
     public int rewardValue;
-    public int winScore;
+    public int winScore = 10;
     private int winScoreHalf;
     private int winScoreDouble;
 
@@ -29,18 +29,17 @@ public class RScoreManager : MonoBehaviour
 
     void WinScoreCalc()
     {
-        winScore = winScoreHalf;
         if (GamePrefs.TotalPlayerCount > 2)
         {
-            winScore = winScoreHalf * 2;
+            winScore += winScoreHalf;
         }
         if (GamePrefs.TotalPlayerCount > 4)
         {
-            winScore = winScoreHalf * 3;
+            winScore += winScoreHalf * 2;
         }
         if (GamePrefs.TotalPlayerCount > 6)
         {
-            winScore = winScoreDouble;
+            winScore += winScoreHalf * 3;
         }
     }
 

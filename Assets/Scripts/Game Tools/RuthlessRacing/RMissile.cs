@@ -9,10 +9,10 @@ public class RMissile : MonoBehaviour
     private float lifespan = 5f;
     private float impactForce = 1.5f;
 
-    private float thrust = 25f;
+    private float thrust = 20f;
     private float radius = 10f;
     private float upwardsThrust = 1.5f;
-    private float rotationSpeed = 500f;
+    private float rotationSpeed = 750f;
     private float closestDistance = float.MaxValue;
     private bool missileEnabled = false;
     private bool isActive = false;
