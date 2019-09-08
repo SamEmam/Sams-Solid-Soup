@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/Circuit Stadium.unity
     guid: b5e6293938d3e434ebb0ba96608a3021
   - enabled: 1
+    path: Assets/Scenes/Solid Soup/Circuit Stadium 8 Caravan.unity
+    guid: 67acfe2381c153d4fb24510b98664e2d
+  - enabled: 1
     path: Assets/Scenes/Solid Soup/Circuit Space 8.unity
     guid: 129022c3c7e7b664ca92e418d0f6fdcd
   - enabled: 1
@@ -74,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Tag.unity
     guid: a1445c56753896b4a85f357e5dea6281
+  - enabled: 1
+    path: Assets/Scenes/Test Scene.unity
+    guid: a2bc0f1457b62e6439a7b5affbd1d700
   m_configObjects: {}

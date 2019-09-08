@@ -20,18 +20,18 @@ public class RPauseBeforeStart : MonoBehaviour
     {
         if (resumeIn3Seconds)
         {
-            StartCoroutine(ResumeAfterSeconds(4));
+            StartCoroutine(ResumeAfterSeconds(3.5f));
         }
     }
 
-    private IEnumerator ResumeAfterSeconds(int resumetime) // 3
+    private IEnumerator ResumeAfterSeconds(float resumetime) // 3
     {
         Time.timeScale = 0.0001f;
         float pauseEndTime = Time.realtimeSinceStartup + resumetime; // 10 + 4 = 13
 
-        float number3 = Time.realtimeSinceStartup + 1; // 10 + 1 = 11
+        float number3 = Time.realtimeSinceStartup + 1.5f; // 10 + 1 = 11
         float number2 = Time.realtimeSinceStartup + 3; // 10 + 2 = 12
-        float number1 = Time.realtimeSinceStartup + 5; // 10 + 3 = 13
+        float number1 = Time.realtimeSinceStartup + 3.5f; // 10 + 3 = 13
 
         while (Time.realtimeSinceStartup < pauseEndTime) // 10 < 13
         {
