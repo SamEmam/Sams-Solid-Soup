@@ -11,7 +11,7 @@ public class RPauseBeforeStart : MonoBehaviour
 
     public string text1 = "Three", text2 = "Two", text3 = "One";
 
-    void Update()
+    void Start()
     {
         ResumeIn3Seconds();
     }

@@ -16,6 +16,10 @@ public class TextObjectColoring : MonoBehaviour
     [SerializeField]
     private SceneLoader sceneLoader;
 
+
+    [SerializeField]
+    private GameObject settings;
+
     private bool loadingScene = false;
 
     // Start is called before the first frame update
@@ -58,6 +62,11 @@ public class TextObjectColoring : MonoBehaviour
         StartCoroutine(SelectedHandle());
     }
 
+    public void OpenSettings()
+    {
+        settings.SetActive(true);
+    }
+
     public IEnumerator SelectedHandle()
     {
         yield return new WaitForSeconds(2f);
@@ -71,7 +80,7 @@ public class TextObjectColoring : MonoBehaviour
                 sceneLoader.LoadSceneByIndex(1);
                 break;
             case HandleEnum.options:
-                sceneLoader.LoadSceneByIndex(1);
+                OpenSettings();
                 break;
             case HandleEnum.exit:
                 Application.Quit();

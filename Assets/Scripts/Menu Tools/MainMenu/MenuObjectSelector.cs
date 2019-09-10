@@ -38,8 +38,15 @@ public class MenuObjectSelector : MonoBehaviour
 
         if (player.GetButtonDown("Select"))
         {
-            textExplosions[currentIndex].Explode();
-            textObjectColorings[currentIndex].SwitchScene();
+            if (currentIndex != 2)
+            {
+                textExplosions[currentIndex].Explode();
+                textObjectColorings[currentIndex].SwitchScene();
+            }
+            else
+            {
+                textObjectColorings[0].OpenSettings();
+            }
         }
 
         if (player.GetButtonDown("Up"))
