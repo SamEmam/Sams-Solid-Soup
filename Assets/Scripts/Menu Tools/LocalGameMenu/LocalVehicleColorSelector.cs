@@ -10,11 +10,13 @@ public class LocalVehicleColorSelector : MonoBehaviour
 
     [SerializeField]
     private int currentIndex;
-
+    
     [SerializeField]
     private int playerNum;
 
     private Player player;
+
+    private ColorEnum color;
     
     // Start is called before the first frame update
     void OnEnable()
@@ -22,6 +24,8 @@ public class LocalVehicleColorSelector : MonoBehaviour
         player = ReInput.players.GetPlayer(playerNum);
         EnableColor(currentIndex);
         LoadColor();
+
+        
     }
 
     // Update is called once per frame
@@ -45,7 +49,7 @@ public class LocalVehicleColorSelector : MonoBehaviour
 
     void SaveColor()
     {
-        ColorEnum color = (ColorEnum)currentIndex;
+        color = (ColorEnum)currentIndex;
 
         switch (playerNum)
         {
@@ -150,6 +154,12 @@ public class LocalVehicleColorSelector : MonoBehaviour
             currentIndex++;
         }
 
+        if (ColorCompare(currentIndex))
+        {
+            NextColor();
+            return;
+        }
+
         EnableColor(currentIndex);
     }
 
@@ -164,13 +174,101 @@ public class LocalVehicleColorSelector : MonoBehaviour
             currentIndex--;
         }
 
+        if (ColorCompare(currentIndex))
+        {
+            PrevColor();
+            return;
+        }
+
         EnableColor(currentIndex);
+    }
+
+    bool ColorCompare(int index)
+    {
+        switch (playerNum)
+        {
+            case 1:
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 2:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 3:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 4:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 5:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 6:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 7:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P8Color) return true;
+                else return false;
+            case 8:
+                if (index == (int)GamePrefs.P1Color) return true;
+                if (index == (int)GamePrefs.P2Color) return true;
+                if (index == (int)GamePrefs.P3Color) return true;
+                if (index == (int)GamePrefs.P4Color) return true;
+                if (index == (int)GamePrefs.P5Color) return true;
+                if (index == (int)GamePrefs.P6Color) return true;
+                if (index == (int)GamePrefs.P7Color) return true;
+                else return false;
+        }
+
+        return false;
     }
 
     void EnableColor(int index)
     {
         DisableColors();
         Colors[index].SetActive(true);
+        SaveColor();
     }
 
     void DisableColors()
