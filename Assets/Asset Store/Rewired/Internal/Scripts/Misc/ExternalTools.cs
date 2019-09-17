@@ -83,6 +83,16 @@ namespace Rewired.Utils {
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public class ExternalTools : IExternalTools {
 
+        private static System.Func<object> _getPlatformInitializerDelegate;
+        public static System.Func<object> getPlatformInitializerDelegate {
+            get {
+                return _getPlatformInitializerDelegate;
+            }
+            set {
+                _getPlatformInitializerDelegate = value;
+            }
+        }
+
         public ExternalTools() {
 #if UNITY_EDITOR
 #if UNITY_2018_PLUS
@@ -148,13 +158,15 @@ namespace Rewired.Utils {
 #elif UNITY_WEBGL && !UNITY_EDITOR
             return Rewired.Utils.Platforms.WebGL.Main.GetPlatformInitializer();
 #else
-            return null;
+            if(_getPlatformInitializerDelegate != null) return _getPlatformInitializerDelegate();
+            else return null;
 #endif
 #else
 #if UNITY_WEBGL && !UNITY_EDITOR
             return Rewired.Utils.Platforms.WebGL.Main.GetPlatformInitializer();
 #else
-            return null;
+            if (_getPlatformInitializerDelegate != null) return _getPlatformInitializerDelegate();
+            else return null;
 #endif
 #endif
         }

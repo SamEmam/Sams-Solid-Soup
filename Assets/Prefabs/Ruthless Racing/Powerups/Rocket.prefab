@@ -4854,6 +4854,9 @@ MonoBehaviour:
   explosion1: {fileID: 19800006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
   explosion2: {fileID: 19800006, guid: e0609132424a24844b1d53ad3d704fd9, type: 3}
   thrust: {fileID: 614813363146786369}
+  clips:
+  - {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  - {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
 --- !u!136 &7361541734048852098
 CapsuleCollider:
   m_ObjectHideFlags: 0

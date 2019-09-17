@@ -13,6 +13,10 @@ public class LocalJoinManager : MonoBehaviour
 
     private bool hasJoined;
 
+    public AudioClip[] clips;
+    private AudioSource source;
+    private int joinSound = 0, leaveSound = 1;
+
     private void Start()
     {
         player = ReInput.players.GetPlayer(playerNum);
@@ -24,6 +28,9 @@ public class LocalJoinManager : MonoBehaviour
             playerObject.SetActive(true);
             hasJoined = true;
         }
+
+        source = gameObject.AddComponent<AudioSource>();
+        source.volume = source.volume / 4;
     }
 
     // Update is called once per frame
@@ -31,11 +38,15 @@ public class LocalJoinManager : MonoBehaviour
     {
         if (player.GetButtonDown("A") && !hasJoined)
         {
+            source.clip = clips[joinSound];
+            source.Play();
             JoinPlayer();
         }
 
         if (player.GetButtonDown("B") && hasJoined)
         {
+            source.clip = clips[leaveSound];
+            source.Play();
             LeavePlayer();
         }
     }

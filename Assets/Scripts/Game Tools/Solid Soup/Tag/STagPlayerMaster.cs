@@ -9,6 +9,9 @@ public class STagPlayerMaster : MonoBehaviour
     [HideInInspector]
     public STagGameMaster GM;
 
+    public Transform runnerTag;
+    public GameObject boost;
+
     [HideInInspector]
     public bool canBeTagged = true;
     private float counter;
@@ -21,14 +24,27 @@ public class STagPlayerMaster : MonoBehaviour
         playerNum = GetComponent<RPlayerScore>().playerNum;
         points = GamePrefs.TotalPlayerCount / 2;
     }
-    
+
+    private void OnDisable()
+    {
+        boost.SetActive(false);
+        runnerTag.position = transform.position + (Vector3.up * 15);
+    }
+
 
     private void Update()
     {
+
         if (isTagged)
         {
+            boost.SetActive(true);
+            runnerTag.position = Vector3.up * 100;
             return;
         }
+
+        boost.SetActive(false);
+        runnerTag.position = transform.position + (Vector3.up * 15);
+
         if (canBeTagged)
         {
             return;
@@ -42,6 +58,8 @@ public class STagPlayerMaster : MonoBehaviour
         {
             counter -= Time.deltaTime;
         }
+
+        
     }
 
     public void GetTagged()

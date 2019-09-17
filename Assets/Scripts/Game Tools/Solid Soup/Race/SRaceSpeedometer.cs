@@ -11,18 +11,20 @@ public class SRaceSpeedometer : MonoBehaviour
     private SRacePlayerCheckpoint cp;
     private TextMeshProUGUI dial;
     private float speed;
+    private SRacePlayerPosition pos;
 
     private void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
         cp = GetComponentInParent<SRacePlayerCheckpoint>();
         dial = GetComponentInChildren<TextMeshProUGUI>();
+        pos = GetComponentInParent<SRacePlayerPosition>();
     }
 
     private void Update()
     {
         var velocity = rb.velocity.magnitude * multiplier;
         speed = velocity;
-        dial.text = speed.ToString("F1") + " km/h \n" + (cp.laps + 1) + "/" + finishLine.raceLaps + " LAPS";
+        dial.text = speed.ToString("F1") + " km/h \n" + (cp.laps + 1) + "/" + finishLine.raceLaps + " LAPS" + "\n" + pos.positionString;
     }
 }

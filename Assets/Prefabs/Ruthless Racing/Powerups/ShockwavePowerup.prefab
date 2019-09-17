@@ -45,15 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da5cd52690136841ae176aadf66e106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactForce: 5
-  radius: 15
-  upwardsThrust: 2
   playerNum: 1
   powerupNum: 4
   explosion: {fileID: 859812865391176341, guid: 5ac7b678aedd1ab489f95662b9841267,
     type: 3}
   rb: {fileID: 0}
   playerPowerup: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: cabfae866cab347928b74b7d0ca6bfa9, type: 3}
 --- !u!1001 &3948815237460353779
 PrefabInstance:
   m_ObjectHideFlags: 0

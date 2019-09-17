@@ -20601,6 +20601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {fileID: 4702008990053404471}
   force: 0.04
+  clips:
+  - {fileID: 8300000, guid: e1a8248faf37c32408eb0bc19ace5075, type: 3}
+  - {fileID: 8300000, guid: 441949b1d216f1b4ab5f92a91020887d, type: 3}
 --- !u!1 &5377685415263323029
 GameObject:
   m_ObjectHideFlags: 0

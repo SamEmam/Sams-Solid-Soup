@@ -20,12 +20,18 @@ public class MenuObjectSelector : MonoBehaviour
     //private float runTime = 1.8f;
     private float runTime = 2.2f;
 
+    public AudioClip[] clips;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         player = ReInput.players.GetPlayer(1);
         SelectIndex(currentIndex);
         startTime = Time.time;
+
+        source = gameObject.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length - 1)];
     }
 
     // Update is called once per frame
@@ -38,6 +44,7 @@ public class MenuObjectSelector : MonoBehaviour
 
         if (player.GetButtonDown("Select"))
         {
+            source.Play();
             if (currentIndex != 2)
             {
                 textExplosions[currentIndex].Explode();
@@ -58,22 +65,6 @@ public class MenuObjectSelector : MonoBehaviour
         {
             SelectDown();
         }
-
-        //if (XCI.GetButtonDown(XboxButton.A))
-        //{
-        //    textExplosions[currentIndex].Explode();
-        //    textObjectColorings[currentIndex].SwitchScene();
-        //}
-
-        //if (XCI.GetButtonDown(XboxButton.DPadDown))
-        //{
-        //    SelectNext();
-        //}
-
-        //if (XCI.GetButtonDown(XboxButton.DPadUp))
-        //{
-        //    SelectPrev();
-        //}
     }
 
     void SelectDown()
@@ -86,6 +77,8 @@ public class MenuObjectSelector : MonoBehaviour
         {
             SelectIndex(currentIndex + 1);
         }
+
+        source.Play();
     }
 
     void SelectUp()
@@ -98,6 +91,8 @@ public class MenuObjectSelector : MonoBehaviour
         {
             SelectIndex(currentIndex - 1);
         }
+
+        source.Play();
     }
 
     void SelectIndex(int i)

@@ -19,11 +19,18 @@ public class RShockwave : MonoBehaviour
     public Rigidbody rb;
     public RPlayerPowerup playerPowerup;
     private Player player;
+    public AudioClip[] clips;
+    private AudioSource source;
+    private GameObject audioPlayer;
 
 
     private void Start()
     {
         player = ReInput.players.GetPlayer(playerNum);
+        audioPlayer = new GameObject("Explosion Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length - 1)];
     }
 
     private void Update()
@@ -43,6 +50,9 @@ public class RShockwave : MonoBehaviour
             if (hitRB != null && hitRB != rb /* && !hit.GetComponent<RNotAffected>()*/)
             {
                 hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.VelocityChange);
+                source.Play();
+                audioPlayer.transform.SetParent(null);
+                Destroy(audioPlayer, 2f);
             }
         }
         Instantiate(explosion, transform.position, transform.rotation);

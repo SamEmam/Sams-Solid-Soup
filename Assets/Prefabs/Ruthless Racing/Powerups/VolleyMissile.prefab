@@ -4849,3 +4849,6 @@ MonoBehaviour:
   rb: {fileID: 3026558105244084169}
   thrustParticle: {fileID: 2630211021923614923}
   explosion: {fileID: 19800006, guid: 93485fd5fc2ccf2439cb3239186f6382, type: 3}
+  clips:
+  - {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  - {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}

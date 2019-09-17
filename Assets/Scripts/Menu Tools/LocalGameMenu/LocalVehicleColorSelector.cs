@@ -22,8 +22,8 @@ public class LocalVehicleColorSelector : MonoBehaviour
     void OnEnable()
     {
         player = ReInput.players.GetPlayer(playerNum);
-        EnableColor(currentIndex);
         LoadColor();
+        //EnableColor(currentIndex);
 
         
     }
@@ -87,57 +87,57 @@ public class LocalVehicleColorSelector : MonoBehaviour
             case 1:
                 if (GamePrefs.P1Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P1Color);
                     currentIndex = (int)GamePrefs.P1Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 2:
                 if (GamePrefs.P2Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P2Color);
                     currentIndex = (int)GamePrefs.P2Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 3:
                 if (GamePrefs.P3Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P3Color);
                     currentIndex = (int)GamePrefs.P3Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 4:
                 if (GamePrefs.P4Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P4Color);
                     currentIndex = (int)GamePrefs.P4Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 5:
                 if (GamePrefs.P5Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P5Color);
                     currentIndex = (int)GamePrefs.P5Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 6:
                 if (GamePrefs.P6Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P6Color);
                     currentIndex = (int)GamePrefs.P6Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 7:
                 if (GamePrefs.P7Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P7Color);
                     currentIndex = (int)GamePrefs.P7Color;
+                    EnableColor(currentIndex);
                 }
                 break;
             case 8:
                 if (GamePrefs.P8Color != ColorEnum.Undefined)
                 {
-                    EnableColor((int)GamePrefs.P8Color);
                     currentIndex = (int)GamePrefs.P8Color;
+                    EnableColor(currentIndex);
                 }
                 break;
         }

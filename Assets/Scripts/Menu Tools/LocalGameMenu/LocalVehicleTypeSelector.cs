@@ -18,12 +18,19 @@ public class LocalVehicleTypeSelector : MonoBehaviour
 
     private float switchCooldown;
 
+    public AudioClip clip;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void OnEnable()
     {
         player = ReInput.players.GetPlayer(playerNum);
         EnableType(currentIndex);
         LoadType();
+
+        source = gameObject.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.volume = source.volume / 2;
     }
 
     // Update is called once per frame
@@ -34,14 +41,20 @@ public class LocalVehicleTypeSelector : MonoBehaviour
             switchCooldown -= Time.deltaTime;
             return;
         }
+        if (player.GetButtonDown("RB") || player.GetButtonDown("LB"))
+        {
+            source.Play();
+        }
 
         if (player.GetButtonDown("RT"))
         {
+            source.Play();
             NextType();
         }
 
         if (player.GetButtonDown("LT"))
         {
+            source.Play();
             PrevType();
         }
 

@@ -14,9 +14,21 @@ public class RMine : MonoBehaviour
 
     [Header("Setup")]
     public ParticleSystem explosion;
+    public AudioClip[] clips;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
+    private void Start()
+    {
+        audioPlayer = new GameObject("Explosion Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length - 1)];
+    }
 
     private void Update()
     {
+
         if (!isShot)
         {
             return;
@@ -44,6 +56,9 @@ public class RMine : MonoBehaviour
                 if (hitRB != null /* && !hit.GetComponent<WNotAffected>()*/)
                 {
                     hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.VelocityChange);
+                    source.Play();
+                    audioPlayer.transform.SetParent(null);
+                    Destroy(audioPlayer, 2f);
                 }
             }
             Instantiate(explosion, transform.position, transform.rotation);

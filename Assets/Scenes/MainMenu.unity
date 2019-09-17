@@ -3978,7 +3978,8 @@ MonoBehaviour:
       xboxOne_primaryInputSource: 0
       ps4_primaryInputSource: 0
       webGL_primaryInputSource: 0
-      useXInput: 1
+      stadia_primaryInputSource: 0
+      useXInput: 0
       useNativeMouse: 1
       useEnhancedDeviceSupport: 1
       windowsStandalone_useSteamRawInputControllerWorkaround: 0
@@ -4042,6 +4043,9 @@ MonoBehaviour:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
       platformVars_webGL:
+        disableKeyboard: 0
+        ignoreInputWhenAppNotInFocus: 1
+      platformVars_stadia:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
       maxJoysticksPerPlayer: 1
@@ -8691,6 +8695,7 @@ GameObject:
   - component: {fileID: 852105024}
   - component: {fileID: 852105023}
   - component: {fileID: 852105025}
+  - component: {fileID: 852105026}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8750,6 +8755,8 @@ MonoBehaviour:
   - {fileID: 423977397}
   defaultMat: {fileID: 2100000, guid: 9c0880e4cd8a8704e82b6940624b569a, type: 2}
   selectedMat: {fileID: 2100000, guid: a24037aa2dae5b145b048dcaf948032a, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 0994c12e202f342459a4212e7287f7e8, type: 3}
 --- !u!114 &852105024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8763,7 +8770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1353220565}
-  _version: Version 0.1.14e
+  _version: Version 0.1.14f
   readFromPrefs: 0
 --- !u!114 &852105025
 MonoBehaviour:
@@ -8778,6 +8785,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 963194229}
+--- !u!114 &852105026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852105020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb26096541d6064fbe8892e04f8f520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &855151689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9713,7 +9732,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0

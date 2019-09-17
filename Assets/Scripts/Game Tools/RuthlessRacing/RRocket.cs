@@ -17,6 +17,17 @@ public class RRocket : MonoBehaviour
     public ParticleSystem explosion1;
     public ParticleSystem explosion2;
     public GameObject thrust;
+    public AudioClip[] clips;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
+    private void Start()
+    {
+        audioPlayer = new GameObject("Explosion Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length - 1)];
+    }
 
     private void Update()
     {
@@ -69,6 +80,9 @@ public class RRocket : MonoBehaviour
             if (hitRB != null /* && !hit.GetComponent<WNotAffected>()*/)
             {
                 hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.VelocityChange);
+                source.Play();
+                audioPlayer.transform.SetParent(null);
+                Destroy(audioPlayer, 2f);
             }
         }
         Instantiate(explosion1, transform.position, transform.rotation);

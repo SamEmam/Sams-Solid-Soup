@@ -26,6 +26,10 @@ public class RMissile : MonoBehaviour
     private Transform closestTarget;
     private Vector3 startPos;
     private Vector3 startRot;
+    public AudioClip[] clips;
+    private AudioSource source;
+    private GameObject audioPlayer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,10 @@ public class RMissile : MonoBehaviour
         emit = thrustParticle.emission;
         emit.enabled = false;
         thrustParticle.Clear();
+        audioPlayer = new GameObject("Explosion Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length - 1)];
     }
 
     // Update is called once per frame
@@ -133,6 +141,9 @@ public class RMissile : MonoBehaviour
             if (hitRB != null /*&& !hit.GetComponent<RNotAffected>()*/)
             {
                 hitRB.AddExplosionForce(impactForce, transform.position, radius, upwardsThrust, ForceMode.VelocityChange);
+                source.Play();
+                audioPlayer.transform.SetParent(null);
+                Destroy(audioPlayer, 2f);
             }
         }
 
