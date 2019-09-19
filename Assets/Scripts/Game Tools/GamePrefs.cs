@@ -16,6 +16,19 @@ public static class GamePrefs
     private static ColorEnum p1Color = ColorEnum.Undefined, p2Color = ColorEnum.Undefined, p3Color = ColorEnum.Undefined, p4Color = ColorEnum.Undefined, p5Color = ColorEnum.Undefined, p6Color = ColorEnum.Undefined, p7Color = ColorEnum.Undefined, p8Color = ColorEnum.Undefined;
     private static TypeEnum p1Type, p2Type, p3Type, p4Type, p5Type, p6Type, p7Type, p8Type;
     private static RaceMapEnum raceMapEnum;
+    private static bool hasAppliedSettings = false;
+
+    public static bool HasAppliedSettings
+    {
+        get
+        {
+            return hasAppliedSettings;
+        }
+        set
+        {
+            hasAppliedSettings = value;
+        }
+    }
 
     public static int TotalPlayerCount
     {

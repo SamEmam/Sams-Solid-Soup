@@ -59,6 +59,12 @@ public class MenuQualitySettings : MonoBehaviour
         masterVolume = PlayerPrefs.GetInt(MASTERVOLUME_PREF_KEY, 100);
         SetMasterVolumeText();
 
+        if (!GamePrefs.HasAppliedSettings)
+        {
+            GamePrefs.HasAppliedSettings = true;
+            ApplySettings();
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnEnable()
