@@ -6,6 +6,7 @@ public class SPHCamera : MonoBehaviour
 {
     private Rigidbody parentRB;
     private Transform target;
+    public Vector3 newDir;
     
 
     // Start is called before the first frame update
@@ -18,12 +19,17 @@ public class SPHCamera : MonoBehaviour
 
     private void Update()
     {
-        transform.position = target.position;
-        float step = (parentRB.velocity.magnitude / 2) * Time.deltaTime;
+        transform.position = parentRB.position;
 
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, parentRB.velocity, step, 0.0f);
-        
-        transform.rotation = Quaternion.LookRotation(newDir);
+        float speed = 2f;
+
+        Vector3 targetRotation = Quaternion.LookRotation(parentRB.velocity).eulerAngles;
+
+        targetRotation.x = Mathf.Clamp(targetRotation.x, -25, 25);
+
+        Quaternion targetQuaternion = Quaternion.Euler(targetRotation);
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetQuaternion, Time.deltaTime * speed);
         
     }
 

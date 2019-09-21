@@ -18,7 +18,7 @@ public class SPointsBar : MonoBehaviour
     private bool maxHasBeenUpdated = false;
 
     public int currentValue;
-    private float currenctPercent;
+    private float currentPercent;
 
     private void Start()
     {
@@ -163,12 +163,12 @@ public class SPointsBar : MonoBehaviour
             if (max - min == 0)
             {
                 currentValue = 0;
-                currenctPercent = 0;
+                currentPercent = 0;
             }
             else
             {
                 currentValue = points;
-                currenctPercent = (float)currentValue / (float)(max - min);
+                currentPercent = (float)currentValue / (float)(max - min);
             }
 
             txtPoints.text = currentValue.ToString();
@@ -176,7 +176,7 @@ public class SPointsBar : MonoBehaviour
             {
                 txtPoints.text += " (+" + (currentValue - startPoints) + ")";
             }
-            imgPointsBar.fillAmount = currenctPercent;
+            imgPointsBar.fillAmount = currentPercent;
         }
     }
 }

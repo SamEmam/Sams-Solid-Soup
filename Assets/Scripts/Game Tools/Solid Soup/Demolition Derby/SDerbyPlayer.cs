@@ -8,6 +8,8 @@ public class SDerbyPlayer : MonoBehaviour
     [HideInInspector]
     public int points = 0;
     [HideInInspector]
+    public int kills = 0;
+    [HideInInspector]
     public int playerNum;
     [HideInInspector]
     public bool canTakeDMG = true;
@@ -20,16 +22,53 @@ public class SDerbyPlayer : MonoBehaviour
     private Rigidbody debrisRB;
     private Rigidbody playerRB;
 
+    public ParticleSystem smoke, fire;
+    
+    private ParticleSystem.EmissionModule smokeEmission, fireEmission;
+
+    private bool isBracing;
+    private float braceCounter;
+    private float braceTime = 0.05f;
+
+
+    private void Awake()
+    {
+        smokeEmission = smoke.emission;
+        fireEmission = fire.emission;
+    }
+
     private void Start()
     {
         playerNum = GetComponent<RPlayerScore>().playerNum;
         CP = GetComponent<SRacePlayerCheckpoint>();
         derbyMaster = FindObjectOfType<SDerbyMaster>();
-        derbyMaster.players[playerNum] = this;
+        derbyMaster.players.Add(this);
         debrisRB = debris.GetComponent<Rigidbody>();
         playerRB = GetComponent<Rigidbody>();
         debris.SetActive(false);
         debris.transform.SetParent(null);
+
+
+
+        smokeEmission.rateOverTime = 0;
+        fireEmission.rateOverTime = 0;
+    }
+
+    private void Update()
+    {
+        var reversedHealth = 1000 - health;
+
+        smokeEmission.rateOverTime = reversedHealth / 10;
+
+        if (reversedHealth > 750)
+        {
+            fireEmission.rateOverTime = reversedHealth / 20;
+        }
+
+        if (braceCounter <= Time.time && isBracing)
+        {
+            isBracing = false;
+        }
     }
 
     void Die()
@@ -37,21 +76,30 @@ public class SDerbyPlayer : MonoBehaviour
         debris.transform.position = transform.position;
         debris.transform.rotation = transform.rotation;
         debris.SetActive(true);
+
         Instantiate(explosion, transform.position, transform.rotation);
+
         debrisRB.velocity = playerRB.velocity;
         debrisRB.angularVelocity = playerRB.angularVelocity;
+        debrisRB.AddForce(Vector3.up, ForceMode.VelocityChange);
 
         CP.Respawn();
+
         health = 1000;
+        smokeEmission.rateOverTime = 0;
+        fireEmission.rateOverTime = 0;
     }
 
     public void TakeDamage(int dmg, int dmgGiverPlayerNum)
     {
-        Debug.Log("DMG: " + dmg);
-        if (!canTakeDMG)
+        if (!canTakeDMG || isBracing)
         {
             return;
         }
+
+        isBracing = true;
+        braceCounter = Time.time + braceTime;
+        
 
         int rewardPoints = dmg;
         health -= dmg;
@@ -61,6 +109,7 @@ public class SDerbyPlayer : MonoBehaviour
             Die();
             rewardPoints += 1000;
             derbyMaster.AwardPlayerScore(dmgGiverPlayerNum, 1);
+            derbyMaster.GiveKill(dmgGiverPlayerNum);
         }
 
         derbyMaster.GivePoints(rewardPoints, dmgGiverPlayerNum);

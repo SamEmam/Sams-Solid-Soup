@@ -5,22 +5,49 @@ using UnityEngine;
 
 public class SDerbyMaster : MonoBehaviour
 {
-    public SDerbyPlayer[] players;
+    public List<SDerbyPlayer> players = new List<SDerbyPlayer>();
     private float timeBeforeEnd = 3f;
     private float gameCounter;
     private bool hasEnded = false;
     private SceneLoader sceneLoader;
     public TextMeshProUGUI gameTimer;
 
+    public GameObject solidPointsBars;
+
     private void Start()
     {
         sceneLoader = GetComponent<SceneLoader>();
         gameCounter = timeBeforeEnd * 60;
+        StartCoroutine(DelayedStart());
+    }
+
+    IEnumerator DelayedStart()
+    {
+        yield return null;
+        solidPointsBars.SetActive(false);
     }
 
     public void GivePoints(int points, int player)
     {
-        players[player].points += points;
+        foreach (var _player in players)
+        {
+            Debug.Log("PlayerNum: " + _player.playerNum);
+            if (_player.playerNum == player)
+            {
+                _player.points += points;
+            }
+        }
+    }
+
+    public void GiveKill(int player)
+    {
+        foreach (var _player in players)
+        {
+            if (_player.playerNum == player)
+            {
+                _player.kills++;
+            }
+        }
     }
 
     private void Update()
@@ -60,9 +87,10 @@ public class SDerbyMaster : MonoBehaviour
     void BubbleSort()
     {
         SDerbyPlayer tempPlayer;
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 0; i < players.Count; i++)
         {
-            for (int j = 0; j < players.Length - 1; j++)
+
+            for (int j = 0; j < players.Count - 1; j++)
             {
 
                 if (players[j].points > players[j + 1].points)
@@ -76,7 +104,8 @@ public class SDerbyMaster : MonoBehaviour
             }
         }
 
-        for (int i = players.Length - 1; i > 0; i++)
+
+        for (int i = players.Count - 1; i > 0; i--)
         {
             AwardPlayerScore(players[i].playerNum, i);
         }
@@ -112,9 +141,11 @@ public class SDerbyMaster : MonoBehaviour
                 break;
         }
     }
+    
 
     IEnumerator EndScene()
     {
+        solidPointsBars.SetActive(true);
         BubbleSort();
 
         foreach (var player in players)
