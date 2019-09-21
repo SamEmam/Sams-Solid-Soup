@@ -12,6 +12,8 @@ public class RRocket : MonoBehaviour
     public float impactForce;
     public float radius = 50f;
     public float upwardsThrust = 5f;
+    [HideInInspector]
+    public int playerNum;
 
     [Header("Setup")]
     public ParticleSystem explosion1;
@@ -83,6 +85,13 @@ public class RRocket : MonoBehaviour
                 source.Play();
                 audioPlayer.transform.SetParent(null);
                 Destroy(audioPlayer, 2f);
+            }
+
+            SDerbyPlayer hitDerby = hit.GetComponent<SDerbyPlayer>();
+            if (hitDerby)
+            {
+                int dist = (int)Vector3.Distance(transform.position, hit.transform.position);
+                hitDerby.TakeDamage(Mathf.Abs((int)((radius - dist) * 20)), playerNum);
             }
         }
         Instantiate(explosion1, transform.position, transform.rotation);

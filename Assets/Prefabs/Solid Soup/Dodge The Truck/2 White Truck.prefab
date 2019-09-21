@@ -1473,6 +1473,7 @@ GameObject:
   - component: {fileID: 619516192443593867}
   - component: {fileID: 1234251206903808981}
   - component: {fileID: 2340479798350193361}
+  - component: {fileID: 2265838405278498524}
   m_Layer: 0
   m_Name: 2 White Truck
   m_TagString: Vehicle
@@ -1577,9 +1578,11 @@ MonoBehaviour:
   lowPitchMin: 1
   lowPitchMax: 5
   highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
+  maxRolloffDistance: 300
+  minRolloffDistance: 5
   dopplerLevel: 1
   useDoppler: 1
+  useSpatialBlend: 1
 --- !u!65 &2340479798350193361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1593,6 +1596,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.66, z: 0}
+--- !u!114 &2265838405278498524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528523627103165452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a902f2d9e1831d44b9185efbbef6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7271661793555637048
 GameObject:
   m_ObjectHideFlags: 0

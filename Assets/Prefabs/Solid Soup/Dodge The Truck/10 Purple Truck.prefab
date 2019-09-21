@@ -5551,6 +5551,7 @@ GameObject:
   - component: {fileID: 1470573719683795484}
   - component: {fileID: 387624440971477696}
   - component: {fileID: 5070384152545847992}
+  - component: {fileID: -4319450223295711200}
   m_Layer: 0
   m_Name: 10 Purple Truck
   m_TagString: Vehicle
@@ -5655,9 +5656,11 @@ MonoBehaviour:
   lowPitchMin: 1
   lowPitchMax: 5
   highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
+  maxRolloffDistance: 300
+  minRolloffDistance: 5
   dopplerLevel: 1
   useDoppler: 1
+  useSpatialBlend: 1
 --- !u!65 &5070384152545847992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5671,6 +5674,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.66, z: 0}
+--- !u!114 &-4319450223295711200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951473478025637702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a902f2d9e1831d44b9185efbbef6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4032255119026239973
 GameObject:
   m_ObjectHideFlags: 0

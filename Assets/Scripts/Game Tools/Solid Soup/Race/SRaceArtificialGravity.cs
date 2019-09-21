@@ -14,9 +14,9 @@ public class SRaceArtificialGravity : MonoBehaviour
         rb.useGravity = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        gravity = rb.velocity.magnitude / 60;
+        gravity = rb.velocity.magnitude / 50;
         if (gravity < 0.1f)
         {
             gravity = 0.1f;

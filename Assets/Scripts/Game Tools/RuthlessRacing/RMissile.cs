@@ -17,6 +17,9 @@ public class RMissile : MonoBehaviour
     private bool missileEnabled = false;
     private bool isActive = false;
 
+    [HideInInspector]
+    public int playerNum;
+
     [Header("Setup")]
     public GameObject parent;
     public Rigidbody rb;
@@ -144,6 +147,13 @@ public class RMissile : MonoBehaviour
                 source.Play();
                 audioPlayer.transform.SetParent(null);
                 Destroy(audioPlayer, 2f);
+            }
+
+            SDerbyPlayer hitDerby = hit.GetComponent<SDerbyPlayer>();
+            if (hitDerby)
+            {
+                int dist = (int)Vector3.Distance(transform.position, hit.transform.position);
+                hitDerby.TakeDamage(Mathf.Abs((int)((radius - dist) * 20)), playerNum);
             }
         }
 

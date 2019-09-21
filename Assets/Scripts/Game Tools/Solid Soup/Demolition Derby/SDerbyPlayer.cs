@@ -108,11 +108,17 @@ public class SDerbyPlayer : MonoBehaviour
         {
             Die();
             rewardPoints += 1000;
-            derbyMaster.AwardPlayerScore(dmgGiverPlayerNum, 1);
-            derbyMaster.GiveKill(dmgGiverPlayerNum);
+            if (dmgGiverPlayerNum != playerNum)
+            {
+                derbyMaster.AwardPlayerScore(dmgGiverPlayerNum, 1);
+                derbyMaster.GiveKill(dmgGiverPlayerNum);
+            }
         }
-
-        derbyMaster.GivePoints(rewardPoints, dmgGiverPlayerNum);
+        if (dmgGiverPlayerNum != playerNum)
+        {
+            derbyMaster.GivePoints(rewardPoints, dmgGiverPlayerNum);
+        }
+        
         
     }
 

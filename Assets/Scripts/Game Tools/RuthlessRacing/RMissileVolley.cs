@@ -69,7 +69,9 @@ public class RMissileVolley : MonoBehaviour
         foreach (var missile in missileGOs)
         {
             Rigidbody rb = missile.GetComponent<Rigidbody>();
-            missile.GetComponent<RMissile>().parent = parent;
+            RMissile rMissile = missile.GetComponent<RMissile>();
+            rMissile.parent = parent;
+            rMissile.playerNum = playerNum;
 
             shootDir = missile.transform.rotation;
             shootDir.x += Random.Range(-spreadFactor, spreadFactor);

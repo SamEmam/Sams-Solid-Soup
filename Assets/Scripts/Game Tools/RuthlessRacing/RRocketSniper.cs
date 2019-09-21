@@ -81,6 +81,7 @@ public class RRocketSniper : MonoBehaviour
             target = null;
         }
         rRocket.target = target;
+        rRocket.playerNum = playerNum;
         playerPowerup.DisablePowerup(powerupNum);
     }
 

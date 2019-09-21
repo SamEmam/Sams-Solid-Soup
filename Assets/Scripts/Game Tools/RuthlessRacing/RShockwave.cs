@@ -54,6 +54,13 @@ public class RShockwave : MonoBehaviour
                 audioPlayer.transform.SetParent(null);
                 Destroy(audioPlayer, 2f);
             }
+
+            SDerbyPlayer hitDerby = hit.GetComponent<SDerbyPlayer>();
+            if (hitDerby)
+            {
+                int dist = (int)Vector3.Distance(transform.position, hit.transform.position);
+                hitDerby.TakeDamage(Mathf.Abs((int)((radius - dist) * 10)), playerNum);
+            }
         }
         Instantiate(explosion, transform.position, transform.rotation);
         playerPowerup.DisablePowerup(powerupNum);

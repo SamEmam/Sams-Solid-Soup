@@ -69,7 +69,9 @@ public class RMineLauncher : MonoBehaviour
         rb.isKinematic = false;
         rb.useGravity = true;
         rb.AddForce(shotMine.transform.up * initialForce, ForceMode.VelocityChange);
-        shotMine.GetComponentInChildren<RMine>().isShot = true;
+        RMine rMine = shotMine.GetComponentInChildren<RMine>();
+        rMine.isShot = true;
+        rMine.playerNum = playerNum;
         StartCoroutine(EnableCollider(shotMine));
         mineCount--;
 

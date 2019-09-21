@@ -11,7 +11,7 @@ public static class GamePrefs
     private static bool withSplit = true;
     private static float gameTime;
     private static bool player1 = false, player2 = false, player3 = false, player4 = false, player5 = false, player6 = false, player7 = false, player8 = false;
-    private static GameModeEnum gameMode;
+    private static GameModeEnum gameMode = GameModeEnum.Soup;
     private static SubModeEnum subMode;
     private static ColorEnum p1Color = ColorEnum.Undefined, p2Color = ColorEnum.Undefined, p3Color = ColorEnum.Undefined, p4Color = ColorEnum.Undefined, p5Color = ColorEnum.Undefined, p6Color = ColorEnum.Undefined, p7Color = ColorEnum.Undefined, p8Color = ColorEnum.Undefined;
     private static TypeEnum p1Type, p2Type, p3Type, p4Type, p5Type, p6Type, p7Type, p8Type;

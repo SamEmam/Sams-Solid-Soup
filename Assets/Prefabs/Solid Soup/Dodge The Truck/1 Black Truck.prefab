@@ -763,6 +763,7 @@ GameObject:
   - component: {fileID: 2151309519715740074}
   - component: {fileID: 3800697548965260175}
   - component: {fileID: 7111636910733764114}
+  - component: {fileID: -482280605271832693}
   m_Layer: 0
   m_Name: 1 Black Truck
   m_TagString: Vehicle
@@ -867,9 +868,11 @@ MonoBehaviour:
   lowPitchMin: 1
   lowPitchMax: 5
   highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
+  maxRolloffDistance: 300
+  minRolloffDistance: 5
   dopplerLevel: 1
   useDoppler: 1
+  useSpatialBlend: 1
 --- !u!65 &7111636910733764114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -883,6 +886,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.66, z: 0}
+--- !u!114 &-482280605271832693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442364593842071184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a902f2d9e1831d44b9185efbbef6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4124409785883765053
 GameObject:
   m_ObjectHideFlags: 0

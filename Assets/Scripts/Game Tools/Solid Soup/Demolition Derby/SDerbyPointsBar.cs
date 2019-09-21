@@ -99,34 +99,34 @@ public class SDerbyPointsBar : MonoBehaviour
         switch (color)
         {
             case 0:
-                imgPointsBar.color = new Color(63f / 255f, 68f / 255f, 68f / 255f, 1f);
+                imgPointsBar.color = new Color(63f / 255f, 68f / 255f, 68f / 255f, 0.7f);
                 break;
             case 1:
-                imgPointsBar.color = new Color(203f / 255f, 203f / 255f, 203f / 255f, 1f);
+                imgPointsBar.color = new Color(203f / 255f, 203f / 255f, 203f / 255f, 0.7f);
                 break;
             case 2:
-                imgPointsBar.color = new Color(198f / 255f, 68f / 255f, 65f / 255f, 1f);
+                imgPointsBar.color = new Color(198f / 255f, 68f / 255f, 65f / 255f, 0.7f);
                 break;
             case 3:
-                imgPointsBar.color = new Color(210f / 255f, 124f / 255f, 56f / 255f, 1f);
+                imgPointsBar.color = new Color(210f / 255f, 124f / 255f, 56f / 255f, 0.7f);
                 break;
             case 4:
-                imgPointsBar.color = new Color(211f / 255f, 177f / 255f, 41f / 255f, 1f);
+                imgPointsBar.color = new Color(211f / 255f, 177f / 255f, 41f / 255f, 0.7f);
                 break;
             case 5:
-                imgPointsBar.color = new Color(150f / 255f, 195f / 255f, 57f / 255f, 1f);
+                imgPointsBar.color = new Color(150f / 255f, 195f / 255f, 57f / 255f, 0.7f);
                 break;
             case 6:
-                imgPointsBar.color = new Color(34f / 255f, 143f / 255f, 105f / 255f, 1f);
+                imgPointsBar.color = new Color(34f / 255f, 143f / 255f, 105f / 255f, 0.7f);
                 break;
             case 7:
-                imgPointsBar.color = new Color(77f / 255f, 173f / 255f, 188f / 255f, 1f);
+                imgPointsBar.color = new Color(77f / 255f, 173f / 255f, 188f / 255f, 0.7f);
                 break;
             case 8:
-                imgPointsBar.color = new Color(80f / 255f, 117f / 255f, 173f / 255f, 1f);
+                imgPointsBar.color = new Color(80f / 255f, 117f / 255f, 173f / 255f, 0.7f);
                 break;
             case 9:
-                imgPointsBar.color = new Color(138f / 255f, 40f / 255f, 173f / 255f, 1f);
+                imgPointsBar.color = new Color(138f / 255f, 40f / 255f, 173f / 255f, 0.7f);
                 break;
 
         }

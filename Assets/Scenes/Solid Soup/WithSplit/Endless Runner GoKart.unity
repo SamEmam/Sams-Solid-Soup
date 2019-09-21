@@ -5410,7 +5410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &218422767
 Transform:
   m_ObjectHideFlags: 0
@@ -28491,7 +28491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &618132000
 Transform:
   m_ObjectHideFlags: 0
@@ -47535,7 +47535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &1066370861
 Transform:
   m_ObjectHideFlags: 0
@@ -59806,7 +59806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &1373030353
 Transform:
   m_ObjectHideFlags: 0
@@ -72216,7 +72216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &1793773777
 Transform:
   m_ObjectHideFlags: 0
@@ -72878,7 +72878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &1846029894
 Transform:
   m_ObjectHideFlags: 0
@@ -79211,6 +79211,70 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1392191181, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392191181, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859531758, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 725
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859531758, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887430093, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887430093, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474832278, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 510
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474832278, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813449568, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813449568, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792529129, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 725
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792529129, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611222801, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611222801, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907147293, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 510
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907147293, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1630374496, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
     - {fileID: 1630374497, guid: 7aae98bee7dee9f439c535b9649e1ec2, type: 3}
@@ -80201,7 +80265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &2020704844
 Transform:
   m_ObjectHideFlags: 0
@@ -80428,7 +80492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 921f1b1179f7f5a4fb347c359665b1ea, type: 2}
+  profile: {fileID: 11400000, guid: d3a4f39044afc8346a3e0f62b3992e61, type: 2}
 --- !u!4 &2042205822
 Transform:
   m_ObjectHideFlags: 0

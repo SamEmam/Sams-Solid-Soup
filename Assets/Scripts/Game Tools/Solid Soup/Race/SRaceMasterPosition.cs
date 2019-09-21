@@ -35,10 +35,18 @@ public class SRaceMasterPosition : MonoBehaviour
         SRacePlayerPosition tempPlayer;
         for (int i = 0; i < playerPositionList.Count; i++)
         {
+            if (!playerPositionList[i])
+            {
+                continue;
+            }
             playerPositionList[i].CalculatePoints();
             Debug.Log("player: " + playerPositionList[i]);
             for (int j = 0; j < playerPositionList.Count - 1; j++)
             {
+                if (!playerPositionList[j])
+                {
+                    continue;
+                }
                 playerPositionList[j].CalculatePoints();
 
                 if (playerPositionList[j].points > playerPositionList[j + 1].points)

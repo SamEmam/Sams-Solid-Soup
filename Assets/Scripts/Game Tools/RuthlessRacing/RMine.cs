@@ -12,6 +12,9 @@ public class RMine : MonoBehaviour
     private float delay = 0.25f;
     public bool isShot = false;
 
+    [HideInInspector]
+    public int playerNum;
+
     [Header("Setup")]
     public ParticleSystem explosion;
     public AudioClip[] clips;
@@ -59,6 +62,13 @@ public class RMine : MonoBehaviour
                     source.Play();
                     audioPlayer.transform.SetParent(null);
                     Destroy(audioPlayer, 2f);
+                }
+
+                SDerbyPlayer hitDerby = hit.GetComponent<SDerbyPlayer>();
+                if (hitDerby)
+                {
+                    int dist = (int)Vector3.Distance(transform.position, hit.transform.position);
+                    hitDerby.TakeDamage(Mathf.Abs((int)((radius - dist) * 20)), playerNum);
                 }
             }
             Instantiate(explosion, transform.position, transform.rotation);

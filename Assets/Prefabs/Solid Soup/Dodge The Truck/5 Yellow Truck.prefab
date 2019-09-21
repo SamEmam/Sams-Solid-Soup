@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6103963824139684573}
   - component: {fileID: 4365272330264907439}
   - component: {fileID: 1770499552556305051}
+  - component: {fileID: -5463034656721169966}
   m_Layer: 0
   m_Name: 5 Yellow Truck
   m_TagString: Vehicle
@@ -117,9 +118,11 @@ MonoBehaviour:
   lowPitchMin: 1
   lowPitchMax: 5
   highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
+  maxRolloffDistance: 300
+  minRolloffDistance: 5
   dopplerLevel: 1
   useDoppler: 1
+  useSpatialBlend: 1
 --- !u!65 &1770499552556305051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133,6 +136,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0.66, z: 0}
+--- !u!114 &-5463034656721169966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702316973319309509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a902f2d9e1831d44b9185efbbef6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749917690133140824
 GameObject:
   m_ObjectHideFlags: 0

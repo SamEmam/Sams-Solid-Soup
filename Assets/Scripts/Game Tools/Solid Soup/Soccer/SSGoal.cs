@@ -9,7 +9,8 @@ public class SSGoal : MonoBehaviour
     public GameObject Explosion;
     public Transform ball;
     private int rewardScore;
-    private bool hasBeenAwarded = false;
+    [HideInInspector]
+    public bool hasBeenAwarded = false;
     private float shortGameTime = 45f;
 
     private void Start()

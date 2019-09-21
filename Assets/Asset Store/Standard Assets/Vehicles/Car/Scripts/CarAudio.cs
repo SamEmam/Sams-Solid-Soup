@@ -39,8 +39,10 @@ namespace UnityStandardAssets.Vehicles.Car
         public float lowPitchMax = 6f;                                              // The highest possible pitch for the low sounds
         public float highPitchMultiplier = 0.25f;                                   // Used for altering the pitch of high sounds
         public float maxRolloffDistance = 500;                                      // The maximum distance where rollof starts to take place
+        public float minRolloffDistance = 5;                                        // The minimun distance where rollof starts to take place
         public float dopplerLevel = 1;                                              // The mount of doppler effect used in the audio
         public bool useDoppler = true;                                              // Toggle for using doppler
+        public bool useSpatialBlend = false;                                        // Toggle for using spatialBlend
 
         private AudioSource m_LowAccel; // Source for the low acceleration sounds
         private AudioSource m_LowDecel; // Source for the low deceleration sounds
@@ -151,6 +153,12 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_LowAccel.dopplerLevel = useDoppler ? dopplerLevel : 0;
                     m_HighDecel.dopplerLevel = useDoppler ? dopplerLevel : 0;
                     m_LowDecel.dopplerLevel = useDoppler ? dopplerLevel : 0;
+
+                    // adjust the spatial blend
+                    m_HighAccel.spatialBlend = useSpatialBlend ? 1 : 0;
+                    m_LowAccel.spatialBlend = useSpatialBlend ? 1 : 0;
+                    m_HighDecel.spatialBlend = useSpatialBlend ? 1 : 0;
+                    m_LowDecel.spatialBlend = useSpatialBlend ? 1 : 0;
                 }
             }
         }
