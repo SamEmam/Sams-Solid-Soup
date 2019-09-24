@@ -55,7 +55,6 @@ public class SSJump : MonoBehaviour
     void Turn()
     {
         var turn = player.GetAxis("Turn");
-        Debug.Log(turn);
         rb.AddTorque(transform.up * torque * turn, ForceMode.Acceleration);
     }
 

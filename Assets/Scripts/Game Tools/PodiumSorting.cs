@@ -58,16 +58,12 @@ public class PodiumSorting : MonoBehaviour
 
     void BubbleSort()
     {
-        Debug.Log("Sorting!");
         int tempPoints;
         int tempPlayer;
         for (int i = 0; i < players.Count - 1; i++)
         {
-            Debug.Log("Sorting 2x");
             for (int j = 0; j < players.Count - 1; j++)
             {
-                Debug.Log("Sorting 3x");
-                Debug.Log("Unchanged - " + "Player: " + players[j] + " Points: " + points[j]);
                 //if (points[j] == players.Count - 2)
                 //{
                 //    return;
@@ -82,12 +78,12 @@ public class PodiumSorting : MonoBehaviour
                     tempPlayer = players[j];
                     players[j] = players[j + 1];
                     players[j + 1] = tempPlayer;
-
-                    Debug.Log("Player: " + players[j] + " Points: " + points[j]);
+                    
                 }
             }
         }
 
-        PP.RelocatePlayers();
+        PP.TransformPodiums();
+        //PP.RelocatePlayers();
     }
 }

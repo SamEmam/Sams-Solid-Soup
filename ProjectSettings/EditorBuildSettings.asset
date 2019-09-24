@@ -39,17 +39,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/WithSplit/Endless Runner GoKart.unity
     guid: 60e10a507fe70324c9b6ea9e9e588f66
   - enabled: 1
-    path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stunt GoKart.unity
-    guid: 5d3e0de40e0246a4a8b15397b041eb98
-  - enabled: 1
     path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stadium GoKart.unity
     guid: 5075642a361cc4e458fb985238c0dd6c
   - enabled: 1
-    path: Assets/Scenes/Solid Soup/WithSplit/Point Hunt.unity
-    guid: 45d128b14142e3244a56be0ea1b8a678
+    path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stunt GoKart.unity
+    guid: 5d3e0de40e0246a4a8b15397b041eb98
   - enabled: 1
     path: Assets/Scenes/Solid Soup/WithSplit/Demolition Derby.unity
     guid: 59ea7374abdd35645b23cd48fdfd1e4c
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/WithSplit/Point Hunt.unity
+    guid: 45d128b14142e3244a56be0ea1b8a678
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Circuit Ice Oval.unity
     guid: 2dcc5f2a3b805bd499389a858cc7ce75
@@ -69,14 +69,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/Endless Runner.unity
     guid: 151bdeb15a4ce4e438c2dece4a85ee55
   - enabled: 1
-    path: Assets/Scenes/Solid Soup/Soccer.unity
-    guid: f19631300611acb43b750e546f4eb2b6
-  - enabled: 1
     path: Assets/Scenes/Solid Soup/Rush Hour.unity
     guid: 01493b6f96b609846b23d910779f51cf
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Tag.unity
     guid: a1445c56753896b4a85f357e5dea6281
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Soccer.unity
+    guid: f19631300611acb43b750e546f4eb2b6
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Dodge The Trucks.unity
     guid: 04b879d9299234b44b56c1631074aede

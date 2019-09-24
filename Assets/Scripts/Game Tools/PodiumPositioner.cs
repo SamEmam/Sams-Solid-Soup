@@ -16,8 +16,46 @@ public class PodiumPositioner : MonoBehaviour
 
     [Header("Materials")]
     public Material[] materials;
-    public MeshRenderer[] podiums;
-    
+    public MeshRenderer[] podiumMeshes;
+
+    [Header("Podiums")]
+    public Transform[] podiums;
+    private float maxPoints;
+
+    public void TransformPodiums()
+    {
+        ////float lowestPoints = PS.points[PS.points.Count - 1];
+
+        //for (int i = 0; i < PS.points.Count; i++)
+        //{
+        //    if (i == 0)
+        //    {
+        //        maxPoints = PS.points[i];
+        //        //continue;
+        //    }
+
+        //    float currentPoints = PS.points[i];
+        //    float percentage = PS.points[i] / maxPoints;
+
+        //    //percentage *= percentage * percentage * percentage * percentage;
+
+        //    podiums[i].localScale = new Vector3(podiums[i].localScale.x, (6f * percentage), podiums[i].localScale.z);
+
+        //    Debug.Log(PS.players[i] + ": y pos = " + PS.points[i] / maxPoints);
+
+        //    Debug.Log(PS.players[i] + ": points = " + currentPoints);
+
+        //    if (podiums[i].localScale.y < 0.1f)
+        //    {
+        //        podiums[i].localScale = new Vector3(podiums[i].localScale.x, 0.1f, podiums[i].localScale.z);
+        //    }
+
+        //    podiums[i].position = new Vector3(podiums[i].position.x, podiums[i].localScale.y / 2f, podiums[i].position.z);
+        //    pointPositions[i].position = new Vector3(pointPositions[i].position.x, podiums[i].localScale.y + 2f, pointPositions[i].position.z);
+        //    playerPositions[i].position = new Vector3(playerPositions[i].position.x, podiums[i].localScale.y, playerPositions[i].position.z);
+        //}
+        RelocatePlayers();
+    }
 
     public void RelocatePlayers()
     {
@@ -32,8 +70,8 @@ public class PodiumPositioner : MonoBehaviour
             points[PS.players[i] - 1].position = pointPositions[i].position;
             points[PS.players[i] - 1].rotation = pointPositions[i].rotation;
 
-            podiums[i].gameObject.SetActive(true);
-            podiums[i].material = GetPlayerColor(PS.players[i]);
+            podiumMeshes[i].gameObject.SetActive(true);
+            podiumMeshes[i].material = GetPlayerColor(PS.players[i]);
         }
     }
 

@@ -40,7 +40,6 @@ public class SRaceMasterPosition : MonoBehaviour
                 continue;
             }
             playerPositionList[i].CalculatePoints();
-            Debug.Log("player: " + playerPositionList[i]);
             for (int j = 0; j < playerPositionList.Count - 1; j++)
             {
                 if (!playerPositionList[j])
