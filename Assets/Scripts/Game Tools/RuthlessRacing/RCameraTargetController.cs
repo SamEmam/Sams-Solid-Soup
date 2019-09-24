@@ -24,6 +24,7 @@ public class RCameraTargetController : MonoBehaviour
     {
         targets = new List<GameObject>();
         targets.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        targets.AddRange(GameObject.FindGameObjectsWithTag("Objective"));
 
         playerCount = targets.Count;
 

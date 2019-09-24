@@ -5019,7 +5019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startIndex: 10
-  splitIndex: 15
+  splitIndex: 24
   finishIndex: 25
   list4Player: 
   list8Player: 

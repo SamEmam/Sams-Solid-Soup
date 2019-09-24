@@ -7,6 +7,7 @@ public class SCaravanSound : MonoBehaviour
     public AudioClip[] clips;
     private AudioSource source;
     private FixedJoint joint;
+    private bool hasPlayedSound = false;
 
     private void Start()
     {
@@ -20,8 +21,13 @@ public class SCaravanSound : MonoBehaviour
 
     private void Update()
     {
+        if (hasPlayedSound)
+        {
+            return;
+        }
         if (!joint)
         {
+            hasPlayedSound = true;
             transform.SetParent(null);
             source.Play();
         }
