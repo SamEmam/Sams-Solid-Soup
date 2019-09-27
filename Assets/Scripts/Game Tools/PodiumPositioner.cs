@@ -24,36 +24,38 @@ public class PodiumPositioner : MonoBehaviour
 
     public void TransformPodiums()
     {
-        ////float lowestPoints = PS.points[PS.points.Count - 1];
+        float lowestPoints = PS.points[PS.points.Count - 1];
 
-        //for (int i = 0; i < PS.points.Count; i++)
-        //{
-        //    if (i == 0)
-        //    {
-        //        maxPoints = PS.points[i];
-        //        //continue;
-        //    }
+        for (int i = 0; i < PS.points.Count; i++)
+        {
+            if (i == 0)
+            {
+                maxPoints = PS.points[i];
+                //continue;
+            }
 
-        //    float currentPoints = PS.points[i];
-        //    float percentage = PS.points[i] / maxPoints;
+            float currentPoints = PS.points[i];
+            float percentage = (PS.points[i] - lowestPoints) / (maxPoints - lowestPoints);
 
-        //    //percentage *= percentage * percentage * percentage * percentage;
+            //percentage *= percentage * percentage * percentage * percentage;
 
-        //    podiums[i].localScale = new Vector3(podiums[i].localScale.x, (6f * percentage), podiums[i].localScale.z);
+            podiums[i].localScale = new Vector3(podiums[i].localScale.x, (6f * percentage), podiums[i].localScale.z);
 
-        //    Debug.Log(PS.players[i] + ": y pos = " + PS.points[i] / maxPoints);
+            //Debug.Log(PS.players[i] + ": y pos = " + PS.points[i] / maxPoints);
 
-        //    Debug.Log(PS.players[i] + ": points = " + currentPoints);
+            //Debug.Log(PS.players[i] + ": points = " + currentPoints);
 
-        //    if (podiums[i].localScale.y < 0.1f)
-        //    {
-        //        podiums[i].localScale = new Vector3(podiums[i].localScale.x, 0.1f, podiums[i].localScale.z);
-        //    }
+            //Debug.Log(PS.players[i] + ": percentage = " + percentage);
 
-        //    podiums[i].position = new Vector3(podiums[i].position.x, podiums[i].localScale.y / 2f, podiums[i].position.z);
-        //    pointPositions[i].position = new Vector3(pointPositions[i].position.x, podiums[i].localScale.y + 2f, pointPositions[i].position.z);
-        //    playerPositions[i].position = new Vector3(playerPositions[i].position.x, podiums[i].localScale.y, playerPositions[i].position.z);
-        //}
+            if (podiums[i].localScale.y < 0.1f)
+            {
+                podiums[i].localScale = new Vector3(podiums[i].localScale.x, 0.1f, podiums[i].localScale.z);
+            }
+
+            podiums[i].position = new Vector3(podiums[i].position.x, podiums[i].localScale.y / 2f, podiums[i].position.z);
+            pointPositions[i].position = new Vector3(pointPositions[i].position.x, podiums[i].localScale.y + 0.2f, pointPositions[i].position.z);
+            playerPositions[i].position = new Vector3(playerPositions[i].position.x, podiums[i].localScale.y, playerPositions[i].position.z);
+        }
         RelocatePlayers();
     }
 
@@ -63,7 +65,7 @@ public class PodiumPositioner : MonoBehaviour
         for (int i = 0; i < PS.players.Count; i++)
         {
             //Debug.Log(PS.players.Count);
-            Debug.Log(PS.players[i]);
+            //Debug.Log(PS.players[i]);
             players[PS.players[i] - 1].position = playerPositions[i].position;
             players[PS.players[i] - 1].rotation = playerPositions[i].rotation;
 

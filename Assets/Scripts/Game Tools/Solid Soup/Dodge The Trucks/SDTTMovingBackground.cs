@@ -8,11 +8,11 @@ public class SDTTMovingBackground : MonoBehaviour
     private float currentSpeed = 0;
     public Transform spawnPos;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (currentSpeed < moveSpeed)
         {
-            currentSpeed += Time.deltaTime * 2;
+            currentSpeed += Time.fixedDeltaTime * 2;
         }
         else
         {
@@ -24,7 +24,7 @@ public class SDTTMovingBackground : MonoBehaviour
             transform.position = spawnPos.position;
         }
 
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + (currentSpeed * Time.deltaTime), transform.localPosition.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + (currentSpeed * Time.fixedDeltaTime), transform.localPosition.z);
         
     }
 }

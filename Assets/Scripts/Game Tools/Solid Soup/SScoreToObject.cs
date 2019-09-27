@@ -8,6 +8,7 @@ public class SScoreToObject : MonoBehaviour
     public Transform scorePos;
     public GameObject[] charObjArray;
     public Material[] materials;
+    public bool colorChars = true;
 
     private int playerNum;
     private string playerString;
@@ -66,22 +67,31 @@ public class SScoreToObject : MonoBehaviour
     void StringToCharArray(string scoreString, Transform position)
     {
         int temp;
-        Vector3 offset = Vector3.right;
+        Vector3 offset = Vector3.zero;
         char[] scoreCharArray = scoreString.ToCharArray();
 
-        for (int i = 0; i < scoreCharArray.Length; i++)
+        for (int i = scoreCharArray.Length - 1; i >= 0; i--)
         {
             temp = (int)System.Char.GetNumericValue(scoreCharArray[i]);
             GameObject instantiatedNum = Instantiate(charObjArray[temp], position.position + offset, position.rotation);
-            instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
+
+            instantiatedNum.transform.localScale = new Vector3(
+                instantiatedNum.transform.localScale.x * position.localScale.x,
+                instantiatedNum.transform.localScale.y * position.localScale.y,
+                instantiatedNum.transform.localScale.z * position.localScale.z);
+
+            if (colorChars)
+            {
+                instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
+            }
 
             if (direction == ScoreDirectionEnum.right)
             {
-                offset += Vector3.right * 3;
+                offset -= position.right * 2 * position.localScale.x;
             }
             else
             {
-                offset += Vector3.left * 3;
+                offset += position.right * 2 * position.localScale.x;
             }
         }
 

@@ -51,6 +51,7 @@ public class SDTTPlayer : MonoBehaviour
             RewardPlayer(playerNum);
             rb.constraints = RigidbodyConstraints.None;
             rb.useGravity = true;
+            rb.drag = 0.1f;
         }
     }
 
