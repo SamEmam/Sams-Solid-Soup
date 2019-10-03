@@ -77,7 +77,7 @@ public class TextObjectColoring : MonoBehaviour
                 sceneLoader.LoadSceneByIndex(1);
                 break;
             case HandleEnum.online:
-                sceneLoader.LoadSceneByIndex(1);
+                sceneLoader.LoadSceneByIndex(25);
                 break;
             case HandleEnum.options:
                 OpenSettings();

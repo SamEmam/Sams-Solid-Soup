@@ -6,15 +6,20 @@ public class RVehicleColorSelector : MonoBehaviour
 {
     [SerializeField]
     private Mesh[] Colors;
-
-    [SerializeField]
-    private RVehicleTypeSelector typeSelector;
+    
+    public RVehicleTypeSelector typeSelector;
 
     [SerializeField]
     private MeshFilter vehicleMesh;
 
     private void OnEnable()
     {
+        StartCoroutine(DelayedStart());
+    }
+
+    IEnumerator DelayedStart()
+    {
+        yield return null;
         LoadColor();
     }
 

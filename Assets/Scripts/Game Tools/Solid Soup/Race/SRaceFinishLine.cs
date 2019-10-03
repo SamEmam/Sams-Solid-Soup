@@ -44,6 +44,11 @@ public class SRaceFinishLine : MonoBehaviour
                 rewardScore--;
 
                 // Instantiate player ragdoll
+                //if (other.GetComponent<SRaceDebrisSpawner>())
+                //{
+                //    other.GetComponent<SRaceDebrisSpawner>().SpawnDebris(other.transform, other.GetComponent<Rigidbody>(), other.GetComponent<RVehicleColorSelector>().typeSelector);
+                //}
+
                 Instantiate(explosion, transform.position + Vector3.down, transform.rotation);
                 Destroy(other.gameObject);
 

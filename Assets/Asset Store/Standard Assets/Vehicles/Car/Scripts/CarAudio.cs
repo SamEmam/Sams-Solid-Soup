@@ -117,6 +117,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_HighAccel.pitch = pitch*pitchMultiplier*highPitchMultiplier;
                     m_HighAccel.dopplerLevel = useDoppler ? dopplerLevel : 0;
                     m_HighAccel.volume = 1;
+                    if (useSpatialBlend)
+                    {
+                        m_HighAccel.spatialBlend = 1;
+                    }
                 }
                 else
                 {
@@ -176,7 +180,7 @@ namespace UnityStandardAssets.Vehicles.Car
             // start the clip from a random point
             source.time = Random.Range(0f, clip.length);
             source.Play();
-            source.minDistance = 5;
+            source.minDistance = minRolloffDistance;
             source.maxDistance = maxRolloffDistance;
             source.dopplerLevel = 0;
             return source;

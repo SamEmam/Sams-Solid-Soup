@@ -4513,6 +4513,15 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 3
+    - _id: 24
+      _name: Pitch
+      _type: 0
+      _descriptiveName: Rotate up or down
+      _positiveDescriptiveName: Pitch up
+      _negativeDescriptiveName: Pitch down
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -4543,7 +4552,7 @@ MonoBehaviour:
       - categoryId: 2
         actionIds: 0b0000000c0000000d0000000e0000000f00000010000000
       - categoryId: 3
-        actionIds: 11000000120000001300000014000000150000001600000017000000
+        actionIds: 1100000012000000130000001400000015000000160000001700000018000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -4855,6 +4864,17 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 24
+        _elementType: 0
+        _elementIdentifierId: 1
+        _axisRange: 0
+        _invert: 1
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     keyboardMaps:
     - id: 0
       categoryId: 0
@@ -4997,7 +5017,7 @@ MonoBehaviour:
     controllerMapLayoutManagerRuleSets: []
     controllerMapEnablerRuleSets: []
     playerIdCounter: 17
-    actionIdCounter: 24
+    actionIdCounter: 25
     actionCategoryIdCounter: 4
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 4
@@ -8770,7 +8790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1353220565}
-  _version: Version 0.1.15.1
+  _version: Version 0.1.17.0
   readFromPrefs: 0
 --- !u!114 &852105025
 MonoBehaviour:
