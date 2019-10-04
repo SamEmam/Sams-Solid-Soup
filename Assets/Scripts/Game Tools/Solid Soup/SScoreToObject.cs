@@ -87,11 +87,11 @@ public class SScoreToObject : MonoBehaviour
 
             if (direction == ScoreDirectionEnum.right)
             {
-                offset -= position.right * 2 * position.localScale.x;
+                offset -= position.right * 2.2f * position.localScale.x;
             }
             else
             {
-                offset += position.right * 2 * position.localScale.x;
+                offset += position.right * 2.2f * position.localScale.x;
             }
         }
 

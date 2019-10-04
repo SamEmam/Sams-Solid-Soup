@@ -41,6 +41,8 @@ public class LocalGameManager : MonoBehaviour
         {
             source.Play();
             ResetPlayerScore();
+            GamePrefs.GamesPlayed = 0;
+            GamePrefs.GamesIndex = 0;
 
             if (GamePrefs.GameMode == GameModeEnum.Racing)
             {
