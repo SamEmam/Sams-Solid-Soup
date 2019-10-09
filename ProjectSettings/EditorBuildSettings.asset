@@ -45,14 +45,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stunt GoKart.unity
     guid: 5d3e0de40e0246a4a8b15397b041eb98
   - enabled: 1
+    path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stadium MotorBike.unity
+    guid: 976ace2b4e4bf4d4f9e2964b404dbe41
+  - enabled: 1
     path: Assets/Scenes/Solid Soup/WithSplit/Demolition Derby.unity
     guid: 59ea7374abdd35645b23cd48fdfd1e4c
   - enabled: 1
     path: Assets/Scenes/Solid Soup/WithSplit/Point Hunt.unity
     guid: 45d128b14142e3244a56be0ea1b8a678
-  - enabled: 1
-    path: Assets/Scenes/Solid Soup/Circuit Ice Oval.unity
-    guid: 2dcc5f2a3b805bd499389a858cc7ce75
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Circuit Dirt Trail.unity
     guid: b6596bf8f643e0c449b4595eb01e383d
@@ -66,9 +66,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/Circuit Stadium 8 Caravan.unity
     guid: 67acfe2381c153d4fb24510b98664e2d
   - enabled: 1
-    path: Assets/Scenes/Solid Soup/Endless Runner.unity
-    guid: 151bdeb15a4ce4e438c2dece4a85ee55
-  - enabled: 1
     path: Assets/Scenes/Solid Soup/Rush Hour.unity
     guid: 01493b6f96b609846b23d910779f51cf
   - enabled: 1
@@ -78,14 +75,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/Soccer.unity
     guid: f19631300611acb43b750e546f4eb2b6
   - enabled: 1
-    path: Assets/Scenes/Solid Soup/Dodge The Trucks.unity
-    guid: 04b879d9299234b44b56c1631074aede
-  - enabled: 1
     path: Assets/Scenes/Solid Soup/Last Car Standing.unity
     guid: 10d72e4475fcaf0428517c754bb3b5fb
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Space Battle.unity
     guid: ba7988113c9b6c949b12fd72fed7a476
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Circuit Ice Oval.unity
+    guid: 2dcc5f2a3b805bd499389a858cc7ce75
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Dodge The Trucks.unity
+    guid: 04b879d9299234b44b56c1631074aede
+  - enabled: 1
+    path: Assets/Scenes/Solid Soup/Endless Runner.unity
+    guid: 151bdeb15a4ce4e438c2dece4a85ee55
   - enabled: 1
     path: Assets/Scenes/Test Scene.unity
     guid: a2bc0f1457b62e6439a7b5affbd1d700

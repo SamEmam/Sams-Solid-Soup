@@ -25,10 +25,8 @@ public class SLCSShipController : MonoBehaviour
         startTime = Time.time;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        
-
         if (!hasSpawned)
         {
             if (Time.time - startTime > spawnTime)
@@ -58,7 +56,7 @@ public class SLCSShipController : MonoBehaviour
         cannonAnim.Play("CannonShoot");
         GameObject ball = Instantiate(cannonBall, firePoint.position, firePoint.rotation);
         Instantiate(shootParticle, firePoint.position, firePoint.rotation);
-        ball.GetComponent<Rigidbody>().AddForce(firePoint.forward * shootSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        ball.GetComponent<Rigidbody>().AddForce(firePoint.forward * shootSpeed * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
         Destroy(ball, destroySpeed);
     }

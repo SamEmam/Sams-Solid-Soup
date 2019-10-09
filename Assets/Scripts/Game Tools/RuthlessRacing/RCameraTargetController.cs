@@ -6,8 +6,7 @@ public class RCameraTargetController : MonoBehaviour
 {
     [SerializeField]
     private CameraMultiTarget cameraMultiTarget;
-    [SerializeField]
-    private List<GameObject> targets;
+    public List<GameObject> targets;
 
     private int playerCount;
 

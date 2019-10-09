@@ -74,7 +74,7 @@ public class SScoreToObject : MonoBehaviour
         {
             temp = (int)System.Char.GetNumericValue(scoreCharArray[i]);
             GameObject instantiatedNum = Instantiate(charObjArray[temp], position.position + offset, position.rotation);
-
+            
             instantiatedNum.transform.localScale = new Vector3(
                 instantiatedNum.transform.localScale.x * position.localScale.x,
                 instantiatedNum.transform.localScale.y * position.localScale.y,
@@ -84,14 +84,15 @@ public class SScoreToObject : MonoBehaviour
             {
                 instantiatedNum.GetComponent<MeshRenderer>().material = objColor;
             }
+            
 
             if (direction == ScoreDirectionEnum.right)
             {
-                offset -= position.right * 2.2f * position.localScale.x;
+                offset -= position.right * 2.4f * position.localScale.x;
             }
             else
             {
-                offset += position.right * 2.2f * position.localScale.x;
+                offset += position.right * 2.4f * position.localScale.x;
             }
         }
 

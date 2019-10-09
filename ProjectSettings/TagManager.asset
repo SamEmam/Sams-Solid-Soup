@@ -11,6 +11,7 @@ TagManager:
   - Vehicle
   - Buoyant
   - Objective
+  - UIBlocker
   layers:
   - Default
   - TransparentFX
