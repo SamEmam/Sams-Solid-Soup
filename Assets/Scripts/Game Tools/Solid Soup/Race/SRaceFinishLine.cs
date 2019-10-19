@@ -11,9 +11,18 @@ public class SRaceFinishLine : MonoBehaviour
     public GameObject explosion;
     public GameObject explosionCP;
 
+    public AudioClip cpClip, finishClip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Awake()
     {
         GetComponent<BoxCollider>().isTrigger = true;
+
+        audioPlayer = new GameObject("CP Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = cpClip;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +45,11 @@ public class SRaceFinishLine : MonoBehaviour
                     cp.checkpointCount = 0;
                     cp.respawnPoint = transform;
                     Instantiate(explosionCP, transform.position + Vector3.down, transform.rotation);
+                    if (cpClip)
+                    {
+                        source.clip = cpClip;
+                        source.Play();
+                    }
                     return;
                 }
 
@@ -50,6 +64,11 @@ public class SRaceFinishLine : MonoBehaviour
                 //}
 
                 Instantiate(explosion, transform.position + Vector3.down, transform.rotation);
+                if (finishClip)
+                {
+                    source.clip = finishClip;
+                    source.Play();
+                }
                 Destroy(other.gameObject);
 
                 playersLeft--;

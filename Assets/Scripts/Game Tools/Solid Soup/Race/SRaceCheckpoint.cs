@@ -7,9 +7,21 @@ public class SRaceCheckpoint : MonoBehaviour
     public int checkpointNum;
     public GameObject explosion;
 
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Awake()
     {
         GetComponent<BoxCollider>().isTrigger = true;
+
+        audioPlayer = new GameObject("CP Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +40,10 @@ public class SRaceCheckpoint : MonoBehaviour
                 if (explosion)
                 {
                     Instantiate(explosion, transform.position + Vector3.down, transform.rotation);
+                    if (clip)
+                    {
+                        source.Play();
+                    }
                 }
                 cp.checkpointCount++;
                 cp.respawnPoint = transform;

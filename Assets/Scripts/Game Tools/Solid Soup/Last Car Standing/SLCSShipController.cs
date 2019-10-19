@@ -19,10 +19,20 @@ public class SLCSShipController : MonoBehaviour
     private float shootTime = 5f;
     private float destroySpeed = 20f;
 
+    public AudioClip[] clips;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         startTime = Time.time;
+
+        audioPlayer = new GameObject("Cannon Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        source.clip = clips[Random.Range(0, clips.Length)];
+        source.volume /= 2f;
     }
 
     private void FixedUpdate()
@@ -57,6 +67,9 @@ public class SLCSShipController : MonoBehaviour
         GameObject ball = Instantiate(cannonBall, firePoint.position, firePoint.rotation);
         Instantiate(shootParticle, firePoint.position, firePoint.rotation);
         ball.GetComponent<Rigidbody>().AddForce(firePoint.forward * shootSpeed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+
+        source.clip = clips[Random.Range(0, clips.Length)];
+        source.Play();
 
         Destroy(ball, destroySpeed);
     }

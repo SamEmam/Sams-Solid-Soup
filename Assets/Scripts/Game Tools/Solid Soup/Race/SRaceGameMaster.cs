@@ -18,9 +18,11 @@ public class SRaceGameMaster : MonoBehaviour
 
     public SRaceFinishLine finishLine;
     private bool hasUpdatedScore;
+    
 
     private void Start()
     {
+
         finishLine.playersLeft = 0;
 
         if (GamePrefs.Player1)
@@ -76,5 +78,7 @@ public class SRaceGameMaster : MonoBehaviour
         yield return new WaitForSeconds(5);
         sceneLoader.LoadSceneByIndex(4);
     }
+
+    
 
 }

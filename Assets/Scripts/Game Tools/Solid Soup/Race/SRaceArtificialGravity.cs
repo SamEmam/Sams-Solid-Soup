@@ -6,6 +6,8 @@ public class SRaceArtificialGravity : MonoBehaviour
 {
     private float gravity;
     private Rigidbody rb;
+    [HideInInspector]
+    public float maxGravity = 1.6f;
     
 
     private void Start()
@@ -21,9 +23,9 @@ public class SRaceArtificialGravity : MonoBehaviour
         {
             gravity = 0.1f;
         }
-        if (gravity > 1.6f)
+        if (gravity > maxGravity)
         {
-            gravity = 1.6f;
+            gravity = maxGravity;
         }
         rb.AddForce(transform.up * -gravity, ForceMode.VelocityChange);
     }

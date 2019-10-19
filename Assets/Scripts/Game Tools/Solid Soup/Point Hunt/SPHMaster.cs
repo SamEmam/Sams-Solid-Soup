@@ -11,7 +11,7 @@ public class SPHMaster : MonoBehaviour
     private float timeBeforeEnd = 2f;
     private float gameCounter;
     private float spawnCounter;
-    private float spawnInterval = 4f;
+    private float spawnInterval = 8f;
     private bool hasEnded = false;
     private SceneLoader sceneLoader;
     [HideInInspector]
@@ -24,7 +24,7 @@ public class SPHMaster : MonoBehaviour
     {
         sceneLoader = GetComponent<SceneLoader>();
         gameCounter = timeBeforeEnd * 60;
-        spawnInterval -= 0.25f * GamePrefs.TotalPlayerCount;
+        spawnInterval -= 0.5f * GamePrefs.TotalPlayerCount;
     }
 
     private void Update()

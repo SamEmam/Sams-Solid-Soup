@@ -14,7 +14,7 @@ public class SCaravanSound : MonoBehaviour
         source = gameObject.AddComponent<AudioSource>();
         source.clip = clips[Random.Range(0, clips.Length - 1)];
         source.pitch = 0.5f;
-        source.volume /= 2;
+        //source.volume /= 2;
 
         joint = GetComponent<FixedJoint>();
     }

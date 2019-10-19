@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIAntiObjectScaler : MonoBehaviour
 {
     private float sizeIncrement = 0.065f;
-    private float startSize = 0.035f;
+    private float startSize = 0.08f;
 
     private void Start()
     {

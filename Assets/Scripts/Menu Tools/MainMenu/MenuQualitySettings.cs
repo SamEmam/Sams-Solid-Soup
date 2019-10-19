@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Linq;
+using System;
 
 public class MenuQualitySettings : MonoBehaviour
 {
@@ -18,7 +21,7 @@ public class MenuQualitySettings : MonoBehaviour
     private TextMeshProUGUI resolutionText, windowModeText, qualityText, vSyncText, masterVolumeText;
 
     [SerializeField]
-    private Button resolutionButton, windowModeButton, qualityButton, vSyncButton, masterVolumeButton, applyButton;
+    private Button resolutionButton, windowModeButton, qualityButton, vSyncButton, masterVolumeButton, applyButton, resetButton;
 
     private Resolution[] resolutions;
     private int currentResolutionIndex = 0;
@@ -42,28 +45,38 @@ public class MenuQualitySettings : MonoBehaviour
     {
         player = ReInput.players.GetPlayer(1);
 
-        resolutions = Screen.resolutions;
-        currentResolutionIndex = PlayerPrefs.GetInt(RESOLUTION_PREF_KEY, resolutions.Length - 1);
-        SetResolutionText(resolutions[currentResolutionIndex]);
-
-        windowMode = PlayerPrefs.GetInt(WINDOWMODE_PREF_KEY, 0);
-        SetWindowModeText();
-
-        qualityNames = QualitySettings.names;
-        qualityIndex = PlayerPrefs.GetInt(QUALITY_PREF_KEY, QualitySettings.names.Length - 1);
-        SetQualityText();
-
-        vSync = PlayerPrefs.GetInt(VSYNC_PREF_KEY, 1);
-        SetVSyncText();
-
-        masterVolume = PlayerPrefs.GetInt(MASTERVOLUME_PREF_KEY, 100);
-        SetMasterVolumeText();
-
-        if (!GamePrefs.HasAppliedSettings)
+        try
         {
-            GamePrefs.HasAppliedSettings = true;
-            ApplySettings();
-            gameObject.SetActive(false);
+
+            //resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+            resolutions = Screen.resolutions;
+            currentResolutionIndex = PlayerPrefs.GetInt(RESOLUTION_PREF_KEY, resolutions.Length - 1);
+            SetResolutionText(resolutions[currentResolutionIndex]);
+
+            windowMode = PlayerPrefs.GetInt(WINDOWMODE_PREF_KEY, 0);
+            SetWindowModeText();
+
+            qualityNames = QualitySettings.names;
+            qualityIndex = PlayerPrefs.GetInt(QUALITY_PREF_KEY, QualitySettings.names.Length - 1);
+            SetQualityText();
+
+            vSync = PlayerPrefs.GetInt(VSYNC_PREF_KEY, 1);
+            SetVSyncText();
+
+            masterVolume = PlayerPrefs.GetInt(MASTERVOLUME_PREF_KEY, 100);
+            SetMasterVolumeText();
+
+            if (!GamePrefs.HasAppliedSettings)
+            {
+                GamePrefs.HasAppliedSettings = true;
+                ApplySettings();
+                gameObject.SetActive(false);
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e);
+            ResetSettings();
         }
     }
 
@@ -110,7 +123,11 @@ public class MenuQualitySettings : MonoBehaviour
             {
                 DecreaseMasterVolume();
             }
-            else
+            else if (EventSystem.current.currentSelectedGameObject == applyButton.gameObject && resetButton != null)
+            {
+                resetButton.Select();
+            }
+            else if (EventSystem.current.currentSelectedGameObject == resetButton.gameObject)
             {
                 applyButton.Select();
             }
@@ -138,7 +155,11 @@ public class MenuQualitySettings : MonoBehaviour
             {
                 IncreaseMasterVolume();
             }
-            else
+            else if (EventSystem.current.currentSelectedGameObject == applyButton.gameObject && resetButton != null)
+            {
+                resetButton.Select();
+            }
+            else if (EventSystem.current.currentSelectedGameObject == resetButton.gameObject)
             {
                 applyButton.Select();
             }
@@ -206,6 +227,10 @@ public class MenuQualitySettings : MonoBehaviour
             {
                 ApplySettings();
             }
+            if (EventSystem.current.currentSelectedGameObject == resetButton.gameObject && resetButton != null)
+            {
+                ResetSettings();
+            }
         }
 
         if (player.GetButtonDown("B") || player.GetButtonDown("Back"))
@@ -219,7 +244,7 @@ public class MenuQualitySettings : MonoBehaviour
     public void ApplySettings()
     {
         PlayerPrefs.SetInt(RESOLUTION_PREF_KEY, currentResolutionIndex);
-        Screen.SetResolution(resolutions[currentResolutionIndex].width, resolutions[currentResolutionIndex].height, SetWindowMode(windowMode));
+        Screen.SetResolution(resolutions[currentResolutionIndex].width, resolutions[currentResolutionIndex].height, SetWindowMode(windowMode), resolutions[currentResolutionIndex].refreshRate);
         SetQualityLevel();
         SetVSyncMode();
         SetMasterVolume();
@@ -228,11 +253,21 @@ public class MenuQualitySettings : MonoBehaviour
 
     #endregion
 
+    #region Reset Settings
+
+    public void ResetSettings()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    #endregion
+
     #region Resolution
 
     private void SetResolutionText(Resolution resolution)
     {
-        resolutionText.text = resolution.width + "x" + resolution.height;
+        resolutionText.text = resolution.width + "x" + resolution.height + " @ " + resolution.refreshRate + "hz";
     }
 
     private void SetNextResolution()

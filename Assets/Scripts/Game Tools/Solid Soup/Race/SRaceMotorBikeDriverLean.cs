@@ -18,6 +18,8 @@ public class SRaceMotorBikeDriverLean : MonoBehaviour
     private float maxNeckRotShift = 5f;
     private float maxNeckPitchShift = 1f;
 
+    private float leanSpeed = 3f;
+
     private void Start()
     {
         playerNum = GetComponent<RPlayerScore>().playerNum;
@@ -42,27 +44,18 @@ public class SRaceMotorBikeDriverLean : MonoBehaviour
         neckYrot = Mathf.Clamp(neckYrot, -maxNeckPitchShift, maxNeckPitchShift);
         neckYrot = -1 * Mathf.Abs(neckYrot);
 
-        spine.localPosition = new Vector3(spineStartPos.x, spineYpos, spineStartPos.z);
-        spine.localRotation = Quaternion.Euler(new Vector3(spineXrot, spineStartRot.y, spineStartRot.z));
-        neck.localRotation = Quaternion.Euler(new Vector3(neckXrot, neckYrot - 30, neckStartRot.z));
+        var spineTargetPos = new Vector3(spineStartPos.x, spineYpos, spineStartPos.z);
+        var spineTargetRot = Quaternion.Euler(new Vector3(spineXrot, spineStartRot.y, spineStartRot.z));
+        var neckTargetRot = Quaternion.Euler(new Vector3(neckXrot, neckYrot - 30, neckStartRot.z));
 
-        //Vector3 leanX = new Vector3(transform.localRotation.eulerAngles.z, 0, 0);
-        //Vector3 leanY = new Vector3(0, transform.localRotation.eulerAngles.z, 0);
-        //Vector3 posLean = spineStartPos;
-        //Vector3 rotLean = spineStartRot;
-        //posLean.y += transform.localRotation.eulerAngles.z / 10;
-        //rotLean.x += transform.localRotation.eulerAngles.z / 3;
+        spine.localPosition = Vector3.Lerp(spine.localPosition, spineTargetPos, Time.deltaTime * leanSpeed);
+        spine.localRotation = Quaternion.Lerp(spine.localRotation, spineTargetRot, Time.deltaTime * leanSpeed);
+        neck.localRotation = Quaternion.Lerp(neck.localRotation, neckTargetRot, Time.deltaTime * leanSpeed);
 
-        //posLean.y = Mathf.Clamp(posLean.y, -0.2f, 0.2f);
-        //rotLean.x = Mathf.Clamp(rotLean.x, -10f, 10f);
-
-        //float speed = 5f;
-
-        //Vector3.Lerp(spine.localPosition, posLean, Time.deltaTime * speed);
-        //Debug.Log("localPos:" + spine.localPosition + " poslean:" + posLean);
-
-        //Quaternion.Lerp(spine.localRotation, Quaternion.Euler(rotLean), Time.deltaTime * speed);
-        //Quaternion.Lerp(neck.localRotation, Quaternion.Euler(rotLean), Time.deltaTime * speed);
+        //spine.localPosition = new Vector3(spineStartPos.x, spineYpos, spineStartPos.z);
+        //spine.localRotation = Quaternion.Euler(new Vector3(spineXrot, spineStartRot.y, spineStartRot.z));
+        //neck.localRotation = Quaternion.Euler(new Vector3(neckXrot, neckYrot - 30, neckStartRot.z));
+        
     }
     
     // spine1 position.y (3.726 -> 0.25)

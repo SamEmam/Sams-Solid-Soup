@@ -12,7 +12,7 @@ public class RMissile : MonoBehaviour
     private float thrust = 20f;
     private float radius = 10f;
     private float upwardsThrust = 1.5f;
-    private float rotationSpeed = 750f;
+    private float rotationSpeed = 1250f;
     private float closestDistance = float.MaxValue;
     private bool missileEnabled = false;
     private bool isActive = false;
