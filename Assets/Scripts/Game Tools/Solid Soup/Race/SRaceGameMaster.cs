@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SRaceGameMaster : MonoBehaviour
@@ -18,10 +19,25 @@ public class SRaceGameMaster : MonoBehaviour
 
     public SRaceFinishLine finishLine;
     private bool hasUpdatedScore;
-    
+
+    private bool countdownSoundOn = false;
+    private float countdownTimer = 20f;
+    public TextMeshProUGUI gameTimer;
+
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
 
     private void Start()
     {
+        audioPlayer = new GameObject("Countdown Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
 
         finishLine.playersLeft = 0;
 
@@ -63,22 +79,58 @@ public class SRaceGameMaster : MonoBehaviour
 
     private void Update()
     {
-        if (finishLine.playersLeft <= 0 && !hasUpdatedScore)
+        if (hasUpdatedScore)
+        {
+            return;
+        }
+
+        if (finishLine.playersLeft <= GamePrefs.TotalPlayerCount / 2 && !hasUpdatedScore)
+        {
+            if (countdownTimer <= 6f && !countdownSoundOn)
+            {
+                countdownSoundOn = true;
+                StartCoroutine(CountdownSound());
+            }
+            countdownTimer -= Time.deltaTime;
+
+            var sec = countdownTimer % 60;
+            var min = countdownTimer / 60;
+
+            if (sec < 10)
+            {
+
+                gameTimer.text = (int)min + ":0" + (int)sec;
+            }
+            else
+            {
+                gameTimer.text = (int)min + ":" + (int)sec;
+            }
+        }
+
+        if (finishLine.playersLeft <= 0 || countdownTimer <= 0f)
         {
             hasUpdatedScore = true;
-            // Display points earned
 
+            gameTimer.text = "Game Over!";
             StartCoroutine(EndScene());
         
         }
     }
 
-    IEnumerator EndScene()
+    IEnumerator CountdownSound()
     {
-        yield return new WaitForSeconds(5);
-        sceneLoader.LoadSceneByIndex(4);
+        if (clip && !hasUpdatedScore)
+        {
+            source.Play();
+        }
+        yield return new WaitForSeconds(1);
+        StartCoroutine(CountdownSound());
     }
 
-    
+    IEnumerator EndScene()
+    {
+        yield return new WaitForSeconds(1);
+        sceneLoader.LoadSceneByIndex(4);
+    }
 
 }

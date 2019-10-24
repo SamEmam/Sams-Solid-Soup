@@ -6,7 +6,8 @@ public class SPHCamera : MonoBehaviour
 {
     private Rigidbody parentRB;
     private Transform target;
-    public Vector3 newDir;
+    [SerializeField]
+    private bool freeXRot = false;
     
 
     // Start is called before the first frame update
@@ -25,11 +26,15 @@ public class SPHCamera : MonoBehaviour
 
         Vector3 targetRotation = Quaternion.LookRotation(parentRB.velocity).eulerAngles;
 
-        targetRotation.x = Mathf.Clamp(targetRotation.x, -25, 25);
+        if (!freeXRot)
+        {
+            targetRotation.x = Mathf.Clamp(targetRotation.x, -25, 25);
+        }
 
         Quaternion targetQuaternion = Quaternion.Euler(targetRotation);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, targetQuaternion, Time.deltaTime * speed);
+        
         
     }
 

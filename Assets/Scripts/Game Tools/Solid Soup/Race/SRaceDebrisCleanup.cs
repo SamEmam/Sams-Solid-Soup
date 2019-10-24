@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SRaceDebrisCleanup : MonoBehaviour
 {
-    private float destroyTime = 20f;
+    private float destroyTime = 10f;
 
     private void Start()
     {

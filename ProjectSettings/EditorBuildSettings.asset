@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Solid Soup/WithSplit/Circuit Stadium MotorBike.unity
     guid: 976ace2b4e4bf4d4f9e2964b404dbe41
   - enabled: 1
+    path: Assets/Scenes/Solid Soup/WithSplit/PointToPoint Space Trail.unity
+    guid: 817aa72a80d04f441ab40eb22a480d49
+  - enabled: 1
     path: Assets/Scenes/Solid Soup/WithSplit/Demolition Derby.unity
     guid: 59ea7374abdd35645b23cd48fdfd1e4c
   - enabled: 1
@@ -89,9 +92,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Solid Soup/Endless Runner.unity
     guid: 151bdeb15a4ce4e438c2dece4a85ee55
-  - enabled: 1
-    path: Assets/Scenes/Solid Soup/WithSplit/PointToPoint Space Trail.unity
-    guid: 817aa72a80d04f441ab40eb22a480d49
   - enabled: 1
     path: Assets/Scenes/Test Scene.unity
     guid: a2bc0f1457b62e6439a7b5affbd1d700

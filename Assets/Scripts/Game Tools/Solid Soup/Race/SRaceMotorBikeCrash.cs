@@ -67,6 +67,8 @@ public class SRaceMotorBikeCrash : MonoBehaviour
         crashCamRotator.SetActive(false);
         motorBike.SetActive(true);
         CP.Respawn();
+
+        yield return new WaitForSeconds(3f);
         isCrashing = false;
     }
 }
