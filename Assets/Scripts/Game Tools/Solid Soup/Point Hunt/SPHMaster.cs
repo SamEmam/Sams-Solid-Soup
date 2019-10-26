@@ -20,8 +20,21 @@ public class SPHMaster : MonoBehaviour
     [SerializeField]
     private int spawnAttempts = 0;
 
+    private bool countdownSoundOn = false;
+
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Start()
     {
+        audioPlayer = new GameObject("Countdown Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
         sceneLoader = GetComponent<SceneLoader>();
         gameCounter = timeBeforeEnd * 60;
         spawnInterval -= 0.5f * GamePrefs.TotalPlayerCount;
@@ -53,6 +66,11 @@ public class SPHMaster : MonoBehaviour
         }
         else
         {
+            if (gameCounter <= 6f && !countdownSoundOn)
+            {
+                countdownSoundOn = true;
+                StartCoroutine(CountdownSound());
+            }
             var sec = gameCounter % 60;
             var min = gameCounter / 60;
 
@@ -102,6 +120,16 @@ public class SPHMaster : MonoBehaviour
         spawnAttempts = 0;
         var spawnedPoint = Instantiate(point, positionToSpawn, Quaternion.identity);
         spawnedPoints.Add(spawnedPoint);
+    }
+
+    IEnumerator CountdownSound()
+    {
+        if (clip && !hasEnded)
+        {
+            source.Play();
+        }
+        yield return new WaitForSeconds(1);
+        StartCoroutine(CountdownSound());
     }
 
     IEnumerator EndScene()

@@ -21,8 +21,22 @@ public class STagGameMaster : MonoBehaviour
     private bool hasStarted = false;
     private bool hasEnded = false;
 
+    private bool countdownSoundOn = false;
+
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Start()
     {
+        audioPlayer = new GameObject("Countdown Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
+
         sceneLoader = GetComponent<SceneLoader>();
         timeBeforeEnd *= 60;
         counter = timeBeforeStart;
@@ -79,6 +93,12 @@ public class STagGameMaster : MonoBehaviour
         }
         else
         {
+            if (counter <= 6f && !countdownSoundOn)
+            {
+                countdownSoundOn = true;
+                StartCoroutine(CountdownSound());
+            }
+
             var sec = counter % 60;
             var min = counter / 60;
 
@@ -116,6 +136,16 @@ public class STagGameMaster : MonoBehaviour
     {
         var rng = Random.Range(0, tagPlayers.Count);
         tagPlayers[rng].GetTagged();
+    }
+
+    IEnumerator CountdownSound()
+    {
+        if (clip && !hasEnded)
+        {
+            source.Play();
+        }
+        yield return new WaitForSeconds(1);
+        StartCoroutine(CountdownSound());
     }
 
     IEnumerator EndScene()

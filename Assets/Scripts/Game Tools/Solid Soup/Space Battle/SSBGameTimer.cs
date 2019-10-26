@@ -5,14 +5,28 @@ using UnityEngine;
 
 public class SSBGameTimer : MonoBehaviour
 {
-    private float timeBeforeEnd = 2f;
+    private float timeBeforeEnd = 1f;
     private float gameCounter;
     private bool hasEnded = false;
     private SceneLoader sceneLoader;
     public TextMeshProUGUI gameTimer;
 
+    private bool countdownSoundOn = false;
+
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Start()
     {
+        audioPlayer = new GameObject("Countdown Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
+
         sceneLoader = GetComponent<SceneLoader>();
         gameCounter = timeBeforeEnd * 60;
     }
@@ -34,8 +48,15 @@ public class SSBGameTimer : MonoBehaviour
             return;
 
         }
+
         else
         {
+            if (gameCounter <= 6f && !countdownSoundOn)
+            {
+                countdownSoundOn = true;
+                StartCoroutine(CountdownSound());
+            }
+
             var sec = gameCounter % 60;
             var min = gameCounter / 60;
 
@@ -49,6 +70,16 @@ public class SSBGameTimer : MonoBehaviour
                 gameTimer.text = (int)min + ":" + (int)sec;
             }
         }
+    }
+
+    IEnumerator CountdownSound()
+    {
+        if (clip && !hasEnded)
+        {
+            source.Play();
+        }
+        yield return new WaitForSeconds(1);
+        StartCoroutine(CountdownSound());
     }
 
     IEnumerator EndScene()

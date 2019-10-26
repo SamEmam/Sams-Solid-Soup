@@ -38,7 +38,7 @@ public class STagPlayerMaster : MonoBehaviour
         if (isTagged)
         {
             boost.SetActive(true);
-            runnerTag.position = Vector3.up * 100;
+            runnerTag.position = Vector3.up * 1000;
             return;
         }
 

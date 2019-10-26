@@ -14,8 +14,21 @@ public class SDerbyMaster : MonoBehaviour
 
     public GameObject solidPointsBars;
 
+    private bool countdownSoundOn = false;
+
+    public AudioClip clip;
+    private AudioSource source;
+    private GameObject audioPlayer;
+
     private void Start()
     {
+        audioPlayer = new GameObject("Countdown Audio");
+        audioPlayer.transform.SetParent(transform);
+        source = audioPlayer.AddComponent<AudioSource>();
+        if (clip)
+        {
+            source.clip = clip;
+        }
         sceneLoader = GetComponent<SceneLoader>();
         gameCounter = timeBeforeEnd * 60;
         StartCoroutine(DelayedStart());
@@ -69,6 +82,11 @@ public class SDerbyMaster : MonoBehaviour
         }
         else
         {
+            if (gameCounter <= 6f && !countdownSoundOn)
+            {
+                countdownSoundOn = true;
+                StartCoroutine(CountdownSound());
+            }
             var sec = gameCounter % 60;
             var min = gameCounter / 60;
 
@@ -141,7 +159,16 @@ public class SDerbyMaster : MonoBehaviour
                 break;
         }
     }
-    
+
+    IEnumerator CountdownSound()
+    {
+        if (clip && !hasEnded)
+        {
+            source.Play();
+        }
+        yield return new WaitForSeconds(1);
+        StartCoroutine(CountdownSound());
+    }
 
     IEnumerator EndScene()
     {
@@ -155,7 +182,7 @@ public class SDerbyMaster : MonoBehaviour
                 player.canTakeDMG = false;
             }
         }
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         sceneLoader.LoadSceneByIndex(4);
     }
 }

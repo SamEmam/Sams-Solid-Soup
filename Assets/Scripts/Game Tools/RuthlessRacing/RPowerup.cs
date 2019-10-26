@@ -11,6 +11,9 @@ public class RPowerup : MonoBehaviour
     private int rng;
     private bool canTriggerPowerUp = true;
 
+    [SerializeField]
+    private int overPowerRNG = -1;
+
     private void Start()
     {
         RandomizePowerUp();
@@ -18,14 +21,20 @@ public class RPowerup : MonoBehaviour
 
     void RandomizePowerUp()
     {
-        rng = Random.Range(0, powerUps.Length);
-
         foreach (var powerUp in powerUps)
         {
             powerUp.SetActive(false);
         }
 
-        powerUps[rng].SetActive(true);
+        if (overPowerRNG == -1)
+        {
+            rng = Random.Range(0, powerUps.Length);
+            powerUps[rng].SetActive(true);
+        }
+        else
+        {
+            powerUps[overPowerRNG].SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

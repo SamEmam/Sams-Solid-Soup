@@ -8,7 +8,7 @@ public class SSBPlayerController : MonoBehaviour
 {
     public Image crosshair;
     private int playerNum;
-    private float moveSpeed = 50f;
+    private float moveSpeed = 75f;
     private float fireRate = 1f;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.1f);
     [SerializeField]
