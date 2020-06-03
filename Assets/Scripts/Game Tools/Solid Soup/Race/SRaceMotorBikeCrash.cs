@@ -19,6 +19,7 @@ public class SRaceMotorBikeCrash : MonoBehaviour
     private Vector3 offset;
     private bool isCrashing = false;
     private RVehicleTypeSelector typeSelector;
+    private float crashThreshold = 3.5f;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class SRaceMotorBikeCrash : MonoBehaviour
             return;
         }
 
-        if (rb && rb.angularVelocity.magnitude > 3f)
+        if (rb && rb.angularVelocity.magnitude > crashThreshold)
         {
             isCrashing = true;
             Crash();
@@ -56,6 +57,8 @@ public class SRaceMotorBikeCrash : MonoBehaviour
         GameObject spawnedCrash = Instantiate(crashDebris, motorBike.transform.position, motorBike.transform.rotation);
         spawnedCrash.GetComponent<RPlayerScore>().playerNum = typeSelector.GetPlayerNum();
         spawnedCrash.GetComponent<RVehicleColorSelector>().typeSelector = typeSelector;
+        spawnedCrash.GetComponent<SERDriverColorSelector>().playerNum = typeSelector.GetPlayerNum();
+        spawnedCrash.GetComponent<SERDriverColorSelector>().TriggerPlayerColor();
         Destroy(spawnedCrash, 10f);
         StartCoroutine(RespawnMotorBike());
 

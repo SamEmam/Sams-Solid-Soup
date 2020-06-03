@@ -11,7 +11,7 @@ public class SSGoal : MonoBehaviour
     private int rewardScore;
     [HideInInspector]
     public bool hasBeenAwarded = false;
-    private float shortGameTime = 45f;
+    private float shortGameTime = 90f;
 
     private void Start()
     {

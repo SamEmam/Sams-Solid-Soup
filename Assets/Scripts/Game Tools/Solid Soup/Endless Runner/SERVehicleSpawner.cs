@@ -11,6 +11,7 @@ public class SERVehicleSpawner : MonoBehaviour
     private float counter;
     private GameObject vehicle;
     private GameObject lane;
+    private int zPos = 0;
 
     private void Start()
     {
@@ -29,9 +30,9 @@ public class SERVehicleSpawner : MonoBehaviour
             counter = spawnInterval;
         }
 
-        if (Random.Range(0,100) <= spawnChance)
+        if (Random.Range(0,100) <= spawnChance && Mathf.Abs((int)transform.position.z) > Mathf.Abs(zPos + 5))
         {
-            Debug.Log("Spawning..");
+            zPos = (int)transform.position.z;
             Spawn();
         }
     }

@@ -12,6 +12,7 @@ public class RPowerup : MonoBehaviour
     private bool canTriggerPowerUp = true;
 
     [SerializeField]
+    [Range(-1,4)]
     private int overPowerRNG = -1;
 
     private void Start()
@@ -29,12 +30,13 @@ public class RPowerup : MonoBehaviour
         if (overPowerRNG == -1)
         {
             rng = Random.Range(0, powerUps.Length);
-            powerUps[rng].SetActive(true);
         }
         else
         {
-            powerUps[overPowerRNG].SetActive(true);
+            rng = overPowerRNG;
         }
+
+        powerUps[rng].SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

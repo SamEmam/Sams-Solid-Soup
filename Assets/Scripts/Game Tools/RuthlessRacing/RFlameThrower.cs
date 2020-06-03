@@ -9,6 +9,7 @@ public class RFlameThrower : MonoBehaviour
     public float speed = 2f;
     public int playerNum;
     public int powerupNum = 2;
+    public bool useAlternateButton = false;
 
     [Header("Setup")]
     public ParticleSystem flame1;
@@ -29,14 +30,29 @@ public class RFlameThrower : MonoBehaviour
 
     private void Update()
     {
-        if (player.GetButton("Shoot"))
+        if (useAlternateButton)
         {
-            Play();
-        }
+            if (player.GetButton("Handbrake"))
+            {
+                Play();
+            }
 
-        if (player.GetButtonUp("Shoot"))
+            if (player.GetButtonUp("Handbrake"))
+            {
+                Stop();
+            }
+        }
+        else
         {
-            Stop();
+            if (player.GetButton("Shoot"))
+            {
+                Play();
+            }
+
+            if (player.GetButtonUp("Shoot"))
+            {
+                Stop();
+            }
         }
     }
 

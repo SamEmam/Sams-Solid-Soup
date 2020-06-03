@@ -107,10 +107,9 @@ public class SDerbyPlayer : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            rewardPoints += 1000;
+            rewardPoints += 250;
             if (dmgGiverPlayerNum != playerNum)
             {
-                //derbyMaster.AwardPlayerScore(dmgGiverPlayerNum, 1);
                 derbyMaster.GiveKill(dmgGiverPlayerNum);
             }
         }

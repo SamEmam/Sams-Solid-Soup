@@ -17,11 +17,11 @@ public class SRaceArtificialGravityCatchup : MonoBehaviour
     {
         if (playerPos.position == 1)
         {
-            gravity.maxGravity = 2f;
+            gravity.reverseGravity = 1f;
         }
         else
         {
-            gravity.maxGravity = 1.6f;
+            gravity.reverseGravity = 0f;
         }
     }
 }

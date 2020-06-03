@@ -8,14 +8,28 @@ public class SERDriverColorSelector : MonoBehaviour
 
     public SkinnedMeshRenderer mesh;
     public Material[] materials;
-    private int playerNum;
+    public RPlayerScore playerScore;
+    public int playerNum;
 
 
     private void OnEnable()
     {
-        playerNum = GetComponent<RPlayerScore>().playerNum;
+        if (playerScore)
+        {
+            playerNum = playerScore.playerNum;
+        }
+        else
+        {
+            playerNum = GetComponent<RPlayerScore>().playerNum;
+        }
         SetupPlayerColor(playerNum);
     }
+
+    public void TriggerPlayerColor()
+    {
+        SetupPlayerColor(playerNum);
+    }
+    
 
     void SetupPlayerColor(int player)
     {

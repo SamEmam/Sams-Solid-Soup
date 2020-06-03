@@ -38,14 +38,14 @@ namespace UnityStandardAssets.Vehicles.Car
                 v = player.GetAxis("Brake");
             }
             float handbrake = 0f;
-            if (player.GetButton("Handbrake"))
-            {
-                handbrake = 1f;
-            }
-            else
-            {
-                handbrake = 0f;
-            }
+            //if (player.GetButton("Handbrake"))
+            //{
+            //    handbrake = 1f;
+            //}
+            //else
+            //{
+            //    handbrake = 0f;
+            //}
 
             // pass the input to the car!
             //float h = CrossPlatformInputManager.GetAxis(horizontal);

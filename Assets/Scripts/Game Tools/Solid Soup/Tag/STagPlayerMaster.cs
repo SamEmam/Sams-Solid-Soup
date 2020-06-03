@@ -28,7 +28,7 @@ public class STagPlayerMaster : MonoBehaviour
     private void OnDisable()
     {
         boost.SetActive(false);
-        runnerTag.position = transform.position + (Vector3.up * 15);
+        runnerTag.position = transform.position + (Vector3.up * 10);
     }
 
 
@@ -37,13 +37,13 @@ public class STagPlayerMaster : MonoBehaviour
 
         if (isTagged)
         {
-            boost.SetActive(true);
+            //boost.SetActive(true);
             runnerTag.position = Vector3.up * 1000;
             return;
         }
 
         boost.SetActive(false);
-        runnerTag.position = transform.position + (Vector3.up * 15);
+        runnerTag.position = transform.position + (Vector3.up * 10);
 
         if (canBeTagged)
         {

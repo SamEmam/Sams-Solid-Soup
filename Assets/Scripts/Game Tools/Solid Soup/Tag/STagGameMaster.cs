@@ -11,6 +11,7 @@ public class STagGameMaster : MonoBehaviour
     public Transform tagObject;
     [HideInInspector]
     public Transform tagPosition;
+    public GameObject explosionPrefab;
 
     public TextMeshProUGUI tagText;
     private SceneLoader sceneLoader;
@@ -116,7 +117,7 @@ public class STagGameMaster : MonoBehaviour
 
         if (tagPosition)
         {
-            tagObject.position = tagPosition.position + (Vector3.up * 15);
+            tagObject.position = tagPosition.position + (Vector3.up * 10);
         }
         else
         {
@@ -152,8 +153,9 @@ public class STagGameMaster : MonoBehaviour
     {
         foreach (var player in tagPlayers)
         {
-            if (!player.isTagged)
+            if (player.isTagged)
             {
+                Instantiate(explosionPrefab, player.transform.position, player.transform.rotation);
                 player.gameObject.SetActive(false);
             }
         }

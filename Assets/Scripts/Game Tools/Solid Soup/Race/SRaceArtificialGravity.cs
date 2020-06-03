@@ -8,6 +8,8 @@ public class SRaceArtificialGravity : MonoBehaviour
     private Rigidbody rb;
     [HideInInspector]
     public float maxGravity = 1.6f;
+    [HideInInspector]
+    public float reverseGravity = 0f;
     
 
     private void Start()
@@ -28,5 +30,6 @@ public class SRaceArtificialGravity : MonoBehaviour
             gravity = maxGravity;
         }
         rb.AddForce(transform.up * -gravity, ForceMode.VelocityChange);
+        rb.AddForce(transform.forward * -reverseGravity, ForceMode.Acceleration);
     }
 }

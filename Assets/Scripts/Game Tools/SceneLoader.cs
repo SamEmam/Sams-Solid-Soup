@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadSceneByIndex(int scene)
     {
         loadingCanvas.SetActive(true);
-        loadingText.text = "LOADING!...";
+        loadingText.text = "LOADING!";
         StartCoroutine(LoadNewScene(scene));
     }
 
@@ -46,15 +47,21 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator LoadNewScene(int scene)
     {
-
-        //yield return new WaitForSeconds(3f);
-
+        int dotCount = 3;
         AsyncOperation async = SceneManager.LoadSceneAsync(scene);
-
+        
         while (!async.isDone)
         {
-            yield return null;
-            //yield return new WaitForSeconds(3f);
+            if (dotCount > 0)
+            {
+                dotCount--;
+                loadingText.text += ".";
+                yield return new WaitForSeconds(0.4f);
+            }
+            else
+            {
+                yield return null;
+            }
         }
     }
 }

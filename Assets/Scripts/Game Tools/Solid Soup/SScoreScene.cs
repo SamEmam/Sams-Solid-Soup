@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SScoreScene : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class SScoreScene : MonoBehaviour
 
     public TextMeshProUGUI countdown;
     public TextMeshProUGUI gamesPlayedText;
+    public TextMeshProUGUI upcomingGame, loadingUpcomingGame;
+
+    private string upcomingGameString;
 
     private bool isLoadingScene = false;
 
@@ -33,6 +37,10 @@ public class SScoreScene : MonoBehaviour
             GamePrefs.GamesIndex = 1;
             
         }
+
+        upcomingGameString = NameFromIndex(GamePrefs.SoupList[GamePrefs.GamesIndex - 1]);
+        loadingUpcomingGame.text = upcomingGameString;
+        upcomingGame.text = "Upcoming: " + upcomingGameString;
     }
 
     private void Update()
@@ -59,5 +67,14 @@ public class SScoreScene : MonoBehaviour
 
         scoreScreenCounter -= Time.deltaTime;
         countdown.text = "Next game in: " + (int)scoreScreenCounter;
+    }
+
+    private string NameFromIndex(int BuildIndex)
+    {
+        string path = SceneUtility.GetScenePathByBuildIndex(BuildIndex);
+        int slash = path.LastIndexOf('/');
+        string name = path.Substring(slash + 1);
+        int dot = name.LastIndexOf('.');
+        return name.Substring(0, dot);
     }
 }
